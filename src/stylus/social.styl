@@ -1,0 +1,79 @@
+@require "var.styl"
+
+.social-item
+	position relative
+	@media (min-width: xl)
+		padding-left (60/p)
+		line-height (42/r)
+		font-size (20/r)
+		margin-right (50/p)
+	@media (min-width: md) and (max-width: xl)
+		padding-left (60/vd)
+		line-height (42/vd)
+		font-size (20/vd)
+		margin-right (50/vd)
+	@media (orientation: portrait) and (max-width: mob)
+		padding-left (35/vm)
+		line-height (28/vm)
+		font-size (10/vm)
+		margin-right (10/vm)
+	@media (orientation: landscape) and (max-width: mob)
+		padding-left (22/vm)
+		line-height (20/vm)
+		font-size (10/vm)
+		margin-right (7/vm)
+	display inline-block
+	vertical-align middle
+	font-family fontL
+	text-transform uppercase
+	
+	
+	&:hover
+		color color1
+
+	&:after
+		position absolute
+		left 0
+		top 0
+		content ""
+		@media (min-width: xl)
+			width (42/p)
+			height (42/p)
+		@media (min-width: md) and (max-width: xl)
+			width (42/vd)
+			height (42/vd)
+		@media (orientation: portrait) and (max-width: mob)
+			width (28/vm)
+			height (28/vm)
+		@media (orientation: landscape) and (max-width: mob)
+			width (20/vm)
+			height (20/vm)
+		
+	&_in:after
+		background url("/img/in.png") no-repeat
+		background-size cover
+
+	
+	
+	&__phone
+		text-transform uppercase
+		@media (min-width: xl)
+			font-size (25/r)
+			line-height (42/r)
+		@media (min-width: md) and (max-width: xl)
+			font-size (25/vd)
+			line-height (42/vd)
+		color color1
+		float right
+		
+		
+	&_footer
+		@media (orientation: portrait) and (max-width: mob)
+			font-size (6/vm)
+		@media (orientation: landscape) and (max-width: mob)
+			font-size (6/vm)
+		margin-bottom (30/p)
+	
+	&_footer:last-child
+		margin-bottom 0
+		

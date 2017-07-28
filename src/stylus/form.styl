@@ -1,0 +1,341 @@
+@require "var.styl"
+
+.form-outer
+	visibility hidden
+	position fixed
+	z-index 1000
+	width 100%
+	height 100%
+	background rgba(0,0,0, .5)
+	top 0
+	opacity 0
+	transition .5s ease
+	&:hover
+		cursor pointer
+	
+.form-outer-container
+	visibility hidden
+	position fixed
+	z-index 2000
+	background #fff
+	top 20vh
+	left 0
+	right 0
+	margin auto auto
+	opacity 0
+	transition .5s ease
+	@media (min-width: xl)
+		width (500/p)
+		border 1px solid #000 
+	@media (min-width: md) and (max-width: xl)
+		width (550/vd)
+		border 1px solid #000 
+	@media (orientation: portrait) and (max-width: md)
+		width 90%
+	@media (orientation: landscape) and (max-width: md)
+		width 80%
+		top 15vh
+	display block
+	box-sizing border-box
+	& .form__block
+		@media (orientation: landscape) and (max-width: md)
+			padding (7/vm) (20/vm)
+		box-sizing border-box
+		& input[type="text"]
+			@media (orientation: landscape) and (max-width: md)
+				border-radius 0
+				font-size (10/vm) !important
+				padding (5/vm) (15/vm)
+				margin-bottom (5/vm) !important
+		& textarea
+			@media (orientation: landscape) and (max-width: md)
+				font-size (10/vm) !important
+				padding (5/vm) (15/vm) !important
+
+.rental-form-show
+	visibility visible
+	opacity 1
+	transform .5s ease
+		
+.form-outer-btn
+	display block
+	border none
+	outline none
+	background-color none
+	background-image url('/img/close.png')
+	background-repeat no-repeat
+	background-size cover
+	position absolute
+	&:hover
+		cursor pointer
+	@media (min-width: md)
+		width 25px
+		height 25px
+		top -30px
+		right -30px
+	@media (max-width: md)
+		@media (orientation: portrait)
+			top (-27/vm)
+			right (-11/vm)
+			width (22/vm)
+			height (22/vm)		
+		@media (orientation: landscape)
+			top 0
+			right (-15/vm)
+			width (12/vm)
+			height (12/vm)
+			
+
+.popup
+	// visibility hidden
+	position fixed
+	left 0
+	right 0
+	margin 0 auto
+	width 
+	text-align center
+	bottom 50vh
+	z-index 10000
+	color #000
+	background-color #fff
+	border 1px solid color2
+	font-family fontSB
+	box-sizing border-box
+	box-shadow 1px 2px 19px 0px rgba(50, 50, 50, 1)
+	background-repeat no-repeat
+	@media (min-width: xl)
+		width 330px
+		padding 15px 25px
+		padding-left 50px
+		font-size 18px
+	@media (min-width: md) and (max-width: xl)
+		width 25%
+		padding 15px 25px
+		padding-left 50px
+		font-size (25/vd)
+	@media (max-width: md)
+		@media(orientation: portrait)
+			width 70%
+			padding (10/vm) (15/vm)
+			padding-left (40/vm)
+			font-size (12/vm)
+		@media(orientation: landscape)
+			width 40%
+			padding (5/vm) (10/vm)
+			padding-left (20/vm)
+			font-size (7/vm)
+
+	&-success
+		background-image url("/img/done.png")
+		@media (min-width: xl)
+			background-size 30px
+			background-position 2% 45%
+		@media (max-width: xl) and (min-width: md)
+			background-size 30px
+			background-position 2% 45%
+		@media (max-width: md)
+			@media (orientation: portrait)
+				background-size (20/vm)
+				background-position 2% 40%
+			@media (orientation: landscape)
+				background-size (15/vm)
+				background-position 2% 40%
+	
+	&-cancel
+		background-image url("/img/cancel.png")
+		@media (min-width: xl)
+			background-size 30px
+			background-position 4% 50%
+		@media (max-width: xl) and (min-width: md)
+			background-size 30px
+			background-position 5% 50%
+		@media (max-width: md)
+			@media (orientation: portrait)
+				background-size (20/vm)
+				background-position 5% 45%
+			@media (orientation: landscape)
+				background-size (15/vm)
+				background-position 3% 45%
+
+.show
+	visibility visible !important
+
+.popup-success1
+	// visibility hidden
+	position fixed
+	left 0
+	right 0
+	margin 0 auto
+	width 
+	text-align center
+	bottom 50vh
+	z-index 10000
+	color #fff
+	background-color rgba(0,0,0, .3)
+	border 2px solid color1
+	border-radius 5px
+	font-family fontSB
+	box-shadow 1px 2px 19px 0px rgba(50, 50, 50, 1)
+	
+	@media (min-width: xl)
+		width 200px
+		padding 30px 25px
+		padding-left 50px
+		font-size 25px
+	@media (min-width: md) and (max-width: xl)
+		width 200px
+		padding 15px 25px
+		padding-left 50px
+		font-size (25/vd)
+	@media (max-width: md)
+		width 70%
+		@media(orientation: portrait)
+			padding (5/vm) (7/vm)
+		@media(orientation: landscape)
+			padding (5/vm) (7/vm)
+
+.form
+	&_main-map
+		@media (min-width: xl)
+			position absolute
+			width (500/p)
+			right 140px
+			top 45px
+			border 1px solid black 
+			
+		@media (min-width: md) and (max-width: xl)
+			position absolute
+			width (550/vd)
+			right (110/vd)
+			top (124/vd)
+			border (1/vd) solid black 
+			
+		@media (orientation: portrait) and (max-width: md)
+			border-top (1/vm) solid rgba(0, 0, 0, 0.2)
+			width 100%
+			margin-bottom (25/vm)
+		@media (orientation: landscape) and (max-width: md)
+			border-top (1/vm) solid rgba(0, 0, 0, 0.2)
+			width 100%
+			margin-bottom (15/vm)
+		display block
+		box-sizing border-box	
+		z-index 1
+	
+	&__block
+		background white
+		@media (min-width: xl)
+			padding (30/p) (45/p)
+		@media (min-width: md) and (max-width: xl)
+			padding (40/vd) (55/vd)
+		@media (orientation: portrait) and (max-width: md)
+			padding (16/vm) (33/vm)
+		@media (orientation: landscape) and (max-width: md)
+			padding (10/vm) (25/vm)
+		box-sizing border-box
+		
+		& input[type="text"]
+			width 100%
+			display block
+			outline none
+			border 2px solid color2
+			background color2
+			font-family fontL
+			@media (min-width: xl)
+				font-size (20/r)
+				padding (23/p) (27/p)
+				margin-bottom (24/p)
+			@media (min-width: md) and (max-width: xl)
+				font-size (20/vd)
+				padding (23/vd) (27/vd)
+				margin-bottom (24/vd)
+			@media (orientation: portrait) and (max-width: md)
+				border-radius 0
+				font-size (10/vm)
+				padding (10/vm) (14/vm)
+				margin-bottom (10/vm)
+			@media (orientation: landscape) and (max-width: md)
+				border-radius 0
+				font-size (9/vm)
+				padding (10/vm) (25/vm)
+				margin-bottom (10/vm)
+			box-sizing border-box
+		
+		& textarea
+			width 100%
+			display block
+			outline none
+			border none
+			background color2
+			font-family fontL
+			@media (min-width: xl)
+				font-size (20/r)
+				padding (23/p) (27/p)
+				margin-bottom 0
+			@media (min-width: md) and (max-width: xl)
+				font-size (20/vd)
+				padding (23/vd) (27/vd)
+				margin-bottom (24/vd)
+			@media (orientation: portrait) and (max-width: md)
+				border-radius 0
+				font-size (11/vm)
+				padding (10/vm) (14/vm)
+			@media (orientation: landscape) and (max-width: md)
+				border-radius 0
+				font-size (9/vm)
+				padding (10/vm) (25/vm)
+			box-sizing border-box
+			resize none
+	
+	&__submit
+		@media (max-width: md)
+			position relative
+			
+			&:after
+				display block
+				position absolute
+				content ""
+				font-size 0
+				background url("/img/phone.png") no-repeat
+				background-size cover
+				@media (orientation: portrait)
+					width (24/vm)
+					height (24/vm)
+					left (215/vm)
+					top (8/vm)
+				@media (orientation: landscape)
+					width (20/vm)
+					height (20/vm)
+					left (215/vm)
+					top (8/vm)
+		
+		&__button
+			width 100%
+			display block
+			background black
+			color white
+			text-align center
+			text-transform uppercase
+			border none
+			outline none
+			font-family fontR
+			@media (min-width: xl)
+				font-size (24/r)
+				padding (30/p)
+			@media (min-width: md) and (max-width: xl)
+				font-size (29/vd)
+				padding (37/vd)
+			@media (orientation: portrait) and (max-width: md)
+				border-radius 0
+				font-size (12/vm)
+				padding (14/vm) 0
+			@media (orientation: landscape) and (max-width: md) 
+				border-radius 0
+				font-size (11/vm)
+				padding (10/vm) 0
+			cursor pointer
+	&__error
+		border 2px solid red !important
+		background-color #ffc0c0 !important
+		animation shake 0.6s !important
+		-webkt-animation shake 0.6s !important

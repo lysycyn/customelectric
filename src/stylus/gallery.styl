@@ -1,0 +1,242 @@
+@require "var.styl"
+
+.gallery-container
+	@media (min-width: xl)
+		padding-top (100/p)
+		margin-bottom (70/p)
+	@media (min-width: md) and (max-width: xl)
+		padding-top (111/vd)
+		margin-bottom (70/vd)
+	@media (max-width: md)
+		@media (orientation: portrait)
+			padding-top (10/vm)
+			margin-bottom (20/vm)
+		@media (orientation: landscape)
+			padding-top (10/vm)
+			margin-bottom (12/vm)
+	&__switch-buttons
+		@media (min-width: md)
+			display none
+		@media (max-width: md)
+			display block
+			text-align right
+			@media (orientation: portrait)
+				margin-bottom (14/vm)
+			@media (orientation: landscape)
+				margin-bottom (12/vm)
+		&__button
+			display inline-block
+			
+			@media (max-width: md)
+				
+				//stroke-width 2px
+			&_1
+				fill none
+				stroke color1
+				@media (max-width: md)
+					@media (orientation: portrait)
+						width (18/vm)
+						height (14/vm)
+						margin-right (10/vm)
+					@media (orientation: landscape)
+						width (12/vm)
+						height (9/vm)
+						margin-right (10/vm)
+			&_2
+				fill none
+				stroke color3
+				@media (max-width: md)
+					@media (orientation: portrait)
+						width (24/vm)
+						height (14/vm)
+					@media (orientation: landscape)
+						width (18/vm)
+						height (9/vm)
+
+	&&_one-column
+		& .gallery-container__switch-buttons
+			&__button
+				&_1
+					@media (max-width: md)
+						stroke color3 !important
+				&_2
+					@media (max-width: md)
+						stroke color1 !important
+		& .gallery__block
+			@media (max-width: md)
+				@media (orientation: portrait)
+					width 100%
+					margin-bottom (20/vm)
+				@media (orientation: landscape)
+					width 100%
+					margin-bottom (14/vm)
+			& .gallery__block__img-block
+				@media (orientation: portrait)
+					height (240/vm)
+				@media (orientation: landscape)
+					height (150/vm)
+		
+		& .gallery__block__details
+			@media (max-width: md)
+				display block
+				@media (orientation: portrait)
+					padding-top (8/vm)
+					padding-left (10/vm)
+				@media (orientation: landscape)
+					padding-top (8/vm)
+					padding-left (15/vm)
+				
+			&__link
+				@media (max-width: md)
+					font-family fontL
+					color color4
+					@media (orientation: portrait)
+						font-size (18/vm)
+					@media (orientation: landscape)
+						font-size (12/vm)
+
+	&__title
+		text-align center
+		margin 0
+		padding 0
+		
+		font-family fontR
+		text-transform uppercase
+		@media (min-width: xl)
+			font-size (32/r)
+			margin-bottom (65/p)
+		@media (min-width: md) and (max-width: xl)
+			font-size (32/vd)
+			margin-bottom (65/vd)
+		@media (max-width: md)
+			@media (orientation: portrait)
+				font-size (12/vm)
+				margin-bottom (15/vm)
+			@media (orientation: landscape)
+				font-size (10/vm)
+				margin-bottom (12/vm)
+
+.gallery
+	@media (min-width: xl)
+		display block
+		//justify-content space-between
+		//flex-flow row wrap
+		//-webkit-flex-flow row wrap
+	@media (min-width: md) and (max-width: xl)
+		display block
+		// justify-content space-between
+		// flex-flow row wrap
+		// -webkit-flex-flow row wrap
+	@media (max-width: md)	
+		display block
+		// justify-content space-between
+		// flex-flow row wrap
+		// -webkit-flex-flow row wrap
+	
+	&__block
+		float left
+		@media (min-width: xl)
+			width 22.9%
+			margin-right 2.8% 
+			margin-bottom 2%
+			&:nth-child(4n)
+				margin-right 0
+		@media (min-width: md) and (max-width: xl)
+			width 22.9%
+			margin-right 2.8% 
+			margin-bottom 2%
+			&:nth-child(4n)
+				margin-right 0
+		@media (max-width: md)
+			width 32%
+			margin-right 2%
+			margin-bottom 2%
+			&:nth-child(3n)
+				margin-right 0
+
+		&__details
+				display none
+			
+		
+
+		&__img-block
+			position relative
+			font-size 0
+			background-size cover
+			background-position center
+			@media (min-width: xl)
+				height (270/p)
+			@media (min-width: md) and (max-width: xl)
+				height (270/vd)
+			@media (max-width: md)
+				@media (orientation: portrait)
+					height (60/vm)
+				@media (orientation: landscape)
+					height (70/vm)
+			&__image
+				display none
+				width 100%
+				height auto
+				margin auto
+			
+			
+				
+			&_1
+				background-image url("/img/gallery1.jpg")
+				
+			&_2
+				background-image url("/img/gallery2.jpg")
+			
+			&_3
+				background-image url("/img/gallery3.jpg")
+			
+			&_4
+				background-image url("/img/gallery4.jpg")
+				
+			&_5
+				background-image url("/img/gallery5.jpg")
+			
+			&_6
+				background-image url("/img/gallery6.jpg")
+				
+			&_7
+				background-image url("/img/gallery7.jpg")
+				
+			&__mask
+				display none
+				position absolute
+				background rgba(0, 0, 0, 0.5)
+				top 0
+				left 0
+				bottom 0
+				right 0
+				font-size (20/vd)
+				@media (min-width: xl)
+					padding (60/p) (55/p)
+				@media (min-width: md) and (max-width: xl)
+					padding (60/vd) (55/vd)
+				@media (orientation: portrait) and (max-width: mob)
+					padding (4/vm) (5/vm)
+				@media (orientation: landscape) and (max-width: mob)
+					padding (7/vm) (10/vm)
+				
+				&_active-mobile
+					@media (max-width: mob)
+						display block
+				
+				
+
+				&__links-block
+					margin auto auto
+					@media (min-width: md)
+						text-align center
+					@media (orientation: portrait) and (max-width: mob)
+						text-align center
+					@media (orientation: landscape) and (max-width: mob)
+						text-align center
+					
+
+			
+			&:hover &__mask
+				@media (min-width: md)
+					display block

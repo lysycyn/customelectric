@@ -1,0 +1,139 @@
+@require 'var.styl'
+
+/* Код для подключения шрифта в /css/stylename.css */
+/* font-family "SegoeUIRegular" */
+@font-face 
+  font-family "SegoeUIRegular"
+  src url("../fonts/SegoeUIRegular/SegoeUIRegular.eot")
+  src url("../fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"),
+  url("../fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype")
+  font-style normal
+  font-weight normal
+/* font-family "SegoeUIBold" */
+@font-face
+  font-family "SegoeUIBold"
+  src url("../fonts/SegoeUIBold/SegoeUIBold.eot")
+  src url("../fonts/SegoeUIBold/SegoeUIBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"),
+  url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype")
+  font-style normal
+  font-weight normal
+/* font-family "SegoeUIItalic" */
+@font-face
+  font-family "SegoeUIItalic"
+  src url("../fonts/SegoeUIItalic/SegoeUIItalic.eot")
+  src url("../fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/SegoeUIItalic/SegoeUIItalic.woff") format("woff"),
+  url("../fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype")
+  font-style normal
+  font-weight normal
+/* font-family "SegoeUILight" */
+@font-face
+  font-family "SegoeUILight"
+  src url("../fonts/SegoeUILight/SegoeUILight.eot")
+  src url("../fonts/SegoeUILight/SegoeUILight.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/SegoeUILight/SegoeUILight.woff") format("woff"),
+  url("../fonts/SegoeUILight/SegoeUILight.ttf") format("truetype")
+  font-style normal
+  font-weight normal
+/* font-family "SegoeUISemiBold" */
+@font-face 
+  font-family "SegoeUISemiBold"
+  src url("../fonts/SegoeUISemiBold/SegoeUISemiBold.eot")
+  src url("../fonts/SegoeUISemiBold/SegoeUISemiBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/SegoeUISemiBold/SegoeUISemiBold.woff") format("woff"),
+  url("../fonts/SegoeUISemiBold/SegoeUISemiBold.ttf") format("truetype")
+  font-style normal
+  font-weight normal
+
+
+@keyframes nav_in
+  0% 
+    transform translateX(400px)
+  100%
+    transform translateX(0)
+
+@keyframes nav_out
+  0% 
+    transform translateX(0)
+  100%
+    transform translateX(1000px)
+
+@keyframes shake
+  0% 
+  100% 
+    transform translateX(0)
+  
+  10% 
+  30% 
+  50% 
+  70% 
+  90% 
+    transform translateX(-10px)
+  
+  20%
+  40%
+  60%
+  80% 
+    transform translateX(10px)
+
+@-webkit-keyframes shake
+  0% 
+  100% 
+    transform translateX(0)
+  
+  10% 
+  30% 
+  50% 
+  70% 
+  90% 
+    transform translateX(-10px)
+
+  20% 
+  40% 
+  60% 
+  80% 
+    transform translateX(10px)
+
+
+
+a
+  text-decoration none
+  color black
+  @media (min-width: md)
+    transition: 150ms all ease-in
+
+a:visited
+	text-decoration none
+	
+p
+	margin 0	
+	
+.container
+  margin 0 auto
+  box-sizing border-box
+  @media (min-width: xl)
+    padding 0 (150/p)
+    max-width xl  
+  @media (min-width: md) and (max-width: xl)
+    padding 0 (150/vd)
+  @media (orientation: portrait) and (max-width: md)
+    padding 0 (14/vm)
+  @media (orientation: landscape) and (max-width: md)
+    padding 0 (7/vm)
+
+.clearfix:after
+	content ""
+	display table
+	clear both
+
+.hide-desc
+	@media (min-width: md)
+		display none
+
+.hide-mobile
+	@media (max-width: md)
+		display none		
+
+

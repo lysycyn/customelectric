@@ -1,0 +1,634 @@
+
+@require "var.styl"
+
+.main-chars
+	@media (min-width: xl)
+		margin-bottom (140/p)
+	@media (min-width: md) and (max-width: xl)
+		margin-bottom (186/vd)
+	@media (orientation: portrait) and (max-width: md)
+		margin-bottom (25/vm)
+	@media (orientation: landscape) and (max-width: md)
+		margin-bottom (20/vm)
+	
+	& .container
+		@media (max-width: md)
+			padding 0 !important
+
+	& .container_chars
+		@media (min-width: xl)
+			border-top 1px solid rgba(0, 0, 0, 0.4)
+			padding-top (80/p)	
+		@media (min-width: md) and (max-width: xl)
+			border-top (1/vd) solid rgba(0, 0, 0, 0.4)
+			padding-top (80/vd)	
+		@media (orientation: portrait) and (max-width: md)
+			border-top (1/vm) solid rgba(0, 0, 0, 0.4)
+			padding-top (27/vm)	
+		@media (orientation: landscape) and (max-width: md)
+			border-top (1/vm) solid rgba(0, 0, 0, 0.4)
+			padding-top (20/vm)	
+		position relative
+		
+	
+	&__title-block //.main-chars__title-block
+		position absolute
+		@media (min-width: xl)
+			top (-16/p)
+		@media (min-width: md) and (max-width: xl)
+			top (-16/vd)
+		@media (orientation: portrait) and (max-width: md)
+			top (-8/vm)
+		@media (orientation: landscape) and (max-width: md)
+			top (-6/vm)
+		left 0
+		right 0
+		margin 0 auto
+		text-align center
+		
+		
+		&__text //.main-chars__title-block__text
+			font-family fontR	
+			display inline-block
+			@media (min-width: xl)
+				padding 0 (39/p)
+				font-size (32/r)
+			@media (min-width: md) and (max-width: xl)
+				padding 0 (39/vd)
+				font-size (32/vd)
+			@media (orientation: portrait) and (max-width: md)
+				padding 0 (8/vm)
+				font-size (10/vm)
+			@media (orientation: landscape) and (max-width: md)
+				padding 0 (8/vm)
+				font-size (10/vm)
+			text-transform uppercase
+			background white
+	
+	&__features //.main-chars__features
+		@media (min-width: xl)
+			width 100%
+			height (1000/p)
+			background url('/img/main-velo.jpg') no-repeat
+			background-size cover	
+			margin-bottom (45/p)
+		@media (min-width: md) and (max-width: xl)
+			width 100%
+			height (1000/vd)
+			background url('/img/main-velo.jpg') no-repeat
+			background-size cover	
+			margin-bottom (45/vd)
+		@media (max-width: md)
+			width 100%
+			background url('/img/main-velo.jpg') 55% 10% no-repeat
+			@media (orientation: portrait)
+				height (325/vm)
+				background-size 180% 
+			@media (orientation: landscape)
+				height (180/vm)
+				background-size 120% 
+		position relative
+		z-index 15
+		
+		&:after
+			position absolute
+			display block
+			content ""
+			left 0
+			right 0
+			bottom 0
+			top 0
+			background rgba(0, 0, 0, .4)
+			
+		&__wrapper //.main-chars__features__wrapper
+			display none
+			position absolute
+			@media (min-width: md)
+				top 0
+				left 0
+				bottom 0
+				right 0
+				background rgba(0, 0, 0, 0.6)
+				z-index 500
+				&:hover
+					background rgba(0, 0, 0, 0.7)
+					cursor pointer
+			@media (max-width: md)
+				top 0
+				left 0
+				bottom 0
+				right 0
+				background rgba(0, 0, 0, 0.6)
+				z-index 500
+				
+			
+				
+				
+				& ~.main-chars__features__wrapper__img-block .main-chars__features__wrapper__img-block__close
+					transition transform 1s
+					transform rotate(90deg)
+					
+
+			&__img-block //.main-chars__features__wrapper__img-block
+				display none
+				position absolute
+				@media (min-width: xl)
+					padding (40/p) (50/p)
+					width (800/p)
+					height (533/p)
+				@media (min-width: md) and (max-width: xl)
+					padding (40/vd) (50/vd)
+					width (800/vd)
+					height (533/vd)
+				@media (orientation: portrait) and (max-width: md)
+					padding (10/vm) (15/vm)
+					width (250/vm)
+					height (175/vm)
+				@media (orientation: landscape) and (max-width: md)
+					padding (10/vm) (15/vm)
+					width (250/vm)
+					height (120/vm)
+				z-index 600
+				
+				&:hover //~.main-chars__features__wrapper
+					cursor default !important
+
+				&.active
+					display block !important
+
+				&__close
+					position absolute
+					display block
+					background url("/img/close.png")
+					background-size cover
+					z-index 100
+					font-size 0
+					@media (min-width: xl)
+						top (-40/p)
+						right (-40/p)
+						width (25/p)
+						height (25/p)
+						transition all 1s
+						&:hover
+							transition transform 1s
+							transform rotate(90deg)
+							cursor pointer
+					@media (min-width: md) and (max-width: xl)
+						top (-40/vd)
+						right (-40/vd)
+						width (25/vd)
+						height (25/vd)
+						transition all 1s
+						&:hover
+							transition transform 1s
+							transform rotate(90deg)
+							cursor pointer
+					@media (orientation: portrait) and (max-width: md)
+						top (-14/vm)
+						right (-14/vm)
+						width (12/vm)
+						height (12/vm)
+					@media (orientation: landscape) and (max-width: md)
+						top (-10/vm)
+						right (-10/vm)
+						width (8/vm)
+						height (8/vm)
+					
+						
+						
+
+				&__title //.main-chars__features__wrapper__img-block__title
+					position relative
+					color white
+					font-family fontSB
+					text-transform uppercase
+					@media (min-width: xl)
+						font-size (25/r)
+					@media (min-width: md) and (max-width: xl)
+						font-size (25/vd)
+					@media (orientation: portrait) and (max-width: md)
+						font-size (12/vm)
+					@media (orientation: landscape) and (max-width: md)
+						font-size (12/vm)
+					display block
+					text-align center
+					z-index 2
+
+				&:after 
+					position absolute
+					content ""
+					@media (min-width: xl)
+						border 2px solid white
+					@media (min-width: md) and (max-width: xl)
+						border (2/vd) solid white
+					@media (orientation: portrait) and (max-width: md)
+						border (1/vm) solid white
+					@media (orientation: landscape) and (max-width: md)
+						border (1/vm) solid white
+					background rgba(0,0,0, 0.4)
+					left 0
+					right 0
+					bottom 0
+					top 0
+					z-index 1
+				
+					
+				
+				&_1
+					background url("/img/feature1.jpg") no-repeat
+					background-size cover
+					@media (min-width: xl)
+						left (450/p)
+						top (150/p)
+					@media (min-width: md) and (max-width: xl)
+						left (450/vd)
+						top (150/vd)
+					@media (orientation: portrait) and (max-width: md)
+						left (20/vm)
+						top (75/vm)
+					@media (orientation: landscape) and (max-width: md)
+						left (20/vm)
+						top (35/vm)
+
+				&_2
+					background url("/img/feature2.jpg") no-repeat
+					background-size cover
+					@media (min-width: xl)
+						left (550/p)
+						top (250/p)
+					@media (min-width: md) and (max-width: xl)
+						left (550/vd)
+						top (250/vd)
+					@media (orientation: portrait) and (max-width: md)
+						left (20/vm)
+						top (95/vm)
+					@media (orientation: landscape) and (max-width: md)
+						left (20/vm)
+						top (35/vm)
+					
+				
+				&_3
+					background url("/img/feature3.jpg") no-repeat
+					background-size cover
+					@media (min-width: xl)
+						left (300/p)
+						top (250/p)
+					@media (min-width: md) and (max-width: xl)
+						left (300/vd)
+						top (250/vd)
+					@media (orientation: portrait) and (max-width: md)
+						left (20/vm)
+						top (25/vm)
+					@media (orientation: landscape) and (max-width: md)
+						left (10/vm)
+						top (20/vm)
+					
+				
+				&_4
+					background url("/img/feature4.jpg") no-repeat
+					background-size cover
+					@media (min-width: xl)
+						left (50/p)
+						top (150/p)
+					@media (min-width: md) and (max-width: xl)
+						left (50/vd)
+						top (150/vd)
+					@media (orientation: portrait) and (max-width: md)
+						left (20/vm)
+						top (30/vm)
+					@media (orientation: landscape) and (max-width: md)
+						left (20/vm)
+						top (25/vm)
+					
+				
+				&_5
+					background url("/img/feature5.jpg") no-repeat
+					background-size cover
+					@media (min-width: xl)
+						left (300/p)
+						top (50/p)
+					@media (min-width: md) and (max-width: xl)
+						left (300/vd)
+						top (50/vd)
+					@media (orientation: portrait) and (max-width: md)
+						left (20/vm)
+						top (30/vm)
+					@media (orientation: landscape) and (max-width: md)
+						left (20/vm)
+						top (25/vm)
+					
+		&__a //.main-chars__features__a
+			position absolute
+			display inline-block
+			text-transform uppercase
+			color color1
+			z-index 4
+			@media (min-width: xl)
+				line-height (50/p)
+				font-size (20/r)
+				padding-left (55/p)
+			@media (min-width: md) and (max-width: xl)
+				line-height (50/vd)
+				font-size (20/vd)
+				padding-left (55/vd)
+			@media (orientation: portrait) and (max-width: md)
+				line-height (26/vm)
+				font-size (14/vm)
+				padding-left (28/vm)
+			@media (orientation: landscape) and (max-width: md)
+				line-height (20/vm)
+				font-size (12/vm)
+				padding-left (25/vm)
+			vertical-align middle	
+			font-family fontSB
+			cursor pointer
+			
+			&:after //.main-chars__features__links-block__a:after
+				position absolute
+				display block
+				left 0
+				top 0
+				content ""
+				@media (min-width: xl)
+					width (50/p)
+					height (50/p)
+					border 4px solid color1
+					border-radius (25/p)
+				@media (min-width: md) and (max-width: xl)
+					width (50/vd)
+					height (50/vd)
+					border (5/vd) solid color1
+					border-radius (25/vd)
+				@media (orientation: portrait) and (max-width: md)
+					width (26/vm)
+					height (26/vm)
+					border (3/vm) solid color1
+					border-radius (13/vm)
+				@media (orientation: landscape) and (max-width: md)
+					width (20/vm)
+					height (20/vm)
+					border (2/vm) solid color1
+					border-radius (10/vm)
+				box-sizing border-box 
+
+			&:hover //.main-chars__features__links-block__a:hover
+				color white
+				
+			&:hover:after //.main-chars__features__links-block__a:hover:after
+				@media (min-width: xl)
+					border 4px solid white
+				@media (min-width: md) and (max-width: xl)
+					border (5/vd) solid white
+				@media (orientation: portrait) and (max-width: md)
+					border (3/vm) solid white
+				@media (orientation: landscape) and (max-width: md)
+					border (2/vm) solid white
+			
+					
+			&.active //.main-chars__features__links-block__a .active
+				 
+				color white
+				&:before //.main-chars__features__links-block__a .active:before
+					position absolute
+					display block
+					content ""
+					box-sizing border-box
+					@media (min-width: xl)
+						left (16/p)
+						top (16/p)
+						width (18/p)
+						height (18/p)
+						border (9/p) solid white
+						border-radius (9/p)
+					@media (min-width: md) and (max-width: xl)
+						left (16/vd)
+						top (16/vd)
+						width (18/vd)
+						height (18/vd)
+						border (9/vd) solid white
+						border-radius (9/vd)
+					@media (max-width: md)
+						@media (orientation: portrait) and (max-width: md)
+							left (9/vm)
+							top (9/vm)
+							width (8/vm)
+							height (8/vm)
+							border (1/vm) solid white
+							border-radius (4/vm)
+						@media (orientation: landscape) and (max-width: md)
+							left (9/vm)
+							top (9/vm)
+							width (8/vm)
+							height (8/vm)
+							border (1/vm) solid white
+							border-radius (4/vm)
+						background white
+						box-sizing border-box
+				&:after //.main-chars__features__links-block__a .active:after
+					@media (min-width: xl)
+						border 5px solid white
+					@media (min-width: md) and (max-width: xl)
+						border (5/vd) solid white
+					@media (orientation: portrait) and (max-width: md)
+						border (3/vm) solid white
+					@media (orientation: landscape) and (max-width: md)
+						border (2/vm) solid white
+				
+				& ~.main-chars__features__wrapper
+					display block !important
+			
+
+
+			&_1
+				@media (min-width: xl)
+					left (700/p)
+					top (70/p)
+				@media (min-width: md) and (max-width: xl)
+					left (700/vd)
+					top (70/vd)
+				@media (orientation: portrait) and (max-width: md)
+					left (105/vm)
+					top (15/vm)
+				@media (orientation: landscape) and (max-width: md)
+					left (38/vm)
+					top (3/vm)
+					&:after
+						left (87/vm)
+					&:before
+						left (92.5/vm) !important
+						top (6/vm) !important
+
+				//&:hover ~.main-chars__features__wrapper + .main-chars__features__wrapper__img-block_1
+				//display block				
+			
+			&_2
+				@media (min-width: xl)
+					left (740/p)
+					top (135/p)
+				@media (min-width: md) and (max-width: xl)
+					left (740/vd)
+					top (135/vd)
+				@media (orientation: portrait) and (max-width: md)
+					left (120/vm)
+					top (42/vm)
+				@media (orientation: landscape) and (max-width: md)
+					left (137/vm)
+					top (22/vm)
+					&:before
+						left (6/vm) !important
+						top (6/vm) !important
+					
+
+				
+				&:hover ~.main-chars__features__block__img_2
+					display block
+					
+			&_3
+				@media (min-width: xl)
+					left (1215/p)
+					top (532/p)
+				@media (min-width: md) and (max-width: xl)
+					left (1215/vd)
+					top (532/vd)
+				@media (orientation: portrait) and (max-width: md)
+					left (210/vm)
+					top (220/vm)
+					
+					&:after
+						left (75/vm)
+						top (-23/vm)
+					&:before
+						left (84/vm) !important
+						top (-14/vm) !important
+						
+				@media (orientation: landscape) and (max-width: md)
+					left (220/vm)
+					top (140/vm)
+					
+					&:after
+						left (25/vm)
+						top (-20/vm)
+					&:before
+						left (31/vm) !important
+						top (-14/vm) !important
+				
+				&:hover ~.main-chars__features__block__img_3
+					display block
+				
+				
+			
+			&_4
+				@media (min-width: xl)
+					left (960/p)
+					top (570/p)
+				@media (min-width: md) and (max-width: xl)
+					left (960/vd)
+					top (570/vd)
+				@media (orientation: portrait) and (max-width: md)
+					left (100/vm)
+					top (200/vm)
+					
+					&:after
+						left (95/vm)
+						top 0
+					&:before
+						left (104/vm) !important
+						top (9/vm) !important
+				
+				@media (orientation: landscape) and (max-width: md)
+					left (100/vm)
+					top (130/vm)
+					
+					&:after
+						left (85/vm)
+						top 0
+					&:before
+						left (91/vm) !important
+						top (6/vm) !important
+						
+				&:hover ~.main-chars__features__block__img_4
+					display block
+			
+			&_5
+				@media (min-width: xl)
+					left (570/p)
+					top (700/p)
+				@media (min-width: md) and (max-width: xl)
+					left (570/vd)
+					top (700/vd)
+				@media (orientation: portrait) and (max-width: md)
+					left (60/vm)
+					top (240/vm)
+				@media (orientation: landscape) and (max-width: md)
+					left (14/vm)
+					top (147/vm)
+					&:after
+						left (85/vm) !important
+					&:before
+						left (91/vm) !important
+						top (6/vm) !important
+				&:hover ~.main-chars__features__block__img_5
+					display block
+	&__table
+		width 100%
+		
+		&__title
+			
+			position relative
+			font-family fontR
+			margin 0 auto !important
+			display table
+			
+	
+			@media (min-width: xl)
+				font-size (28/r)
+				padding-right (35/p)
+			@media (min-width: md) and (max-width: xl)
+				font-size (28/vd)
+				padding-right (35/vd)
+			&__arrow
+				display block
+				position absolute
+				right 0
+				
+				font-size 0
+				background url("/img/arrow.png") no-repeat
+				background-size cover
+				transition transform 0.5s
+				@media (min-width: xl)
+					top (10/p)
+					width (26/p)
+					height (16/p)
+					&:hover
+						cursor pointer
+				@media (min-width: md) and (max-width: xl)
+					top (10/vd)
+					width (26/vd)
+					height (16/vd)
+					&:hover
+						cursor pointer
+				&_active
+					transition transform 0.5s
+					transform rotate(180deg)
+					
+		&__block
+			display none
+			&_active
+				@media (min-width: md)
+					display flex
+				@media (orientation: portrait) and (max-width: md)
+					display block
+			
+			@media (min-width: desc)
+				padding-top (50/vd)
+			&__right
+				font-size 0
+				text-align center
+				@media (min-width: desc)
+					width 45%
+					& img
+						width (400/vd)
+			&__left
+				@media (min-width: desc)
+					width 55%
+				

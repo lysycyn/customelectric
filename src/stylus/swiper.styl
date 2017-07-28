@@ -1,0 +1,167 @@
+@require 'var.styl'
+
+
+hxl = 800
+hmdp = 220
+hmdl = 200
+
+.swiper-container
+    width 100%
+  
+.swiper-slide 
+    text-align center
+    background #fff
+    display -webkit-box
+    display -ms-flexbox
+    display -webkit-flex
+    display flex
+    -webkit-box-pack center
+    -ms-flex-pack center
+    -webkit-justify-content center
+    justify-content center
+    -webkit-box-align center
+    -ms-flex-align center
+    -webkit-align-items center
+    align-items center
+    @media (min-width: md)
+        background colorBG
+    &__image
+        @media(min-width: xl)
+            width 80%
+            height (hxl/p)
+        @media(min-width: md) and (max-width: xl)
+            width 80%
+            height (hxl/vd)
+        @media(max-width: md)
+            @media(orientation: portrait)
+                width 93%
+                height (hmdp/vm)
+            @media(orientation: landscape)
+                width 90%
+                height (hmdl/vm)
+        background-repeat no-repeat
+        background-position center
+        background-size cover
+        &_1
+            background-image url("/img/gallery1.jpg")
+        &_2
+            background-image url("/img/gallery2.jpg")
+        &_3
+            background-image url("/img/gallery3.jpg")
+        &_4
+            background-image url("/img/gallery4.jpg")
+        &_5
+            background-image url("/img/gallery5.jpg")
+        &_6
+            background-image url("/img/gallery2.jpg")
+        &_7
+            background-image url("/img/gallery3.jpg")
+
+.swiper-button-next, .swiper-button-prev 
+    position absolute
+    top 0
+    cursor pointer
+    background-position center
+    background-repeat no-repeat
+    @media(min-width: xl)
+        height (hxl/p)
+        background none
+    @media(min-width: md) and (max-width: xl)
+        height (hxl/vd)
+    @media(max-width: md)
+        @media(orientation: portrait)
+            height (hmdp/vm)
+        @media(orientation: landscape)
+            height (hmdl/vm) 
+.swiper-button-next
+    width 60%
+.swiper-button-prev
+    width 40%
+     
+
+.swiper-button-next:after, .swiper-button-prev:after
+    display block
+    position absolute
+    content ''
+    background-size cover
+    @media(min-width: xl)
+        width (21/p)
+        height (42/p)
+        top 46%
+    @media(min-width: md) and (max-width: xl)
+        width (21/vd)
+        height (42/vd)
+        top 46%
+    @media(max-width: md)
+        @media(orientation: portrait)
+            width (8/vm)
+            height (16/vm)
+            top 44%
+        @media(orientation: landscape)
+            width (5/vm)
+            height (10/vm)
+            top 46%
+        // moz-background-size (21/vd) (42/p)
+        // -webkit-background-size (21/vd) (42/p)
+        // background-size (21/vd) (42/p)
+
+.swiper-button-next:after
+    background-image url('/img/next@2x.png')
+    background-repeat no-repeat
+    background-size cover
+    @media(min-width: xl)
+        right 3% 
+    @media(min-width: md) and (max-width: xl)
+        right 3%
+    @media(max-width: md)
+        @media(orientation: portrait)
+            right 0
+        @media(orientation: landscape)
+            right 3%
+
+.swiper-button-prev:after
+    background-image url('/img/prev@2x.png')
+    background-repeat no-repeat
+    background-size cover
+    @media(min-width: xl)
+        left 4% 
+    @media(min-width: md) and (max-width: xl)
+        left 4%
+    @media(max-width: md)
+        @media(orientation: portrait)
+            left 0
+        @media(orientation: landscape)
+            left 3%
+
+.swiper-button-next
+    right 0
+.swiper-button-prev
+    left 0
+    
+.swiper-button-next:before, .swiper-button-prev:before
+    display none
+    content ''
+    top 0
+    position absolute 
+    background rgba(0, 0, 0, .5) 
+    @media(min-width: xl)
+        height (hxl/p)
+    @media(min-width: md) and (max-width: xl)
+        height (hxl/vd)
+    @media(max-width: md)
+        @media(orientation: portrait)
+            height (hmdp/vm)
+        @media(orientation: landscape)
+            height (hmdl/vm) 
+            
+.swiper-button-next:hover:before, .swiper-button-prev:hover:before
+    @media(min-width: md)
+        display block
+    
+.swiper-button-next:before
+    width (50/6)%
+    right 0
+.swiper-button-prev:before
+    width 12.7%
+    left 0
+

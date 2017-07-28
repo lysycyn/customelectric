@@ -1,0 +1,324 @@
+@require "var.styl"
+
+.rental
+	&-container
+		@media (min-width: xl)
+			padding-top (100/p)
+			margin-bottom (70/p)
+		@media (min-width: md) and (max-width: xl)
+			padding-top (111/vd)
+			margin-bottom (70/vd)
+		@media (max-width: md)
+			@media (orientation: portrait)
+				padding-top (10/vm)
+				margin-bottom (20/vm)
+			@media (orientation: landscape)
+				padding-top (10/vm)
+				margin-bottom (12/vm)
+	&-block
+		@media (min-width: md)
+			position relative
+		@media (max-width: md)
+			display flex
+			flex-direction column
+	&-map
+		width 100%
+		@media (min-width: xl)
+			height (900/p)
+		@media (min-width: md) and (max-width: xl)
+			height (900/vd)
+		@media (max-width: md)
+			@media (orientation: portrait)
+				height (250/vm)
+			@media (orientation: landscape)
+				height (150/vm)
+				
+	&-title
+		text-align center
+		margin 0
+		padding 0
+		font-family fontR
+		text-transform uppercase
+		@media (min-width: xl)
+			font-size (32/r)
+			margin-bottom (65/p)
+		@media (min-width: md) and (max-width: xl)
+			font-size (32/vd)
+			margin-bottom (65/vd)
+		@media (max-width: md)
+			@media (orientation: portrait)
+				font-size (12/vm)
+				margin-bottom (15/vm)
+			@media (orientation: landscape)
+				font-size (10/vm)
+				margin-bottom (12/vm)
+	&-addresses-city
+		@media (min-width: md)
+			display none
+		@media (max-width: md)
+			display block
+			font-family fontL
+			text-align center
+			@media (orientation: landscape)
+				font-size (10/vm)
+			@media (orientation: portrait)
+				font-size (15/vm)
+		
+	&-addresses
+		@media (min-width: md)
+			position absolute
+			z-index 1
+		@media (min-width: xl)
+			top (250/p)
+			left (100/p)
+		@media (min-width: md) and (max-width: xl)
+			top (250/vd)
+			left (100/vd)
+		@media (max-width: md)
+			display flex
+	&-address
+		background white
+		font-family fontL
+		cursor pointer
+		
+		@media (min-width: xl)
+			margin-bottom (25/p)
+			padding (37/p) (18/p)
+			padding-right (30/p)
+			border-radius 3px
+			box-shadow 1px 2px 19px 0px rgba(50, 50, 50, 1)
+		@media (min-width: md) and (max-width: xl)
+			margin-bottom (25/vd)
+			padding (37/vd) (18/vd)
+			padding-right (30/vd)
+			border-radius 3px
+			box-shadow 1px 2px 19px 0px rgba(50, 50, 50, 1)
+		@media (max-width md)
+			flex-basis 50%
+			position relative
+			@media (orientation: landscape)
+				padding (10/vm) (8/vm)
+				padding-left (35/vm)
+			@media (orientation: portrait)
+				padding (15/vm) (10/vm)
+				padding-left (30/vm)
+			&:before
+				position absolute
+				display block
+				content ''
+				background-image url('/img/location.jpg')
+				background-size cover
+				
+				@media (orientation: landscape)
+					top (9/vm)
+					left (17/vm)	
+					width (9/vm)
+					height (12/vm)
+				@media (orientation: portrait)
+					top (12/vm)
+					left (5/vm)
+					width (15/vm)
+					height (20/vm)
+				
+		&:hover
+			box-shadow 0px 0px 2px 0px rgba(50, 50, 50, 1)
+		&:active
+			box-shadow inset 0px 0px 9px 0px rgba(50, 50, 50, 1)
+		
+		&__title
+			@media (min-width: xl)
+				font-size 20px
+				margin-bottom 15px
+			@media (min-width: md) and (max-width: xl)
+				font-size (22/vd)
+				margin-bottom (15/vd)
+			@media (max-width: md)
+				display none
+		&__text
+			@media (min-width: xl)
+				font-size 18px
+				margin-bottom 15px
+			@media (min-width: md) and (max-width: xl)
+				font-size (18/vd)
+				margin-bottom (15/vd)
+			@media (max-width: md)
+				@media (orientation: landscape)
+					font-size (8/vm)
+				@media (orientation: portrait)
+					font-size (10/vm)
+				
+					
+					
+		&__phone
+			@media (min-width: xl)
+				font-size 18px
+			@media (min-width: md) and (max-width: xl)
+				font-size (18/vd)
+			@media (max-width: md)
+				display none
+	&-balloon
+		font-family fontSB
+		@media (min-width: xl)
+			width 400px
+		@media (min-width: md) and (max-width: xl)
+			width 400px
+		@media (max-width: md)
+			@media (orientation: landscape)
+				width 100%
+			@media (orientation: portrait)		
+				width 100%
+		
+		&-title
+			text-transform uppercase
+			@media (min-width: xl)
+				font-size (26/p)
+				margin-bottom (25/p)
+			@media (min-width: md) and (max-width: xl)
+				font-size (26/vd)
+				margin-bottom (25/vd)
+			@media (max-width: md)
+				@media (orientation: landscape)
+					font-size (9/vm)
+					margin-bottom (8/vm)
+				@media (orientation: portrait)		
+					font-size (12/vm)
+					margin-bottom (5/vm)
+
+		&-content
+			display flex
+		&-text
+			flex-basis 70%
+			@media (min-width: xl)
+				padding-right (25/p)
+			@media (min-width: md) and (max-width: xl)
+				padding-right (25/vd)
+			
+		
+		&-address
+			@media (min-width: xl)
+				font-size (22/p)
+				line-height (30/p)
+				margin-bottom (30/p)
+			@media (min-width: md) and (max-width: xl)
+				font-size (22/vd)
+				line-height (30/vd)
+				margin-bottom (30/vd) 
+			@media (max-width: md)
+				@media (orientation: portrait)
+					font-size (10/vm)
+					line-height (12/vm)
+					margin-bottom (8/vm)
+				@media (orientation: landscape)
+					font-size (6/vm)
+					line-height (7/vm)
+					margin-bottom (10/vm)
+
+		&-phone
+			position relative
+			@media (min-width: xl)
+				font-size (22/p)
+				padding-left (30/p)
+				margin-bottom (30/p)
+			@media (min-width: md) and (max-width: xl)
+				font-size (22/vd)
+				margin-bottom (30/vd)
+				padding-left (30/vd)
+			@media (max-width: md)
+				@media (orientation: portrait)
+					font-size (14/vm)
+					margin-bottom (10/vm)
+					padding-top (7/vm)
+					padding-left (20/vm)
+				@media (orientation: landscape)
+					font-size (8/vm)
+					margin-bottom (10/vm)
+					padding-left (10/vm)
+			&:before
+				position absolute
+				content ""
+				display block
+				background-image url('/img/phone_small.png') 
+				background-repeat no-repeat
+				background-position center
+				background-size cover
+				@media (min-width: md) and (max-width: xl)
+					width (22/vd)
+					height (22/vd)
+					left 0
+					top (9/vd)
+				@media (min-width: xl)
+					width (22/p)
+					height (22/p)
+					left 0
+					top (9/p)
+				@media (max-width: md)
+					@media (orientation: portrait)
+						width (14/vm)
+						height (14/vm)
+						top (9/vm)
+						left 0
+					@media (orientation: landscape)
+						width (8/vm)
+						height (8/vm)
+						top (1/vm)
+						left 0
+					
+				
+		&-work
+			position relative
+			@media (min-width: xl)
+				font-size (22/p)
+				padding-left (30/p)
+			@media (min-width: md) and (max-width: xl)
+				font-size (22/vd)
+				padding-left (30/vd)
+			@media (max-width: md)
+				@media (orientation: portrait)
+					padding-top (7/vm)
+					font-size (14/vm)
+					padding-left (20/vm)
+				@media (orientation: landscape)
+					font-size (8/vm)
+					padding-left (10/vm)
+			&:before
+				position absolute
+				content ""
+				display block
+				background-image url('/img/worktime.png') 
+				background-repeat no-repeat
+				background-position center
+				background-size cover
+				@media (min-width: md) and (max-width: xl)
+					width (22/vd)
+					height (22/vd)
+					left 0
+					top (7/vd)
+				@media (min-width: xl)
+					width (22/p)
+					height (22/p)
+					left 0
+					top (7/p)
+				@media (max-width: md)
+					@media (orientation: portrait)
+						width (14/vm)
+						height (14/vm)
+						left 0
+						top (9/vm)
+					@media (orientation: landscape)
+						width (8/vm)
+						height (8/vm)
+						top (1/vm)
+						left 0
+
+		&-img
+			flex-basis 30%
+			& img
+				width 100%
+			
+			
+
+		// 	@media (min-width: xl)
+		//	@media (min-width: md) and (max-width: xl)
+		//	@media (max-width: md)
+		// 	@media (orientation: landscape)
+		// 	@media (orientation: portrait)

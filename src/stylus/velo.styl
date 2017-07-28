@@ -1,0 +1,306 @@
+@require "var.styl"
+
+.velo-container
+	@media (min-width: xl)
+		padding-top (100/p)
+		margin-bottom (70/p)
+	@media (min-width: md) and (max-width: xl)
+		padding-top (111/vd)
+		margin-bottom (70/vd)
+	@media (max-width: md)
+		@media (orientation: portrait)
+			padding-top (10/vm)
+			margin-bottom (20/vm)
+		@media (orientation: landscape)
+			padding-top (10/vm)
+			margin-bottom (12/vm)
+			
+	&__title
+		text-align center
+		margin 0
+		padding 0
+		
+		font-family fontR
+		text-transform uppercase
+		@media (min-width: xl)
+			font-size (32/r)
+			margin-bottom (65/p)
+		@media (min-width: md) and (max-width: xl)
+			font-size (32/vd)
+			margin-bottom (65/vd)
+		@media (max-width: md)
+			@media (orientation: portrait)
+				font-size (12/vm)
+				margin-bottom (15/vm)
+			@media (orientation: landscape)
+				font-size (10/vm)
+				margin-bottom (12/vm)
+
+.velo
+	display flex
+	flex-flow row wrap
+	-webkit-flex-flow row wrap
+	
+
+	& table
+		
+		border none
+		border-collapse collapse
+		font-family fontR
+		vertical-align top
+		@media(min-width: xl)
+			width 80%
+			font-size (25/p)
+			line-height (50/p)
+		@media(min-width: md) and (max-width: xl)
+			width 80%
+			font-size (25/vd)
+			line-height (50/vd)
+		@media(max-width: md)
+			width 100%
+			@media(orientation: portrait)
+				line-height (25/vm)
+			@media(orientation: landscape)
+				line-height (20/vm)
+		& td
+			width 50%
+			&:last-child
+				text-align right
+			@media(max-width: md)
+				@media(orientation: portrait)
+					padding 0 (5/vm)
+					font-size (12/vm)
+				@media(orientation: landscape)
+					padding 0 (5/vm)
+					font-size (10/vm)
+			//border-bottom 1px solid color4
+		& tr
+			@media(min-width: xl)
+				padding 5px 0
+			@media(min-width: md) and (max-width: xl)
+				padding (10/vd) 0
+			@media(max-width: md)
+				@media(orientation: landscape)
+					font-size (25/vd)
+			border-bottom 1px solid color5
+			&:last-child
+				border-bottom none
+	
+	&__chars
+		display flex
+		flex-flow row wrap
+		-webkit-flex-flow row wrap
+		@media(min-width: xl)
+			width 50%
+			order 1
+			margin-bottom 100px			
+		@media(min-width: md) and (max-width: xl)
+			width 50%
+			order 1
+			margin-bottom (90/vd)			
+		@media(max-width: md)
+			width 100%
+			@media(orientation: portrait)
+				order 3
+			@media(orientation: landscape)
+				order 3
+		
+		&__title-chars
+			@media(min-width: xl)
+				display none
+			@media(min-width: md) and (max-width: xl)
+				display none
+			@media(max-width: md)
+				font-family fontL
+				text-transform uppercase
+				text-align center
+				width 40%
+				@media(orientation: portrait)
+					margin-bottom (20/vm)
+					font-size (12/vm)
+					order 1
+				@media(orientation: landscape)
+					margin-bottom (12/vm)
+					font-size (10/vm)
+					order 1
+			&_active
+				@media(max-width: md)
+					& ~.velo__chars__table-chars
+						display block
+					@media(orientation: portrait)
+						& span
+							display inline-block
+							padding-bottom (5/vm)
+							border-bottom 1px solid color1
+					@media(orientation: landscape)
+						& span
+							display inline-block
+							padding-bottom (5/vm)
+							border-bottom 1px solid color1
+		&__table-chars
+			@media(min-width: xl)
+				width 100%
+				order 2
+				margin-bottom 38px				
+			@media(min-width: md) and (max-width: xl)
+				width 100%
+				order 2
+				margin-bottom (38/vd)
+			@media(max-width: md)
+				display none
+				width 100%
+				@media(orientation: portrait)
+					order 3
+				@media(orientation: landscape)
+					order 3
+			
+		&__title-plus
+			font-family fontR
+			@media(min-width: xl)
+				position relative
+				display inline-block
+				font-size (25/p)
+				padding-right 20px
+				margin-bottom 25px
+				order 3
+				&:after
+					position absolute
+					right 0
+					top 8px
+					display block
+					content ''
+					background url('/img/arrow.png') no-repeat
+					background-size cover
+					width 13px
+					height 8px
+			@media(min-width: md) and (max-width: xl)
+				position relative
+				display inline-block
+				order 3
+				font-size (25/vd)
+				padding-right (25/vd)
+				margin-bottom (25/vd)
+				&:after
+					position absolute
+					right 0
+					top (10/vd)
+					display block
+					content ''
+					transition all 0.5s ease
+					background url('/img/arrow.png') no-repeat
+					background-size cover
+					width (16/vd)
+					height (10/vd)
+			@media(min-width: md)
+				&:hover
+					cursor pointer
+			@media(max-width: md)
+				
+				font-family fontL
+				text-transform uppercase
+				text-align center
+				width 60%
+				@media(orientation: portrait)
+					margin-bottom (20/vm)
+					font-size (12/vm)
+					order 2
+				@media(orientation: landscape)
+					margin-bottom (12/vm)
+					font-size (10/vm)
+					order 2
+			&_active
+				
+				@media(min-width: md)
+					&:after
+						transition all 0.5s ease
+						transform rotate(180deg)
+					& ~.velo__chars__table-plus
+						display block
+				@media(max-width: md)
+					& ~.velo__chars__table-plus
+						display block
+					@media(orientation: portrait)
+						& span
+							display inline-block
+							padding-bottom (5/vm)
+							border-bottom 1px solid color1
+					@media(orientation: landscape)
+						& span
+							display inline-block
+							padding-bottom (5/vm)
+							border-bottom 1px solid color1
+				
+		&__table-plus
+			display:none
+			@media(min-width: xl)
+				width 100%
+				order 4				
+			@media(min-width: md) and (max-width: xl)
+				width 100%
+				order 4
+			@media(max-width: md)
+				display none
+				width 100%
+				@media(orientation: portrait)
+					order 4
+				@media(orientation: landscape)
+					order 4
+			&_active
+				display block
+				
+	&__photo
+		font-size 0
+		
+		@media(min-width: xl)
+			text-align right
+			width 50%
+			order 2				
+			margin-bottom 100px
+		@media(min-width: md) and (max-width: xl)
+			text-align right
+			width 50%
+			order 2
+			margin-bottom (90/vd)
+		@media(max-width: md)
+			text-align center
+			width 100%
+			@media(orientation: portrait)
+				margin-bottom (20/vm)
+				order 1
+			@media(orientation: landscape)
+				margin-bottom (15/vm)
+				order 1
+		& img
+			@media (min-width: md)
+				width 90%
+			@media (max-width: md)
+				@media(orientation: portrait)
+					width 100%
+				@media(orientation: landscape)
+					width 100%
+				
+		
+	&__slider
+		@media(min-width: xl)
+			width 100%
+			order 3				
+		@media(min-width: md) and (max-width: xl)
+			width 100%
+			order 3
+		@media(max-width: md)
+			width 100%
+			@media(orientation: portrait)
+				margin-bottom (20/vm)
+				order 2
+			@media(orientation: landscape)
+				margin-bottom (14/vm)
+				order 2
+
+// @media(min-width: xl)
+		
+// 	@media(min-width: md) and (max-width: xl)
+	
+// 	@media(max-width: md)
+// 		@media(orientation: portrait)
+		
+// 		@media(orientation: landscape)

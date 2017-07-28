@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Custom-electric.ru</title>
+  <link rel="shortcut icon" href="/img/favicon.ico"/>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/lightbox.css">
+</head>
+<body>
+  <nav id="header" class="main-header clearfix">
+    <div class="container">
+      <div id="nav" class="main-nav">
+        <div id="menu-button-mask" class="main-nav__butter-mask"></div>
+        <ul is="nav-list" class="main-nav__list">
+          <li class="main-nav__list__item"><a class="main-nav__list__item__a" href="index.html">Характеристики</a></li>
+          <li id="nav-list-nesting" class="main-nav__list__item "><a id="nesting-list-link" class="main-nav__list__item__a main-nav__list__item_nesting-list-link" href="#">Комплектации</a>
+
+            <ul class="main-nav__list__item__nesting-list">
+              <li class="main-nav__list__item__nesting-list__item"><a href="item1.html">Комплектация 1</a></li>
+              <li class="main-nav__list__item__nesting-list__item"><a href="item1.html">Комплектация 2</a></li>
+              <li class="main-nav__list__item__nesting-list__item"><a href="item1.html">Комплектация 3</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__list__item main-nav__list__item_active"><a class="main-nav__list__item__a" href="#">Галерея</a></li>
+          <li class="main-nav__list__item"><a class="main-nav__list__item__a" href="#">Прокат</a></li>
+          <li class="main-nav__list__item main-nav__list__item_call"><a id="ticket-form-mobile" class="main-nav__list__item__a js-phone-button" href="#ticket-form">Заказать <span class="hide-mobile">обратный</span> звонок</a></li>
+        </ul>
+      </div>
+      <div class="main-header__phone">
+        <a class="js-phone-button" href="#ticket-form"><img src="/img/phone.png" alt="Обратный звонок"></a>
+      </div>
+      <div class="main-header__logo">
+        <a class="main-header__logo1" href="#"><img src="/img/logo.png" alt="Custom-electric.ru"></a>
+      </div>
+      <div class="main-header__butter-button">
+        <svg id="menu-button">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#butter"></use>
+        </svg>
+      </div>
+    </div>
+  </nav>
+  <div class="header-margin-block"></div>
+  <section id="gallery-container" class="gallery-container">
+    <div class="container">
+      <h1 class="gallery-container__title">Галерея</h1>
+      <div class="gallery-container__switch-buttons">
+        <svg id="gallery_view3" class="gallery-container__switch-buttons__button gallery-container__switch-buttons__button_1">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon3"></use>
+        </svg>
+        <svg id="gallery_view1" class="gallery-container__switch-buttons__button gallery-container__switch-buttons__button_2">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon1"></use>
+        </svg>
+      </div>
+      <div class="gallery clearfix">
+        <div class="gallery__block">
+          <div class="gallery__block__img-block gallery__block__img-block_1">
+            <div class="gallery__block__img-block__mask">
+              <div class="gallery__block__img-block__mask__links-block">
+                <a class="btn btn_gal js-lightbox-click" href="/img/gallery1.jpg" data-link="item1.html"  data-lightbox="gallery">Увеличить</a>
+                <a class="btn btn_gal" href="item1.html">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="gallery__block__details">
+            <a class="gallery__block__details__link" href="item1.html">#Комплектация 1</a>
+          </div>
+        </div>
+
+        <div class="gallery__block">
+          <div class="gallery__block__img-block gallery__block__img-block_2">
+            <div class="gallery__block__img-block__mask">
+              <div class="gallery__block__img-block__mask__links-block">
+                <a class="btn btn_gal" href="/img/gallery2.jpg" data-link="item2.html" data-lightbox="gallery">Увеличить</a>
+                <a class="btn btn_gal" href="item1.html">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="gallery__block__details">
+            <a class="gallery__block__details__link" href="item1.html">#Комплектация 2</a>
+          </div>
+        </div>
+
+        <div class="gallery__block">
+          <div class="gallery__block__img-block gallery__block__img-block_3">
+            <div class="gallery__block__img-block__mask">
+              <div class="gallery__block__img-block__mask__links-block">
+                <a class="btn btn_gal" href="/img/gallery3.jpg" data-link="item1.html" data-lightbox="gallery">Увеличить</a>
+                <a class="btn btn_gal" href="item1.html">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="gallery__block__details">
+            <a class="gallery__block__details__link" href="item1.html">#Комплектация 2</a>
+          </div>
+        </div>
+
+        <div class="gallery__block">
+          <div class="gallery__block__img-block gallery__block__img-block_5">
+            <div class="gallery__block__img-block__mask">
+              <div class="gallery__block__img-block__mask__links-block">
+                <a class="btn btn_gal" href="/img/gallery5.jpg" data-link="item1.html" data-lightbox="gallery">Увеличить</a>
+                <a class="btn btn_gal" href="item1.html">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="gallery__block__details">
+            <a class="gallery__block__details__link" href="item1.html">#Комплектация 1</a>
+          </div>
+        </div>
+
+        <div class="gallery__block">
+          <div class="gallery__block__img-block gallery__block__img-block_1">
+            <div class="gallery__block__img-block__mask">
+              <div class="gallery__block__img-block__mask__links-block">
+                <a class="btn btn_gal" href="/img/gallery1.jpg" data-link="item1.html" data-lightbox="gallery">Увеличить</a>
+                <a class="btn btn_gal" href="item1.html">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="gallery__block__details">
+            <a class="gallery__block__details__link" href="item1.html">#Комплектация 1</a>
+          </div>
+        </div>
+
+        <div class="gallery__block">
+          <div class="gallery__block__img-block gallery__block__img-block_2">
+            <div class="gallery__block__img-block__mask">
+              <div class="gallery__block__img-block__mask__links-block">
+                <a class="btn btn_gal" href="/img/gallery2.jpg" data-link="item1.html" data-lightbox="gallery">Увеличить</a>
+                <a class="btn btn_gal" href="item1.html">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="gallery__block__details">
+            <a class="gallery__block__details__link" href="item1.html">#Комплектация 1</a>
+          </div>
+        </div>
+
+        <div class="gallery__block">
+          <div class="gallery__block__img-block gallery__block__img-block_4">
+            <div class="gallery__block__img-block__mask">
+              <div class="gallery__block__img-block__mask__links-block">
+                <a class="btn btn_gal" href="/img/gallery4.jpg" data-link="item1.html" data-lightbox="gallery">Увеличить</a>
+                <a class="btn btn_gal" href="item1.html">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="gallery__block__details">
+            <a class="gallery__block__details__link" href="item1.html">#Комплектация 1</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+   <section class="main-map">
+      <div class="container">
+        <form id="ticket-form" class="form form_main-map" action="">
+          <div class="form__block">
+            <input id="form_name" type="text" placeholder="Введите имя *">
+            <input id="form_phone" class="phone-mask" type="text" placeholder="Введите телефон *">
+            <textarea name="" id="form_message" cols="30" rows="10" placeholder="Введите сообщение"></textarea>
+          </div>
+          <div class="form__submit">
+            <input type="submit" class="form__submit__button" value="Заказать звонок">
+          </div>
+
+        </form>
+        <div class="main-map__contacts-block"><!--grid-->
+
+            <div class="main-map__contacts-block__left">
+              <span class="main-map__contacts-block__left__title">
+                Контакты
+              </span>
+              <span class="main-map__contacts-block__left__category">
+                Телефон
+              </span>
+              <a href="tel:+79851876634" class="main-map__contacts-block__left__contact" title="телефон">+7 (985) 187 66 34</a>
+              <a href="tel:+79851876634" class="main-map__contacts-block__left__contact" title="телефон">+7 (985) 187 66 34</a>
+              <span class="main-map__contacts-block__left__category">
+                E-mail
+              </span>
+              <span class="main-map__contacts-block__left__contact">custom-electric@gmail.com</span>
+              <span class="main-map__contacts-block__left__category">
+                Skype
+              </span>
+              <span class="main-map__contacts-block__left__contact">custom-electric</span>
+            </div>
+            <div class="main-map__contacts-block__map" id="map">
+
+            </div>
+        </div>
+      </div>
+  </section>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="main-footer__block main-footer__block_social">
+        <a class="social-item social-item_in social-item_footer" href="https://www.instagram.com/kuzmen_custom.electric/">/kuzmen_custom.electric</a>
+        <a class="social-item social-item_in social-item_footer" href="https://www.instagram.com/custom.electric/">/custom.electric</a>
+      </div>
+      <div class="main-footer__block main-footer__block_logo">
+        <img src="/img/logo.png" alt="Custom-electric.ru">
+      </div>
+      <div class="main-footer__block">
+        <a href="tel:+79851876634" class="main-footer__block__phone" title="телефон">+7 (985) 187 66 34</a>
+        <a href="tel:+79851876634" class="main-footer__block__phone" title="телефон">+7 (985) 187 66 34</a>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="/js/mask.js"></script>
+  <!--<script type="text/javascript" src="/js/hammertime.js"></script>-->
+  <script type="text/javascript" src="/js/sprite.min.js"></script>
+  <script type="text/javascript" src="/js/script.min.js"></script>
+  <script type="text/javascript" src="/js/lightbox.js"></script>
+  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aca10567c482a601199695e88ad4b16a5619ed930931890ab30714a61cb8a2ffc&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true;&amp;id=map"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+@require "var.styl"
+
+.btn
+	outline 0
+	font-family fontR
+	text-transform uppercase
+	@media (min-width: xl)
+		border 1px solid color1
+	@media (min-width: md) and (max-width: xl)
+		border (1/vd) solid color1
+	@media (max-width: md)
+		border (1/vm) solid color1
+
+	&_main
+		display inline-block
+		@media (min-width: xl)
+			font-size (20/r)
+			padding (25/p) (50/p)
+		@media (min-width: md) and (max-width: xl)
+			font-size (20/vd)
+			padding (25/vd) (50/vd)
+		@media (orientation: portrait) and (max-width: md)
+			font-size (10/vm)
+			padding (13/vm) (33/vm)
+		@media (orientation: landscape) and (max-width: md)
+			font-size (9/vm)
+			padding (7/vm) (14/vm)
+		color white
+		&:hover
+			background rgba(0, 229, 255, 0.4)
+
+	&_black
+		color black
+		&:hover
+			background color1
+			border 1px solid black
+			color white
+
+
+
+	&_buy
+		display inline-block
+		margin 0 auto
+		@media (min-width: xl)
+			font-size (20/r)
+			padding (17/p) (55/p)
+			&:hover
+				background rgba(0, 229, 255, 0.4)
+		@media (min-width: md) and (max-width: xl)
+			font-size (20/vd)
+			padding (17/vd) (55/vd)
+			&:hover
+				background rgba(0, 229, 255, 0.4)
+		@media (orientation: portrait) and (max-width: md)
+			font-size (13/vm)
+			padding (13/vm) (33/vm)
+		@media (orientation: landscape) and (max-width: md)
+			font-size (9/vm)
+			padding (7/vm) (14/vm)
+		color white
+
+	&_gal
+		display block
+		margin 0 auto
+		text-align center
+		@media (min-width: xl)
+			font-size (20/r)
+			padding (17/p) 0
+			margin-bottom (25/p)
+			&:last-child
+				margin-botom 0
+			&:hover
+				background rgba(0, 229, 255, 0.4)
+		@media (min-width: md) and (max-width: xl)
+			font-size (20/vd)
+			padding (17/vd) 0
+			margin-bottom (25/vd)
+			&:last-child
+				margin-botom 0
+			&:hover
+				background rgba(0, 229, 255, 0.4)
+		@media (orientation: portrait) and (max-width: md)
+			font-size (10/vm)
+			padding (4/vm) 0
+			margin-bottom (10/vm)
+		@media (orientation: landscape) and (max-width: md)
+			font-size (8/vm)
+			padding (7/vm) 0
+			margin-bottom (7/vm)
+		color white

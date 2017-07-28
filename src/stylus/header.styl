@@ -1,0 +1,356 @@
+
+@require "var.styl"
+
+.main-header
+	position fixed
+	display block
+	width 100%
+	z-index 1000
+	background white
+	transition all 0.5s ease
+	-webkit-transition all 0.5s ease
+
+	& .container
+		position relative
+		z-index 1000
+		@media (orientation: portrait) and (max-width: md)
+			padding-top (7/vm)
+			padding-bottom (7/vm)
+		@media (orientation: landscape) and (max-width: md)
+			padding-top (2/vm)
+			padding-bottom (2/vm)
+		@media (max-width: md)
+			display flex
+			align-items center
+			justify-content space-between
+
+	&__logo
+		@media (min-width: xl)
+			position absolute
+			top (10/r)
+			left 0
+			right 0
+			margin 0 auto
+			z-index 50
+		@media (min-width: md) and (max-width: xl)
+			position absolute
+			top (15/vd)
+			left 0
+			right 0
+			margin 0 auto
+			z-index 50
+		text-align center
+		@media (max-width: md)
+			width 33.3%
+			font-size 0
+
+		& img
+			@media (min-width: xl)
+				width (150/vd)
+				max-width (1280/1920)*150px
+			@media (min-width: md) and (max-width: xl)
+				width (135/vd)
+			@media (orientation: portrait) and (max-width: md)
+				width (55/vm)
+			@media (orientation: landscape) and (max-width: md)
+				width (24/vm)
+
+
+	&__phone
+		@media (min-width: md)
+			display none
+		@media (max-width: md)
+			display block
+			text-align left
+			width 33.3%
+			& img
+				@media (orientation: portrait) and (max-width: md)
+					width (28/vm)
+				@media (orientation: landscape) and (max-width: md)
+					width (16/vm)
+
+	&__butter-button
+		@media (min-width: md)
+			display none
+		@media (max-width: md)
+			display block
+			text-align right
+			width 33.3%
+			& img
+				@media (orientation: portrait) and (max-width: md)
+					width (44/vm)
+					height (20/vm)
+				@media (orientation: landscape) and (max-width: md)
+					width (18/vm)
+					height (9/vm)
+			& svg
+				@media (max-width: md)
+					fill none
+					stroke color1
+					stroke-width 2px
+					@media (orientation: portrait)
+						width (44/vm)
+						height (20/vm)
+					@media (orientation: landscape)
+						width (18/vm)
+						height (9/vm)
+
+
+.header-margin-block
+	@media (min-width: xl)
+		height (151/r)
+	@media (min-width: md) and (max-width: xl)
+		height (151/vd)
+	@media (orientation: portrait) and (max-width: md)
+		height (62/vm)
+	@media (orientation: landscape) and (max-width: md)
+		height (26/vm)
+
+.fixed
+	background rgba(0,0,0, 0.7)
+	transition all 0.5s ease
+	-webkit-transition all 0.5s ease
+
+	.main-nav__list__item a
+		color white
+	.main-nav__list__item_active a
+		@media (min-width: md)
+			color color1
+
+.small_header
+	& .main-nav__list__item__a
+		@media (min-width: xl)
+			line-height (80/p) !important
+		@media (min-width: md) and (max-width: xl)
+			line-height (80/vd) !important
+	& .main-header__logo
+		@media (min-width: xl)
+			top (5/r)
+		@media (min-width: md) and (max-width: xl)
+			top (5/vd)
+		& img
+			@media (min-width: xl)
+				width (80/vd) !important
+				max-width (1280/1920)*80px !important
+			@media (min-width: md) and (max-width: xl)
+				width (80/vd) !important
+			@media (orientation: portrait) and (max-width: md)
+				width (35/vm) !important
+			@media (orientation: landscape) and (max-width: md)
+				width (20/vm) !important
+
+.main-nav
+	transition all 0.5s ease
+	@media (max-width: md)
+		display none
+		position absolute
+		top 0
+		background rgba(0, 0, 0, 0.8)
+		z-index 50
+		@media (orientation: portrait)
+			height 1000px
+			width 90%
+			padding-top (52/vm)
+			right -100%
+		@media (orientation: landscape)
+			height 1000px
+			width 90%
+			padding-top (20/vm)
+			right -100%
+		&_active
+			display block
+		&_in
+			@media (orientation: portrait) and (max-width: md)
+				transform translateX(-110%)
+			@media (orientation: landscape) and (max-width: md)
+				transform translateX(-110%)
+
+	&__butter-mask
+		position absolute
+		display block
+		z-index 1000
+		@media (orientation: portrait) and (max-width: md)
+			top 0
+			right 0
+			width (65/vm)
+			height (55/vm)
+		@media (orientation: landscape) and (max-width: md)
+			top 0
+			right 0
+			width (28/vm)
+			height (26/vm)
+
+
+	&__list
+		position relative
+		list-style none
+		margin 0
+		display block
+		z-index 100
+
+
+		@media (min-width: md)
+			padding 0 (30/vd)
+
+		@media (max-width: md)
+			float right
+
+		&__item
+			text-decoration none
+			display block
+			@media (min-width: xl)
+				float left
+				margin-right (33/p)
+			@media (min-width: md) and (max-width: xl)
+				float left
+				margin-right (33/vd)
+			@media (max-width: md)
+				text-align right
+				//margin-bottom (14/vm)
+
+
+			&__btn
+				position absolute
+				display none
+				@media (max-width: md)
+					display block
+					background none
+					border none
+					outline 0
+					background-image url("/img/arrow.png")
+					background-repeat no-repeat
+					background-position center
+					@media (orientation: portrait)
+						width (30/vm)
+						height (42/vm)
+						top 0
+						right 0
+					@media (orientation: landscape)
+						width (20/vm)
+						height (18/vm)
+						top 0
+						right 0
+					&_active
+						transform rotate(180deg) !important
+						& + .main-nav__list__item__nesting-list
+							display block !important
+					&:focus
+						outline 0
+
+			&_nesting-list-link
+				position relative
+				// @media (max-width: md)
+				// 	&:after
+				// 		position absolute
+				// 		content ""
+				// 		background url("/img/arrow.png") no-repeat
+				// 		background-size cover
+				// 		@media (orientation: portrait)
+				// 			width (10/vm)
+				// 			height (6/vm)
+				// 			top (18/vm)
+				// 			right (12/vm)
+				// 		@media (orientation: landscape)
+				// 			width (8/vm)
+				// 			height (5/vm)
+				// 			top (7/vm)
+				// 			right (8/vm)
+
+				// 	&_active
+				// 		&:after
+				// 			transform rotate(180deg) !important
+
+				// 		& + .main-nav__list__item__nesting-list
+				// 			display block !important
+
+
+			&__nesting-list
+				@media (min-width: md)
+					display none
+				@media (max-width: md)
+					display none
+					list-style none
+					margin 0
+					padding 0
+					@media (orientation: portrait)
+						padding-right (18/vm)
+					@media (orientation: landscape)
+						padding-right (15/vm)
+
+					&__item
+						a
+							color white
+							@media (orientation: portrait)
+								font-size (20/vm)
+								line-height (30/vm)
+							@media (orientation: landscape)
+								font-size (9/vm)
+								line-height (15/vm)
+							text-transform none
+
+
+			&_call
+				a
+					position relative
+					@media (max-width: md)
+						&:after
+							position absolute
+							content ""
+							background url("/img/phone.png") no-repeat
+							background-size cover
+							@media (orientation: portrait)
+								width (28/vm)
+								height (28/vm)
+								top (7/vm)
+							@media (orientation: landscape)
+								width (12/vm)
+								height (12/vm)
+								top (4/vm)
+							left 0
+
+			&__a
+				text-transform uppercase
+				vertical-align middle
+				display block
+				@media (min-width: xl)
+					font-size (20/r)
+					font-family fontL
+					line-height (150/r)
+				@media (min-width: md) and (max-width: xl)
+					font-size (20/vd)
+					font-family fontL
+					line-height (150/vd)
+				@media  (max-width: md)
+					@media (orientation: portrait)
+						font-size (20/vm)
+						line-height (42/vm)
+						padding-right (30/vm)
+						padding-left (35/vm)
+					@media (orientation: landscape)
+						font-size (10/vm)
+						line-height (18/vm)
+						padding-right (20/vm)
+						padding-left (20/vm)
+					font-family fontSB
+					color white
+					&:hover
+						color color1
+
+			&:last-child
+				@media(min-width: xl)
+					float right
+					& a
+						font-family fontR
+						color color1
+						font-size (25/r)
+				@media (min-width: md) and (max-width: xl)
+					float right
+					& a
+						font-family fontR
+						color color1
+						font-size (25/vd)
+			&_active
+				@media (min-width: xl)
+					border-bottom (3/p) solid color1
+				@media (min-width: md) and (max-width: xl)
+					border-bottom (3/vd) solid color1

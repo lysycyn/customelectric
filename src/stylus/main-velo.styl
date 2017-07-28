@@ -1,0 +1,246 @@
+@require "var.styl"
+
+.main-velo
+	@media (min-width: xl)
+		margin-bottom (70/p)
+	@media (max-width: xl)
+		margin-bottom (114/vd)
+	@media (orientation: portrait) and (max-width: md)
+		margin-bottom (17/vm)
+	@media (orientation: landscape) and (max-width: md)
+		margin-bottom (13/vm)
+
+	& .container
+		@media (max-width: md)
+			padding 0 !important
+
+	& .container_velo
+		@media (min-width: xl)
+			border-top 1px solid rgba(0, 0, 0, 0.2)
+			position relative
+			padding-top (114/p)
+		@media (max-width: xl)
+			border-top (1/vd) solid rgba(0, 0, 0, 0.2)
+			position relative
+			padding-top (114/vd)
+		@media (orientation: portrait) and (max-width: md)
+			border-top (1/vm) solid rgba(0, 0, 0, 0.2)
+			position relative
+			padding-top (18/vm)
+		@media (orientation: landscape) and (max-width: md)
+			border-top (1/vm) solid rgba(0, 0, 0, 0.2)
+			position relative
+			padding-top (15/vm)
+
+	&__title-block
+		position absolute
+		@media (min-width: xl)
+			top (-16/p)
+		@media (min-width: md) and (max-width: xl)
+			top (-16/vd)
+		@media (orientation: portrait) and (max-width: md)
+			top (-8/vm)
+		@media (orientation: landscape) and (max-width: md)
+			top (-6/vm)
+		left 0
+		right 0
+		margin 0 auto
+		text-align center
+
+
+		&__text
+			display inline-block
+			@media (min-width: xl)
+				padding 0 (39/p)
+				font-size (32/r)
+				line-height (32/r)
+			@media (max-width: xl)
+				padding 0 (39/vd)
+				font-size (32/vd)
+				line-height (32/vd)
+			@media (orientation: portrait) and (max-width: md)
+				padding 0 (8/vm)
+				font-size (10/vm)
+			@media (orientation: landscape) and (max-width: md)
+				padding 0 (8/vm)
+				font-size (10/vm)
+			font-family fontR
+			text-transform uppercase
+			background white
+	&__btn
+		text-align center
+		@media (min-width: xl)
+			padding-bottom (35/p)
+		@media (min-width: md) and (max-width: xl)
+			padding-bottom (40/vd)
+		@media (max-width: md)
+			@media (orientation: portrait)
+				padding-bottom (22/vm)
+			@media (orientation: landscape)
+				padding-bottom (14/vm)
+	&__container
+		@media (min-width: md)
+			display flex
+			justify-content space-between
+			flex-flow row wrap
+			-webkit-flex-flow row wrap
+		@media (max-width: md)
+			display block
+
+		&__block
+			@media (min-width: xl)
+				margin-bottom (50/p)
+			@media (min-width: md)
+				width 26%
+				font-size 0
+				margin-bottom (60/vd)
+			@media (orientation: portrait) and (max-width: md)
+				width 100%
+				font-size 0
+				margin-bottom (18/vm)
+			@media (orientation: landscape) and (max-width: md)
+				width 70%
+				font-size 0
+				margin 0 auto
+				margin-bottom (18/vm)
+
+			&__image
+				position relative
+				@media (min-width: xl)
+					margin-bottom (37/p)
+				@media (max-width: xl)
+					margin-bottom (37/vd)
+				@media (orientation: portrait) and (max-width: md)
+					margin-bottom (7/vm)
+				@media (orientation: landscape) and (max-width: md)
+					margin-bottom (7/vm)
+
+				&:hover &__mask
+					@media (min-width: md)
+						display block
+
+				& img
+					width 100%
+
+				&__mask
+					display none
+					position absolute
+					background rgba(0, 0, 0, 0.5)
+					top 0
+					left 0
+					bottom 0
+					right 0
+
+					@media (min-width: xl)
+						padding (45/p) (35/p)
+						font-size (20/r)
+					@media (max-width: xl)
+						padding (45/vd) (35/vd)
+						font-size (20/vd)
+					@media (orientation: portrait) and (max-width: md)
+						padding (40/vm) (25/vm)
+					@media (orientation: landscape) and (max-width: md)
+						padding (30/vm) (20/vm)
+
+					&_active-mobile
+						@media (max-width: md)
+							display block
+
+					&__title
+						display block
+						text-align center
+						font-family fontSB
+						@media (min-width: xl)
+							font-size (20/r)
+							margin-bottom (37/p)
+						@media (max-width: xl)
+							font-size (20/vd)
+							margin-bottom (37/vd)
+
+						@media (orientation: portrait) and (max-width: md)
+							font-size (22/vm)
+							margin-bottom (25/vm)
+						@media (orientation: landscape) and (max-width: md)
+							font-size (15/vm)
+							margin-bottom (15/vm)
+						text-transform uppercase
+						color color1
+
+
+					&__text
+						color white
+						font-family fontL
+						@media (min-width: xl)
+							font-size (20/r)
+							line-height (24/r)
+							margin-bottom (35/p)
+						@media (max-width: xl)
+							font-size (20/vd)
+							line-height (24/vd)
+							margin-bottom (35/vd)
+						@media (orientation: portrait) and (max-width: md)
+							font-size (14/vm)
+							line-height (17/vm)
+							margin-bottom (30/vm)
+						@media (orientation: landscape) and (max-width: md)
+							font-size (10/vm)
+							line-height (13/vm)
+							margin-bottom (17/vm)
+
+
+					&__link-block
+						@media (min-width: md)
+							text-align center
+						@media (orientation: portrait) and (max-width: md)
+							text-align center
+						@media (orientation: landscape) and (max-width: md)
+							text-align center
+
+
+			&__title
+				display block
+				text-align center
+				@media (min-width: xl)
+					font-size (25/r)
+				@media (max-width: xl)
+					font-size (25/vd)
+				@media (orientation: portrait) and (max-width: md)
+					font-size (12/vm)
+				@media (orientation: landscape) and (max-width: md)
+					font-size (10/vm)
+				font-family fontR
+
+				&:hover
+					color color1
+
+
+			&__title:hover + &__image__mask
+				display block
+		&__price
+			color black
+			text-align center
+			@media (min-width: xl)
+				padding-top (25/p)
+				font-size (35/p)
+			@media (max-width: xl)
+				padding-top (25/vd)
+				font-size (35/vd)
+			@media (orientation: portrait) and (max-width: md)
+				padding-top (15/vm)
+				font-size (20/vm)
+			@media (orientation: landscape) and (max-width: md)
+				padding-top (10/vm)
+				font-size (15/vm)
+			&:after
+				content "₽"
+				display inline-block
+				padding-left 5px
+				@media (min-width: xl)
+					font-size (35/p)
+				@media (max-width: xl)
+					font-size (35/vd)
+				@media (max-width: md)
+					@media (orientation: portrait)
+						font-size (20/vm)
+					@media (orientation: landscape)
+						font-size (15/vm)

@@ -1,0 +1,123 @@
+@require "var.styl"
+
+.main-preview
+
+	position relative
+	z-index 2
+	@media (min-width: xl)
+		background url("/img/preview_bg.jpg") 0 40% no-repeat
+		height (900/p)
+		margin-bottom (90/p)
+		background-size cover
+	@media (min-width: md) and (max-width: xl)
+		background url("/img/preview_bg.jpg") 0 40% no-repeat
+		height (900/vd)
+		margin-bottom (90/vd)
+		background-size cover
+	@media (max-width: md)
+		background url("/img/preview_bg.jpg") 50% 40% no-repeat
+		@media (orientation: portrait)
+			height (350/vm)
+			margin-bottom (20/vm)
+		@media (orientation: landscape)
+			height (160/vm)
+			margin-bottom (10/vm)
+		background-size cover
+
+
+	& .container
+		position relative
+		z-index 1
+		@media (min-width: xl)
+			padding-top (111/p)
+		@media (min-width: md) and (max-width: xl)
+			padding-top (111/vd)
+		@media (orientation: portrait) and (max-width: md)
+			padding-top (35/vm)
+		@media (orientation: landscape) and (max-width: md)
+			padding-top (11/vm)
+
+
+	&:after
+		position absolute
+		top 0
+		left 0
+		height 100%
+		width 100%
+		@media (min-width: md)
+			background rgba(0, 0, 0, 0.5)
+		@media (orientation: portrait) and (max-width: md)
+			background rgba(0, 0, 0, 0.5)
+		@media (orientation: landscape) and (max-width: md)
+			background rgba(0, 0, 0, 0.6)
+		content ""
+
+	&__title
+		text-transform uppercase
+		@media (min-width: xl)
+			font-size (34/p)
+			margin-bottom (90/p)
+		@media (min-width: md) and (max-width: xl)
+			font-size (34/vd)
+			margin-bottom (90/vd)
+		@media (orientation: portrait) and (max-width: md)
+			font-size (16/vm)
+			margin-bottom (32/vm)
+		@media (orientation: landscape) and (max-width: md)
+			font-size (12/vm)
+			margin-bottom (12/vm)
+		font-family fontR
+		color white
+
+
+	&__line
+		display block
+		height 2px
+		@media (min-width: xl)
+			width (178/p)
+
+			margin-bottom (90/p)
+		@media (min-width: md) and (max-width: xl)
+			width (178/vd)
+
+			margin-bottom (90/vd)
+		@media (orientation: portrait) and (max-width: md)
+			width (89/vm)
+
+			margin-bottom (30/vm)
+		@media (orientation: landscape) and (max-width: md)
+			width (55/vm)
+
+			margin-bottom (8/vm)
+		background color1
+		border 0
+		outline 0
+		margin 0
+
+
+	&__text
+		@media (min-width: xl)
+			width (740/p)
+			line-height (30/r)
+			font-size (25/r)
+			margin-bottom (115/p)
+			font-family fontSB
+		@media (min-width: md) and (max-width: xl)
+			width (640/vd)
+			line-height (30/vd)
+			font-size (25/vd)
+			margin-bottom (115/vd)
+			font-family fontSB
+		@media (orientation: portrait) and (max-width: md)
+			width 100%
+			line-height (14/vm)
+			font-size (12/vm)
+			margin-bottom (42/vm)
+			font-family fontL
+		@media (orientation: landscape) and (max-width: md)
+			width 100%
+			line-height (11/vm)
+			font-size (9/vm)
+			margin-bottom (15/vm)
+			font-family fontL
+		color white

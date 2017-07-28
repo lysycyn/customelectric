@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Custom-electric.ru</title>
+  <link rel="shortcut icon" href="/img/favicon.ico"/>
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+</head>
+<body>
+  <nav id="header" class="main-header clearfix">
+    <div class="container">
+      <div id="nav" class="main-nav">
+        <div id="menu-button-mask" class="main-nav__butter-mask"></div>
+        <ul is="nav-list" class="main-nav__list">
+          <li class="main-nav__list__item main-nav__list__item_active"><a class="main-nav__list__item__a" href="/">Характеристики</a></li>
+          <li id="nav-list-nesting" class="main-nav__list__item main-nav__list__item_nesting-list-link">
+
+          <a id="nesting-list-link" class="main-nav__list__item__a " href="products.html">Комплектации</a>
+          <button id="js-nesting-list-btn" class="main-nav__list__item__btn"></button>
+            <ul class="main-nav__list__item__nesting-list">
+              <li class="main-nav__list__item__nesting-list__item"><a href="item1.html">Комплектация 1</a></li>
+              <li class="main-nav__list__item__nesting-list__item"><a href="item1.html">Комплектация 2</a></li>
+              <li class="main-nav__list__item__nesting-list__item"><a href="item1.html">Комплектация 3</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__list__item"><a class="main-nav__list__item__a" href="gallery.html">Галерея</a></li>
+          <li class="main-nav__list__item"><a class="main-nav__list__item__a" href="rental.html">Прокат</a></li>
+          <li class="main-nav__list__item main-nav__list__item_call"><a id="ticket-form-mobile" class="main-nav__list__item__a js-outer-form" href="#ticket-form">Заказать <span class="hide-mobile">обратный</span> звонок</a></li>
+        </ul>
+      </div>
+      <div class="main-header__phone">
+        <a class="js-phone-button" href="#ticket-form"><img src="/img/phone.png" alt="Обратный звонок"></a>
+      </div>
+      <div class="main-header__logo">
+        <a class="main-header__logo1" href="#"><img src="/img/logo.png" alt="Custom-electric.ru"></a>
+      </div>
+      <div class="main-header__butter-button">
+        <svg id="menu-button">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#butter"></use>
+        </svg>
+      </div>
+    </div>
+  </nav>
+  <div class="header-margin-block"></div>
+  <section class="rental-container">
+    
+      <h1 class="rental-title">Прокат велосипедов</h1>
+      <h2 class="rental-addresses-city">г. Сочи, Курортный район Имеретинский</h2>
+      <div class="rental-block">
+        <div class="rental-addresses">
+          <div class="rental-address" onClick="toggleMap(myPlacemark1); return false;">
+            <p class="rental-address__title">г. Сочи, Курортный район Имеретинский</p>
+            <p class="rental-address__text">ул. Парусная, д.11, корп.6.6</p>
+            <p class="rental-address__phone">Тел. <a href="tel:+79186772201" title="телефон">+7 (918) 677-22-01</a></p>
+          </div>
+          <div class="rental-address" onClick="toggleMap(myPlacemark); return false;">
+            <p class="rental-address__title">г. Сочи, Курортный район Имеретинский</p>
+            <p class="rental-address__text">ул. Парусная, д.39, корп.2.4</p>
+            <p class="rental-address__phone">Тел. <a href="tel:+79186772201" title="телефон">+7 (918) 677-22-01</a></p>
+          </div>  
+        </div>
+        <div id="map1" class="rental-map">
+        </div>
+      </div>    
+    
+  </section>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="main-footer__block main-footer__block_social">
+        <a class="social-item social-item_in social-item_footer" href="https://www.instagram.com/kuzmen_custom.electric/">/kuzmen_custom.electric</a>
+        <a class="social-item social-item_in social-item_footer" href="https://www.instagram.com/custom.electric/">/custom.electric</a>
+      </div>
+      <div class="main-footer__block main-footer__block_logo">
+        <img src="/img/logo.png" alt="Custom-electric.ru">
+      </div>
+      <div class="main-footer__block">
+
+        <a href="tel:+79851876634" class="main-footer__block__phone" title="телефон">+7 (985) 187 66 34</a>
+        <a href="tel:+79851876634" class="main-footer__block__phone" title="телефон">+7 (985) 187 66 34</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="rental-form-outer" class="form-outer"></div>
+  <div id="rental-form-outer-container" class="form-outer-container">
+    <a id="rental-form-close" class="form-outer-btn"></a>
+    <form id="ticket-form" class="form" action="">
+      <div class="form__block">
+        <input id="form_name" type="text" placeholder="Введите имя *">
+        <input id="form_phone" class="phone-mask" type="text" placeholder="Введите телефон *">
+        <textarea rows="2" name="message" id="form_message-rental" cols="30" placeholder="Введите сообщение"></textarea>
+      </div>
+      <div class="form__submit">
+        <input type="submit" class="form__submit__button" value="Заказать звонок">
+      </div>
+    </form>
+  </div>
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script type="text/javascript">
+    // $(document).ready(function() {
+    ymaps.ready(init);
+    var myMap;
+
+
+    function init() {
+      myMap = new ymaps.Map('map1', {
+        center: [43.409032236602854,39.940674],
+        zoom: 15,
+        controls: ['zoomControl', 'typeSelector',  'fullscreenControl'],
+      });
+
+      myPlacemark = new ymaps.Placemark([43.40537407453411,39.94496350000001], {
+        hintContent: '<p>Парусная 39</p>',
+        balloonContent: '<div class="rental-balloon"><p class="rental-balloon-title">Прокат на Парусной 39</p><div class="rental-balloon-content"><div class="rental-balloon-text"><p class="rental-balloon-address">г. Сочи, Курортный район Имеретинский,ул. Парусная, д.39, корп.2.4</p><p class="rental-balloon-phone"><a href="tel:+79186772201" title="телефон">+7 (918) 677-22-01</a></p><p class="rental-balloon-work">10.00-22.00</p></div><div class="rental-balloon-img"><img src="img/rental1.jpg" alt=""></div></div></div>',
+      },
+      {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            iconContent: 'islands#blackBicycle2Icon',
+            // Размеры метки.
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        });
+
+      myPlacemark1 = new ymaps.Placemark([43.41187107455084,39.93644749999997], {
+        hintContent: '<p>Парусная 11</p>',
+        balloonContent: '<div class="rental-balloon"><p class="rental-balloon-title">Прокат на Парусной 11</p><div class="rental-balloon-content"><div class="rental-balloon-text"><p class="rental-balloon-address">г. Сочи, Курортный район Имеретинский,ул. Парусная, д.11, корп.6.6</p><p class="rental-balloon-phone"><a href="tel:+79186772201" title="телефон">+7 (918) 677-22-01</a></p><p class="rental-balloon-work">10.00-22.00</p></div><div class="rental-balloon-img"><img src="img/rental2.jpg" alt=""></div></div></div>',
+      });
+      
+      myMap.geoObjects.add(myPlacemark);
+      myMap.geoObjects.add(myPlacemark1);
+    }
+
+    function toggleMap(myPlace) {
+      var cords = myPlace.geometry._coordinates;
+      
+      myMap.setCenter(cords, 13, {checkZoomRange: true});
+      myPlace.balloon.open();
+    }
+    // });
+  </script>
+  <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="/js/mask.js"></script>
+  <script type="text/javascript" src="/js/sprite.min.js"></script>
+  <script type="text/javascript" src="/js/script.min.js"></script>
+  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aca10567c482a601199695e88ad4b16a5619ed930931890ab30714a61cb8a2ffc&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true;&amp;id=map"></script>
+</body>
+</html>

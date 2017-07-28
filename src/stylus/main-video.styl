@@ -1,0 +1,75 @@
+@require "var.styl"
+
+.main-video
+	@media (min-width: xl)
+		margin-bottom (111/p)
+	@media (min-width: md) and (max-width: xl)
+		margin-bottom (111/vd)
+	@media (orientation: portrait) and (max-width: md)
+		margin-bottom (22/vm)
+	@media (orientation: landscape) and (max-width: md)
+		margin-bottom (20/vm)
+	
+	& .container
+		@media (min-width: xl)
+			padding 0 (180/vd)
+		@media (min-width: md) and (max-width: xl)
+			padding 0 (180/vd)
+		@media (max-width: md)
+			padding 0
+
+	&__frame
+		width 100%
+		@media (min-width: xl)
+			height (857/p)		
+			margin-bottom (33/p)
+		@media (min-width: md) and (max-width: xl)
+			height (857/vd)		
+			margin-bottom (33/vd)
+		@media (orientation: portrait) and (max-width: md)
+			height (177/vm)		
+			margin-bottom (17/vm)
+		@media (orientation: landscape) and (max-width: md)
+			height (140/vm)		
+			margin-bottom (10/vm)
+
+	&__social
+		font-size 0
+		@media (orientation: portrait) and (max-width: md)
+			padding 0 (17/vm)
+			height (28/vm)
+		@media (orientation: landscape) and (max-width: md)
+			padding 0 (17/vm)
+			height (20/vm)
+				
+		&__phone
+			display inline-block
+			float right
+			font-family fontR
+			@media (min-width: xl)
+				font-size (25/r)
+				line-height (42/r)
+				text-transform uppercase
+				color color1
+			@media (min-width: md) and (max-width: xl)
+				font-size (25/vd)
+				line-height (42/vd)
+				text-transform uppercase
+				color color1
+			@media (max-width: md)
+				position relative
+				&:after
+					content ""
+					position absolute
+					@media (orientation: portrait)
+						width (28/vm)
+						height (28/vm)
+					@media (orientation: landscape)
+						width (20/vm)
+						height (20/vm)
+					top 0
+					right 0
+					background url("/img/phone.png") no-repeat
+					background-size cover
+			
+			

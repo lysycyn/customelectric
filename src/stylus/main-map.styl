@@ -1,0 +1,113 @@
+@require "var.styl"
+
+.main-map
+	
+	@media (min-width: md)
+		position relative
+		
+	& .container
+		@media (min-width: xl)
+			position relative
+		@media (max-width: xl)
+			padding 0 !important
+			
+	&__contacts-block
+		display flex
+		@media (min-width: xl)
+			height (974/p)
+		@media (min-width: md) and (max-width: xl)
+			height (974/vd)
+		@media (orientation: portrait) and (max-width: md)
+			height (290/vm)
+		@media (orientation: landscape) and (max-width: md)
+			height (170/vm)
+		&__left
+			@media (min-width: xl)
+				width (550/p)
+				padding 0 (52/p)
+				padding-top (87/p)
+			@media (min-width: md) and (max-width: xl)
+				width (550/vd)
+				padding 0 (52/vd)
+				padding-top (87/vd)
+			@media (orientation: portrait) and (max-width: md)
+				width (150/vm)
+				padding 0 (20/vm)
+				padding-top (29/vm)
+			@media (orientation: landscape) and (max-width: md)
+				width (120/vm)
+				padding 0 (15/vm)
+				padding-top (13/vm)
+			background black
+			
+			box-sizing border-box
+			
+			&__title
+				display block
+				text-align center
+				text-transform uppercase
+				color white
+				@media (min-width: xl)
+					margin-bottom (72/p)
+					font-size (30/r)
+				@media (min-width: md) and (max-width: xl)
+					margin-bottom (72/vd)
+					font-size (36/vd)
+				@media (orientation: portrait) and (max-width: md)
+					margin-bottom (30/vm)
+					font-size (13/vm)
+				@media (orientation: landscape) and (max-width: md)
+					margin-bottom (11/vm)
+					font-size (9/vm)
+				font-family fontR
+			
+			&__category
+				display block
+				color color1
+				font-family fontR
+				@media (min-width: xl)
+					font-size (18/r)
+					margin-bottom (30/p)
+				@media (min-width: md) and (max-width: xl)
+					font-size (20/vd)
+					margin-bottom (30/vd)
+				@media (orientation: portrait) and (max-width: md)
+					font-size (8/vm)
+					margin-bottom (15/vm)
+				@media (orientation: landscape) and (max-width: md)
+					font-size (7/vm)
+					margin-bottom (10/vm)
+				text-align left
+				
+
+			&__contact
+				display block
+				font-family fontL
+				@media (min-width: xl)
+					font-size (20/r)
+					margin-bottom (26/p)
+				@media (min-width: md) and (max-width: xl)
+					font-size (24/vd)
+					margin-bottom (26/vd)
+				@media (orientation: portrait) and (max-width: md)
+					font-size (9/vm)
+					margin-bottom (15/vm)
+				@media (orientation: landscape) and (max-width: md)
+					font-size (9/vm)
+					margin-bottom (8/vm)
+				color white
+				
+		
+		&__map
+			@media (min-width: xl)
+				height (974/p)
+				width (1370/p)
+			@media (min-width: md) and (max-width: xl)
+				height (974/vd)
+				width (1370/vd)
+			@media (orientation: portrait) and (max-width: md)
+				height (290/vm)
+				width (170/vm)
+			@media (orientation: landscape) and (max-width: md)
+				height (170/vm)
+				width (220/vm)

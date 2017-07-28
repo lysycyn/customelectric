@@ -1,0 +1,63 @@
+@require "var.styl"
+
+.main-footer
+	@media (min-width: xl)
+		padding-top (54/p)
+		padding-bottom (51/p)
+	@media (min-width: md) and (max-width: xl)
+		padding-top (54/vd)
+		padding-bottom (51/vd)
+	@media (orientation: portrait) and (max-width: md)
+		padding-top (19/vm)
+		padding-bottom (18/vm)
+	@media (orientation: landscape) and (max-width: md)
+		padding-top (8/vm)
+		padding-bottom (7/vm)
+	
+
+	.container
+		display flex
+		align-items center
+		justify-content space-between
+		box-sizing border-box
+		@media (min-width: xl)
+			padding 0 (180/p)
+		@media (min-width: md) and (max-width: xl)
+			padding 0 (180/vd)
+	
+
+	&__block
+		width 33.3%
+
+		&_logo
+			text-align center
+					
+			& img
+				@media (min-width: xl)
+					width (180/p)
+				@media (min-width: md) and (max-width: xl)
+					width (180/vd)
+				@media (orientation: portrait) and (max-width: md)
+					width (60/vm)
+					height (54/vm)
+				@media (orientation: landscape) and (max-width: md)
+					width (35/vm)
+					
+		
+		&__phone
+			display block
+			text-align right
+			
+			font-family fontL
+			@media (min-width: xl)
+				margin-bottom (26/p)
+			@media (min-width: md) and (max-width: xl)
+				margin-bottom (26/vd)
+			@media (orientation: portrait) and (max-width: md)
+				margin-bottom (12/vm)
+				font-size (12/vm)
+			@media (orientation: landscape) and (max-width: md)
+				margin-bottom (12/vm)
+				font-size (9/vm)
+			&:last-child
+				margin-bottom 0
