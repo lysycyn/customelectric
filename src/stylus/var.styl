@@ -4,11 +4,19 @@ vm = (320/100)vw
 
 mob = 785px
 desc = 786px
-d = 1280px
-r=20rem
+d1 = 1280px
+r=16rem
 
-p = round((1920/d))
+p = (1920/d1)
 
+px(r)
+  round(r/p)
+d(r)
+  round((r/vd), 1)
+m(r)
+  round((r/vm), 1)
+rem(d)
+  round((d/r), 1)
 
 color1 = #00B8D4
 color2 = #EEEDED

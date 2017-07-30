@@ -14,11 +14,11 @@
 		position relative
 		z-index 1000
 		@media (orientation: portrait) and (max-width: md)
-			padding-top (7/vm)
-			padding-bottom (7/vm)
+			padding-top m(7)
+			padding-bottom m(7)
 		@media (orientation: landscape) and (max-width: md)
-			padding-top (2/vm)
-			padding-bottom (2/vm)
+			padding-top m(2)
+			padding-bottom m(2)
 		@media (max-width: md)
 			display flex
 			align-items center
@@ -27,14 +27,14 @@
 	&__logo
 		@media (min-width: xl)
 			position absolute
-			top (10/r)
+			top rem(10)
 			left 0
 			right 0
 			margin 0 auto
 			z-index 50
 		@media (min-width: md) and (max-width: xl)
 			position absolute
-			top (15/vd)
+			top d(15)
 			left 0
 			right 0
 			margin 0 auto
@@ -46,14 +46,14 @@
 
 		& img
 			@media (min-width: xl)
-				width (150/vd)
+				width d(150)
 				max-width (1280/1920)*150px
 			@media (min-width: md) and (max-width: xl)
-				width (135/vd)
+				width d(135)
 			@media (orientation: portrait) and (max-width: md)
-				width (55/vm)
+				width m(55)
 			@media (orientation: landscape) and (max-width: md)
-				width (24/vm)
+				width m(24)
 
 
 	&__phone
@@ -65,9 +65,9 @@
 			width 33.3%
 			& img
 				@media (orientation: portrait) and (max-width: md)
-					width (28/vm)
+					width m(28)
 				@media (orientation: landscape) and (max-width: md)
-					width (16/vm)
+					width m(16)
 
 	&__butter-button
 		@media (min-width: md)
@@ -78,33 +78,33 @@
 			width 33.3%
 			& img
 				@media (orientation: portrait) and (max-width: md)
-					width (44/vm)
-					height (20/vm)
+					width m(44)
+					height m(20)
 				@media (orientation: landscape) and (max-width: md)
-					width (18/vm)
-					height (9/vm)
+					width m(18)
+					height m(9)
 			& svg
 				@media (max-width: md)
 					fill none
 					stroke color1
 					stroke-width 2px
 					@media (orientation: portrait)
-						width (44/vm)
-						height (20/vm)
+						width m(44)
+						height m(20)
 					@media (orientation: landscape)
-						width (18/vm)
-						height (9/vm)
+						width m(18)
+						height m(9)
 
 
 .header-margin-block
 	@media (min-width: xl)
-		height (151/r)
+		height rem(151)
 	@media (min-width: md) and (max-width: xl)
-		height (151/vd)
+		height d(151)
 	@media (orientation: portrait) and (max-width: md)
-		height (62/vm)
+		height m(62)
 	@media (orientation: landscape) and (max-width: md)
-		height (26/vm)
+		height m(26)
 
 .fixed
 	background rgba(0,0,0, 0.7)
@@ -120,24 +120,24 @@
 .small_header
 	& .main-nav__list__item__a
 		@media (min-width: xl)
-			line-height (80/p) !important
+			line-height px(80) !important
 		@media (min-width: md) and (max-width: xl)
-			line-height (80/vd) !important
+			line-height d(80) !important
 	& .main-header__logo
 		@media (min-width: xl)
-			top (5/r)
+			top rem(5)
 		@media (min-width: md) and (max-width: xl)
-			top (5/vd)
+			top d(5)
 		& img
 			@media (min-width: xl)
-				width (80/vd) !important
-				max-width (1280/1920)*80px !important
+				width d(80) !important
+				max-width px(80) !important
 			@media (min-width: md) and (max-width: xl)
-				width (80/vd) !important
+				width d(80) !important
 			@media (orientation: portrait) and (max-width: md)
-				width (35/vm) !important
+				width m(35) !important
 			@media (orientation: landscape) and (max-width: md)
-				width (20/vm) !important
+				width m(20) !important
 
 .main-nav
 	transition all 0.5s ease
@@ -150,12 +150,12 @@
 		@media (orientation: portrait)
 			height 1000px
 			width 90%
-			padding-top (52/vm)
+			padding-top m(52)
 			right -100%
 		@media (orientation: landscape)
 			height 1000px
 			width 90%
-			padding-top (20/vm)
+			padding-top m(20)
 			right -100%
 		&_active
 			display block
@@ -172,13 +172,13 @@
 		@media (orientation: portrait) and (max-width: md)
 			top 0
 			right 0
-			width (65/vm)
-			height (55/vm)
+			width m(65)
+			height m(55)
 		@media (orientation: landscape) and (max-width: md)
 			top 0
 			right 0
-			width (28/vm)
-			height (26/vm)
+			width m(28)
+			height m(26)
 
 
 	&__list
@@ -190,7 +190,7 @@
 
 
 		@media (min-width: md)
-			padding 0 (30/vd)
+			padding 0 d(30)
 
 		@media (max-width: md)
 			float right
@@ -200,14 +200,12 @@
 			display block
 			@media (min-width: xl)
 				float left
-				margin-right (33/p)
+				margin-right px(33)
 			@media (min-width: md) and (max-width: xl)
 				float left
-				margin-right (33/vd)
+				margin-right d(33)
 			@media (max-width: md)
 				text-align right
-				//margin-bottom (14/vm)
-
 
 			&__btn
 				position absolute
@@ -221,13 +219,13 @@
 					background-repeat no-repeat
 					background-position center
 					@media (orientation: portrait)
-						width (30/vm)
-						height (42/vm)
+						width m(30)
+						height m(42)
 						top 0
 						right 0
 					@media (orientation: landscape)
-						width (20/vm)
-						height (18/vm)
+						width m(20)
+						height m(18)
 						top 0
 						right 0
 					&_active
@@ -239,30 +237,6 @@
 
 			&_nesting-list-link
 				position relative
-				// @media (max-width: md)
-				// 	&:after
-				// 		position absolute
-				// 		content ""
-				// 		background url("/img/arrow.png") no-repeat
-				// 		background-size cover
-				// 		@media (orientation: portrait)
-				// 			width (10/vm)
-				// 			height (6/vm)
-				// 			top (18/vm)
-				// 			right (12/vm)
-				// 		@media (orientation: landscape)
-				// 			width (8/vm)
-				// 			height (5/vm)
-				// 			top (7/vm)
-				// 			right (8/vm)
-
-				// 	&_active
-				// 		&:after
-				// 			transform rotate(180deg) !important
-
-				// 		& + .main-nav__list__item__nesting-list
-				// 			display block !important
-
 
 			&__nesting-list
 				@media (min-width: md)
@@ -273,19 +247,19 @@
 					margin 0
 					padding 0
 					@media (orientation: portrait)
-						padding-right (18/vm)
+						padding-right m(18)
 					@media (orientation: landscape)
-						padding-right (15/vm)
+						padding-right m(15)
 
 					&__item
 						a
 							color white
 							@media (orientation: portrait)
-								font-size (20/vm)
-								line-height (30/vm)
+								font-size m(20)
+								line-height m(30)
 							@media (orientation: landscape)
-								font-size (9/vm)
-								line-height (15/vm)
+								font-size m(9)
+								line-height m(15)
 							text-transform none
 
 
@@ -299,13 +273,13 @@
 							background url("/img/phone.png") no-repeat
 							background-size cover
 							@media (orientation: portrait)
-								width (28/vm)
-								height (28/vm)
-								top (7/vm)
+								width m(28)
+								height m(28)
+								top m(7)
 							@media (orientation: landscape)
-								width (12/vm)
-								height (12/vm)
-								top (4/vm)
+								width m(12)
+								height m(12)
+								top m(4)
 							left 0
 
 			&__a
@@ -313,24 +287,24 @@
 				vertical-align middle
 				display block
 				@media (min-width: xl)
-					font-size (20/r)
+					font-size px(20)
 					font-family fontL
-					line-height (150/r)
+					line-height rem(150)
 				@media (min-width: md) and (max-width: xl)
-					font-size (20/vd)
+					font-size d(20)
 					font-family fontL
-					line-height (150/vd)
+					line-height d(150)
 				@media  (max-width: md)
 					@media (orientation: portrait)
-						font-size (20/vm)
-						line-height (42/vm)
-						padding-right (30/vm)
-						padding-left (35/vm)
+						font-size m(20)
+						line-height m(42)
+						padding-right m(30)
+						padding-left m(35)
 					@media (orientation: landscape)
-						font-size (10/vm)
-						line-height (18/vm)
-						padding-right (20/vm)
-						padding-left (20/vm)
+						font-size m(10)
+						line-height m(18)
+						padding-right m(20)
+						padding-left m(20)
 					font-family fontSB
 					color white
 					&:hover
@@ -342,15 +316,15 @@
 					& a
 						font-family fontR
 						color color1
-						font-size (25/r)
+						font-size rem(25)
 				@media (min-width: md) and (max-width: xl)
 					float right
 					& a
 						font-family fontR
 						color color1
-						font-size (25/vd)
+						font-size d(25)
 			&_active
 				@media (min-width: xl)
-					border-bottom (3/p) solid color1
+					border-bottom 2px solid color1
 				@media (min-width: md) and (max-width: xl)
-					border-bottom (3/vd) solid color1
+					border-bottom 2px solid color1

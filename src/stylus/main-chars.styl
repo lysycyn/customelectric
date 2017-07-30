@@ -3,14 +3,14 @@
 
 .main-chars
 	@media (min-width: xl)
-		margin-bottom (140/p)
+		margin-bottom px(140)
 	@media (min-width: md) and (max-width: xl)
-		margin-bottom (186/vd)
+		margin-bottom d(186)
 	@media (orientation: portrait) and (max-width: md)
-		margin-bottom (25/vm)
+		margin-bottom m(25)
 	@media (orientation: landscape) and (max-width: md)
-		margin-bottom (20/vm)
-	
+		margin-bottom m(20)
+
 	& .container
 		@media (max-width: md)
 			padding 0 !important
@@ -18,78 +18,78 @@
 	& .container_chars
 		@media (min-width: xl)
 			border-top 1px solid rgba(0, 0, 0, 0.4)
-			padding-top (80/p)	
+			padding-top px(80)
 		@media (min-width: md) and (max-width: xl)
-			border-top (1/vd) solid rgba(0, 0, 0, 0.4)
-			padding-top (80/vd)	
+			border-top 1px solid rgba(0, 0, 0, 0.4)
+			padding-top d(80)
 		@media (orientation: portrait) and (max-width: md)
-			border-top (1/vm) solid rgba(0, 0, 0, 0.4)
-			padding-top (27/vm)	
+			border-top 1px solid rgba(0, 0, 0, 0.4)
+			padding-top m(27)
 		@media (orientation: landscape) and (max-width: md)
-			border-top (1/vm) solid rgba(0, 0, 0, 0.4)
-			padding-top (20/vm)	
+			border-top 1px solid rgba(0, 0, 0, 0.4)
+			padding-top m(20)
 		position relative
-		
-	
+
+
 	&__title-block //.main-chars__title-block
 		position absolute
 		@media (min-width: xl)
-			top (-16/p)
+			top px(-16)
 		@media (min-width: md) and (max-width: xl)
-			top (-16/vd)
+			top px(-16)
 		@media (orientation: portrait) and (max-width: md)
-			top (-8/vm)
+			top m(-8)
 		@media (orientation: landscape) and (max-width: md)
-			top (-6/vm)
+			top m(-6)
 		left 0
 		right 0
 		margin 0 auto
 		text-align center
-		
-		
+
+
 		&__text //.main-chars__title-block__text
-			font-family fontR	
+			font-family fontR
 			display inline-block
 			@media (min-width: xl)
-				padding 0 (39/p)
-				font-size (32/r)
+				padding 0 px(39)
+				font-size rem(32)
 			@media (min-width: md) and (max-width: xl)
-				padding 0 (39/vd)
-				font-size (32/vd)
+				padding 0 d(39)
+				font-size d(32)
 			@media (orientation: portrait) and (max-width: md)
-				padding 0 (8/vm)
-				font-size (10/vm)
+				padding 0 m(8)
+				font-size m(10)
 			@media (orientation: landscape) and (max-width: md)
-				padding 0 (8/vm)
-				font-size (10/vm)
+				padding 0 m(8)
+				font-size m(10)
 			text-transform uppercase
 			background white
-	
+
 	&__features //.main-chars__features
 		@media (min-width: xl)
 			width 100%
-			height (1000/p)
+			height px(1000)
 			background url('/img/main-velo.jpg') no-repeat
-			background-size cover	
+			background-size cover
 			margin-bottom (45/p)
 		@media (min-width: md) and (max-width: xl)
 			width 100%
 			height (1000/vd)
 			background url('/img/main-velo.jpg') no-repeat
-			background-size cover	
+			background-size cover
 			margin-bottom (45/vd)
 		@media (max-width: md)
 			width 100%
 			background url('/img/main-velo.jpg') 55% 10% no-repeat
 			@media (orientation: portrait)
 				height (325/vm)
-				background-size 180% 
+				background-size 180%
 			@media (orientation: landscape)
 				height (180/vm)
-				background-size 120% 
+				background-size 120%
 		position relative
 		z-index 15
-		
+
 		&:after
 			position absolute
 			display block
@@ -99,7 +99,7 @@
 			bottom 0
 			top 0
 			background rgba(0, 0, 0, .4)
-			
+
 		&__wrapper //.main-chars__features__wrapper
 			display none
 			position absolute
@@ -120,14 +120,14 @@
 				right 0
 				background rgba(0, 0, 0, 0.6)
 				z-index 500
-				
-			
-				
-				
+
+
+
+
 				& ~.main-chars__features__wrapper__img-block .main-chars__features__wrapper__img-block__close
 					transition transform 1s
 					transform rotate(90deg)
-					
+
 
 			&__img-block //.main-chars__features__wrapper__img-block
 				display none
@@ -149,7 +149,7 @@
 					width (250/vm)
 					height (120/vm)
 				z-index 600
-				
+
 				&:hover //~.main-chars__features__wrapper
 					cursor default !important
 
@@ -193,9 +193,9 @@
 						right (-10/vm)
 						width (8/vm)
 						height (8/vm)
-					
-						
-						
+
+
+
 
 				&__title //.main-chars__features__wrapper__img-block__title
 					position relative
@@ -214,7 +214,7 @@
 					text-align center
 					z-index 2
 
-				&:after 
+				&:after
 					position absolute
 					content ""
 					@media (min-width: xl)
@@ -231,9 +231,9 @@
 					bottom 0
 					top 0
 					z-index 1
-				
-					
-				
+
+
+
 				&_1
 					background url("/img/feature1.jpg") no-repeat
 					background-size cover
@@ -265,8 +265,8 @@
 					@media (orientation: landscape) and (max-width: md)
 						left (20/vm)
 						top (35/vm)
-					
-				
+
+
 				&_3
 					background url("/img/feature3.jpg") no-repeat
 					background-size cover
@@ -282,8 +282,8 @@
 					@media (orientation: landscape) and (max-width: md)
 						left (10/vm)
 						top (20/vm)
-					
-				
+
+
 				&_4
 					background url("/img/feature4.jpg") no-repeat
 					background-size cover
@@ -299,8 +299,8 @@
 					@media (orientation: landscape) and (max-width: md)
 						left (20/vm)
 						top (25/vm)
-					
-				
+
+
 				&_5
 					background url("/img/feature5.jpg") no-repeat
 					background-size cover
@@ -316,7 +316,7 @@
 					@media (orientation: landscape) and (max-width: md)
 						left (20/vm)
 						top (25/vm)
-					
+
 		&__a //.main-chars__features__a
 			position absolute
 			display inline-block
@@ -339,10 +339,10 @@
 				line-height (20/vm)
 				font-size (12/vm)
 				padding-left (25/vm)
-			vertical-align middle	
+			vertical-align middle
 			font-family fontSB
 			cursor pointer
-			
+
 			&:after //.main-chars__features__links-block__a:after
 				position absolute
 				display block
@@ -369,11 +369,11 @@
 					height (20/vm)
 					border (2/vm) solid color1
 					border-radius (10/vm)
-				box-sizing border-box 
+				box-sizing border-box
 
 			&:hover //.main-chars__features__links-block__a:hover
 				color white
-				
+
 			&:hover:after //.main-chars__features__links-block__a:hover:after
 				@media (min-width: xl)
 					border 4px solid white
@@ -383,10 +383,10 @@
 					border (3/vm) solid white
 				@media (orientation: landscape) and (max-width: md)
 					border (2/vm) solid white
-			
-					
+
+
 			&.active //.main-chars__features__links-block__a .active
-				 
+
 				color white
 				&:before //.main-chars__features__links-block__a .active:before
 					position absolute
@@ -433,10 +433,10 @@
 						border (3/vm) solid white
 					@media (orientation: landscape) and (max-width: md)
 						border (2/vm) solid white
-				
+
 				& ~.main-chars__features__wrapper
 					display block !important
-			
+
 
 
 			&_1
@@ -459,8 +459,8 @@
 						top (6/vm) !important
 
 				//&:hover ~.main-chars__features__wrapper + .main-chars__features__wrapper__img-block_1
-				//display block				
-			
+				//display block
+
 			&_2
 				@media (min-width: xl)
 					left (740/p)
@@ -477,12 +477,12 @@
 					&:before
 						left (6/vm) !important
 						top (6/vm) !important
-					
 
-				
+
+
 				&:hover ~.main-chars__features__block__img_2
 					display block
-					
+
 			&_3
 				@media (min-width: xl)
 					left (1215/p)
@@ -493,30 +493,30 @@
 				@media (orientation: portrait) and (max-width: md)
 					left (210/vm)
 					top (220/vm)
-					
+
 					&:after
 						left (75/vm)
 						top (-23/vm)
 					&:before
 						left (84/vm) !important
 						top (-14/vm) !important
-						
+
 				@media (orientation: landscape) and (max-width: md)
 					left (220/vm)
 					top (140/vm)
-					
+
 					&:after
 						left (25/vm)
 						top (-20/vm)
 					&:before
 						left (31/vm) !important
 						top (-14/vm) !important
-				
+
 				&:hover ~.main-chars__features__block__img_3
 					display block
-				
-				
-			
+
+
+
 			&_4
 				@media (min-width: xl)
 					left (960/p)
@@ -527,28 +527,28 @@
 				@media (orientation: portrait) and (max-width: md)
 					left (100/vm)
 					top (200/vm)
-					
+
 					&:after
 						left (95/vm)
 						top 0
 					&:before
 						left (104/vm) !important
 						top (9/vm) !important
-				
+
 				@media (orientation: landscape) and (max-width: md)
 					left (100/vm)
 					top (130/vm)
-					
+
 					&:after
 						left (85/vm)
 						top 0
 					&:before
 						left (91/vm) !important
 						top (6/vm) !important
-						
+
 				&:hover ~.main-chars__features__block__img_4
 					display block
-			
+
 			&_5
 				@media (min-width: xl)
 					left (570/p)
@@ -571,15 +571,15 @@
 					display block
 	&__table
 		width 100%
-		
+
 		&__title
-			
+
 			position relative
 			font-family fontR
 			margin 0 auto !important
 			display table
-			
-	
+
+
 			@media (min-width: xl)
 				font-size (28/r)
 				padding-right (35/p)
@@ -590,27 +590,27 @@
 				display block
 				position absolute
 				right 0
-				
+
 				font-size 0
 				background url("/img/arrow.png") no-repeat
 				background-size cover
 				transition transform 0.5s
 				@media (min-width: xl)
-					top (10/p)
-					width (26/p)
-					height (16/p)
+					top px(10)
+					width px(26)
+					height px(16)
 					&:hover
 						cursor pointer
 				@media (min-width: md) and (max-width: xl)
-					top (10/vd)
-					width (26/vd)
-					height (16/vd)
+					top d(10)
+					width d(26)
+					height d(16)
 					&:hover
 						cursor pointer
 				&_active
 					transition transform 0.5s
 					transform rotate(180deg)
-					
+
 		&__block
 			display none
 			&_active
@@ -618,17 +618,16 @@
 					display flex
 				@media (orientation: portrait) and (max-width: md)
 					display block
-			
+
 			@media (min-width: desc)
-				padding-top (50/vd)
+				padding-top d(50)
 			&__right
 				font-size 0
 				text-align center
 				@media (min-width: desc)
 					width 45%
 					& img
-						width (400/vd)
+						width d(400)
 			&__left
 				@media (min-width: desc)
 					width 55%
-				

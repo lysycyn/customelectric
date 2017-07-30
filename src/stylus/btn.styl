@@ -8,24 +8,24 @@
 	@media (min-width: xl)
 		border 1px solid color1
 	@media (min-width: md) and (max-width: xl)
-		border (1/vd) solid color1
+		border 1px solid color1
 	@media (max-width: md)
-		border (1/vm) solid color1
+		border 1px solid color1
 
 	&_main
 		display inline-block
 		@media (min-width: xl)
-			font-size (20/r)
-			padding (25/p) (50/p)
+			font-size rem(20)
+			padding px(25) px(50)
 		@media (min-width: md) and (max-width: xl)
-			font-size (20/vd)
-			padding (25/vd) (50/vd)
+			font-size rem(20)
+			padding d(25) d(50)
 		@media (orientation: portrait) and (max-width: md)
-			font-size (10/vm)
-			padding (13/vm) (33/vm)
+			font-size m(10)
+			padding m(13) m(33)
 		@media (orientation: landscape) and (max-width: md)
-			font-size (9/vm)
-			padding (7/vm) (14/vm)
+			font-size m(9)
+			padding m(7) m(14)
 		color white
 		&:hover
 			background rgba(0, 229, 255, 0.4)
@@ -37,27 +37,25 @@
 			border 1px solid black
 			color white
 
-
-
 	&_buy
 		display inline-block
 		margin 0 auto
 		@media (min-width: xl)
-			font-size (20/r)
-			padding (17/p) (55/p)
+			font-size rem(20)
+			padding px(17) px(55)
 			&:hover
 				background rgba(0, 229, 255, 0.4)
 		@media (min-width: md) and (max-width: xl)
-			font-size (20/vd)
-			padding (17/vd) (55/vd)
+			font-size d(20)
+			padding d(17) d(55)
 			&:hover
 				background rgba(0, 229, 255, 0.4)
 		@media (orientation: portrait) and (max-width: md)
-			font-size (13/vm)
-			padding (13/vm) (33/vm)
+			font-size m(13)
+			padding m(13) m(33)
 		@media (orientation: landscape) and (max-width: md)
-			font-size (9/vm)
-			padding (7/vm) (14/vm)
+			font-size m(9)
+			padding M(7) m(14)
 		color white
 
 	&_gal
@@ -65,27 +63,27 @@
 		margin 0 auto
 		text-align center
 		@media (min-width: xl)
-			font-size (20/r)
-			padding (17/p) 0
-			margin-bottom (25/p)
+			font-size rem(20)
+			padding px(17) 0
+			margin-bottom px(25)
 			&:last-child
 				margin-botom 0
 			&:hover
 				background rgba(0, 229, 255, 0.4)
 		@media (min-width: md) and (max-width: xl)
-			font-size (20/vd)
-			padding (17/vd) 0
-			margin-bottom (25/vd)
+			font-size d(20)
+			padding d(17) 0
+			margin-bottom d(25)
 			&:last-child
 				margin-botom 0
 			&:hover
 				background rgba(0, 229, 255, 0.4)
 		@media (orientation: portrait) and (max-width: md)
-			font-size (10/vm)
-			padding (4/vm) 0
-			margin-bottom (10/vm)
+			font-size m(10)
+			padding m(4) 0
+			margin-bottom m(10)
 		@media (orientation: landscape) and (max-width: md)
-			font-size (8/vm)
-			padding (7/vm) 0
-			margin-bottom (7/vm)
+			font-size m(8)
+			padding m(7) 0
+			margin-bottom m(7)
 		color white

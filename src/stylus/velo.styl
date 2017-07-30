@@ -2,90 +2,87 @@
 
 .velo-container
 	@media (min-width: xl)
-		padding-top (100/p)
-		margin-bottom (70/p)
+		padding-top px(100)
+		margin-bottom px(70)
 	@media (min-width: md) and (max-width: xl)
-		padding-top (111/vd)
-		margin-bottom (70/vd)
+		padding-top d(111)
+		margin-bottom d(70)
 	@media (max-width: md)
 		@media (orientation: portrait)
-			padding-top (10/vm)
-			margin-bottom (20/vm)
+			padding-top m(10)
+			margin-bottom m(20)
 		@media (orientation: landscape)
-			padding-top (10/vm)
-			margin-bottom (12/vm)
-			
+			padding-top m(10)
+			margin-bottom m(12)
+
 	&__title
 		text-align center
 		margin 0
 		padding 0
-		
+
 		font-family fontR
 		text-transform uppercase
 		@media (min-width: xl)
-			font-size (32/r)
-			margin-bottom (65/p)
+			font-size rem(32)
+			margin-bottom px(65)
 		@media (min-width: md) and (max-width: xl)
-			font-size (32/vd)
-			margin-bottom (65/vd)
+			font-size d(32)
+			margin-bottom d(65)
 		@media (max-width: md)
 			@media (orientation: portrait)
-				font-size (12/vm)
-				margin-bottom (15/vm)
+				font-size m(12)
+				margin-bottom m(15)
 			@media (orientation: landscape)
-				font-size (10/vm)
-				margin-bottom (12/vm)
+				font-size m(10)
+				margin-bottom m(12)
 
 .velo
 	display flex
 	flex-flow row wrap
 	-webkit-flex-flow row wrap
-	
 
 	& table
-		
 		border none
 		border-collapse collapse
 		font-family fontR
 		vertical-align top
 		@media(min-width: xl)
 			width 80%
-			font-size (25/p)
-			line-height (50/p)
+			font-size px(25)
+			line-height px(50)
 		@media(min-width: md) and (max-width: xl)
 			width 80%
-			font-size (25/vd)
-			line-height (50/vd)
+			font-size d(25)
+			line-height d(50)
 		@media(max-width: md)
 			width 100%
 			@media(orientation: portrait)
-				line-height (25/vm)
+				line-height m(25)
 			@media(orientation: landscape)
-				line-height (20/vm)
+				line-height m(20)
 		& td
 			width 50%
 			&:last-child
 				text-align right
 			@media(max-width: md)
 				@media(orientation: portrait)
-					padding 0 (5/vm)
-					font-size (12/vm)
+					padding 0 m(5)
+					font-size m(12)
 				@media(orientation: landscape)
-					padding 0 (5/vm)
-					font-size (10/vm)
-			//border-bottom 1px solid color4
+					padding 0 m(5)
+					font-size m(10)
 		& tr
 			@media(min-width: xl)
 				padding 5px 0
 			@media(min-width: md) and (max-width: xl)
-				padding (10/vd) 0
+				padding d(10) 0
 			@media(max-width: md)
 				@media(orientation: landscape)
-					font-size (25/vd)
+					font-size d(25)
 			border-bottom 1px solid color5
 			&:last-child
 				border-bottom none
-	
+
 	&__chars
 		display flex
 		flex-flow row wrap
@@ -93,18 +90,18 @@
 		@media(min-width: xl)
 			width 50%
 			order 1
-			margin-bottom 100px			
+			margin-bottom 100px
 		@media(min-width: md) and (max-width: xl)
 			width 50%
 			order 1
-			margin-bottom (90/vd)			
+			margin-bottom d(90)
 		@media(max-width: md)
 			width 100%
 			@media(orientation: portrait)
 				order 3
 			@media(orientation: landscape)
 				order 3
-		
+
 		&__title-chars
 			@media(min-width: xl)
 				display none
@@ -116,12 +113,12 @@
 				text-align center
 				width 40%
 				@media(orientation: portrait)
-					margin-bottom (20/vm)
-					font-size (12/vm)
+					margin-bottom m(20)
+					font-size m(12)
 					order 1
 				@media(orientation: landscape)
-					margin-bottom (12/vm)
-					font-size (10/vm)
+					margin-bottom m(12)
+					font-size m(10)
 					order 1
 			&_active
 				@media(max-width: md)
@@ -130,22 +127,22 @@
 					@media(orientation: portrait)
 						& span
 							display inline-block
-							padding-bottom (5/vm)
+							padding-bottom m(5)
 							border-bottom 1px solid color1
 					@media(orientation: landscape)
 						& span
 							display inline-block
-							padding-bottom (5/vm)
+							padding-bottom m(5)
 							border-bottom 1px solid color1
 		&__table-chars
 			@media(min-width: xl)
 				width 100%
 				order 2
-				margin-bottom 38px				
+				margin-bottom 38px
 			@media(min-width: md) and (max-width: xl)
 				width 100%
 				order 2
-				margin-bottom (38/vd)
+				margin-bottom d(38)
 			@media(max-width: md)
 				display none
 				width 100%
@@ -153,13 +150,13 @@
 					order 3
 				@media(orientation: landscape)
 					order 3
-			
+
 		&__title-plus
 			font-family fontR
 			@media(min-width: xl)
 				position relative
 				display inline-block
-				font-size (25/p)
+				font-size px(25)
 				padding-right 20px
 				margin-bottom 25px
 				order 3
@@ -177,39 +174,38 @@
 				position relative
 				display inline-block
 				order 3
-				font-size (25/vd)
-				padding-right (25/vd)
-				margin-bottom (25/vd)
+				font-size d(25)
+				padding-right d(25)
+				margin-bottom d(25)
 				&:after
 					position absolute
 					right 0
-					top (10/vd)
+					top d(10)
 					display block
 					content ''
 					transition all 0.5s ease
 					background url('/img/arrow.png') no-repeat
 					background-size cover
-					width (16/vd)
-					height (10/vd)
+					width d(16)
+					height d(10)
 			@media(min-width: md)
 				&:hover
 					cursor pointer
 			@media(max-width: md)
-				
 				font-family fontL
 				text-transform uppercase
 				text-align center
 				width 60%
 				@media(orientation: portrait)
-					margin-bottom (20/vm)
-					font-size (12/vm)
+					margin-bottom m(20)
+					font-size m(12)
 					order 2
 				@media(orientation: landscape)
-					margin-bottom (12/vm)
-					font-size (10/vm)
+					margin-bottom m(12)
+					font-size m(10)
 					order 2
 			&_active
-				
+
 				@media(min-width: md)
 					&:after
 						transition all 0.5s ease
@@ -222,19 +218,19 @@
 					@media(orientation: portrait)
 						& span
 							display inline-block
-							padding-bottom (5/vm)
+							padding-bottom m(5)
 							border-bottom 1px solid color1
 					@media(orientation: landscape)
 						& span
 							display inline-block
-							padding-bottom (5/vm)
+							padding-bottom m(5)
 							border-bottom 1px solid color1
-				
+
 		&__table-plus
 			display:none
 			@media(min-width: xl)
 				width 100%
-				order 4				
+				order 4
 			@media(min-width: md) and (max-width: xl)
 				width 100%
 				order 4
@@ -247,28 +243,28 @@
 					order 4
 			&_active
 				display block
-				
+
 	&__photo
 		font-size 0
-		
+
 		@media(min-width: xl)
 			text-align right
 			width 50%
-			order 2				
+			order 2
 			margin-bottom 100px
 		@media(min-width: md) and (max-width: xl)
 			text-align right
 			width 50%
 			order 2
-			margin-bottom (90/vd)
+			margin-bottom d(90)
 		@media(max-width: md)
 			text-align center
 			width 100%
 			@media(orientation: portrait)
-				margin-bottom (20/vm)
+				margin-bottom m(20)
 				order 1
 			@media(orientation: landscape)
-				margin-bottom (15/vm)
+				margin-bottom m(15)
 				order 1
 		& img
 			@media (min-width: md)
@@ -278,29 +274,20 @@
 					width 100%
 				@media(orientation: landscape)
 					width 100%
-				
-		
+
+
 	&__slider
 		@media(min-width: xl)
 			width 100%
-			order 3				
+			order 3
 		@media(min-width: md) and (max-width: xl)
 			width 100%
 			order 3
 		@media(max-width: md)
 			width 100%
 			@media(orientation: portrait)
-				margin-bottom (20/vm)
+				margin-bottom m(20)
 				order 2
 			@media(orientation: landscape)
-				margin-bottom (14/vm)
+				margin-bottom m(14)
 				order 2
-
-// @media(min-width: xl)
-		
-// 	@media(min-width: md) and (max-width: xl)
-	
-// 	@media(max-width: md)
-// 		@media(orientation: portrait)
-		
-// 		@media(orientation: landscape)

@@ -1,0 +1,169 @@
+@require "var.styl"
+
+
+.product-container
+  position relative
+  @media (min-width: xl)
+    padding-top px(100)
+    margin-bottom px(100)
+  @media (min-width: md) and (max-width: xl)
+    padding-top d(111)
+    margin-bottom d(100)
+  @media (max-width: md)
+    @media (orientation: portrait)
+      padding-top m(10)
+      margin-bottom m(20)
+    @media (orientation: landscape)
+      padding-top m(10)
+      margin-bottom m(12)
+  &__title
+    text-align center
+    margin 0
+    padding 0
+    font-family fontR
+    text-transform uppercase
+    @media (min-width: xl)
+      font-size rem(32)
+      margin-bottom px(65)
+    @media (min-width: md) and (max-width: xl)
+      font-size d(32)
+      margin-bottom d(65)
+    @media (max-width: md)
+      @media (orientation: portrait)
+        font-size m(12)
+        margin-bottom m(15)
+      @media (orientation: landscape)
+        font-size m(10)
+        margin-bottom m(12)
+.product-block
+  display flex
+  @media (max-width: md)
+    flex-direction column
+  &__text
+    @media (min-width: md)
+      flex-basis 60%
+    @media (max-width: md)
+      order 2
+      flex-basis 100%
+  &__image
+    @media (min-width: md)
+      flex-basis 40%
+    @media (max-width: md)
+      flex-basis 100%
+    & img
+      width 100%
+    &.seev
+      @media (min-width: md)
+        padding-top 3rem
+  &__descr
+    font-family fontR
+    & b
+      font-family fontSB
+    @media (min-width: xl)
+      font-size px(25)
+      line-height px(35)
+    @media (max-width: xl)
+      padding-top d(50)
+      margin-bottom d(70)
+      font-size d(27)
+      line-height d(38)
+    @media (max-width: md)
+      text-align justify
+      font-size 1rem
+      line-height 1.4rem
+      margin-bottom 2rem
+.product-table
+  border-collapse collapse
+  & td
+    text-align center
+    border-right 1px solid color1
+    &:last-child
+      border none
+    @media (min-width: xl)
+      padding-left d(15)
+      padding-right d(15)
+    @media (max-width: xl)
+      padding-left d(15)
+      padding-right d(15)
+    @media (max-width: md)
+      @media (orientation: landscape)
+        padding-left m(5)
+        padding-right m(5)
+      @media (orientation: portrait)
+        padding-left m(5)
+        padding-right m(5)
+  &__short
+    text-transform uppercase
+    font-family fontSB
+    @media (min-width: xl)
+      font-size px(25)
+    @media (max-width: xl)
+      font-size d(25)
+    @media (max-width: md)
+      font-size .7rem
+  &__value
+    font-family fontSB
+    @media (max-width: xl)
+      padding-top d(30)
+      padding-bottom d(30)
+      font-size d(80)
+      color color1
+    @media (max-width: md)
+      padding-top 25px
+      padding-bottom 40px
+      font-size 2rem
+  &__descr
+    font-family fontR
+.product-title
+  border-top 1px solid color2
+
+.title-wrapper
+  position relative
+  border-top 1px solid color2
+  @media (max-width: md)
+    margin-bottom 1rem
+.product-table-chars
+  @media (min-width: md)
+    padding-left 30%
+  & table
+    width 100%
+    border none
+    border-collapse collapse
+    font-family fontR
+    vertical-align top
+    @media(min-width: xl)
+      font-size px(25)
+      line-height px(50)
+    @media(min-width: md) and (max-width: xl)
+      font-size d(25)
+      line-height d(50)
+    @media(max-width: md)
+      @media(orientation: portrait)
+        line-height m(25)
+      @media(orientation: landscape)
+        line-height m(20)
+    & td
+      width 50%
+      &:last-child
+        text-align right
+        font-family fontSB
+      @media(max-width: md)
+        @media(orientation: portrait)
+          padding 0 m(5)
+          font-size m(12)
+        @media(orientation: landscape)
+          padding 0 m(5)
+          font-size m(10)
+    & tr
+      @media(min-width: xl)
+        padding 5px 0
+      @media(min-width: md) and (max-width: xl)
+        padding d(10) 0
+      @media(max-width: md)
+        @media(orientation: landscape)
+          font-size d(25)
+      border-bottom 1px solid color5
+      &:last-child
+        border-bottom none
+.product-image
+  width 100%

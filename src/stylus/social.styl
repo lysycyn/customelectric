@@ -3,31 +3,31 @@
 .social-item
 	position relative
 	@media (min-width: xl)
-		padding-left (60/p)
-		line-height (42/r)
-		font-size (20/r)
-		margin-right (50/p)
+		padding-left px(60)
+		line-height rem(42)
+		font-size rem(20)
+		margin-right px(50)
 	@media (min-width: md) and (max-width: xl)
-		padding-left (60/vd)
-		line-height (42/vd)
-		font-size (20/vd)
-		margin-right (50/vd)
+		padding-left d(60)
+		line-height d(42)
+		font-size d(20)
+		margin-right d(50)
 	@media (orientation: portrait) and (max-width: mob)
-		padding-left (35/vm)
-		line-height (28/vm)
-		font-size (10/vm)
-		margin-right (10/vm)
+		padding-left m(35)
+		line-height m(28)
+		font-size m(10)
+		margin-right m(10)
 	@media (orientation: landscape) and (max-width: mob)
-		padding-left (22/vm)
-		line-height (20/vm)
-		font-size (10/vm)
-		margin-right (7/vm)
+		padding-left m(22)
+		line-height m(20)
+		font-size m(10)
+		margin-right m(7)
 	display inline-block
 	vertical-align middle
 	font-family fontL
 	text-transform uppercase
-	
-	
+
+
 	&:hover
 		color color1
 
@@ -37,43 +37,42 @@
 		top 0
 		content ""
 		@media (min-width: xl)
-			width (42/p)
-			height (42/p)
+			width px(42)
+			height px(42)
 		@media (min-width: md) and (max-width: xl)
-			width (42/vd)
-			height (42/vd)
+			width d(42)
+			height d(42)
 		@media (orientation: portrait) and (max-width: mob)
-			width (28/vm)
-			height (28/vm)
+			width m(28)
+			height m(28)
 		@media (orientation: landscape) and (max-width: mob)
-			width (20/vm)
-			height (20/vm)
-		
+			width m(20)
+			height m(20)
+
 	&_in:after
 		background url("/img/in.png") no-repeat
 		background-size cover
 
-	
-	
+
+
 	&__phone
 		text-transform uppercase
 		@media (min-width: xl)
-			font-size (25/r)
-			line-height (42/r)
+			font-size rem(25)
+			line-height rem(42)
 		@media (min-width: md) and (max-width: xl)
-			font-size (25/vd)
-			line-height (42/vd)
+			font-size d(25)
+			line-height d(42)
 		color color1
 		float right
-		
-		
+
+
 	&_footer
 		@media (orientation: portrait) and (max-width: mob)
-			font-size (6/vm)
+			font-size m(6)
 		@media (orientation: landscape) and (max-width: mob)
-			font-size (6/vm)
-		margin-bottom (30/p)
-	
+			font-size m(6)
+		margin-bottom px(30)
+
 	&_footer:last-child
 		margin-bottom 0
-		

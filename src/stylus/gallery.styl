@@ -2,18 +2,18 @@
 
 .gallery-container
 	@media (min-width: xl)
-		padding-top (100/p)
-		margin-bottom (70/p)
+		padding-top px(100)
+		margin-bottom px(70)
 	@media (min-width: md) and (max-width: xl)
-		padding-top (111/vd)
-		margin-bottom (70/vd)
+		padding-top d(111)
+		margin-bottom d(70)
 	@media (max-width: md)
 		@media (orientation: portrait)
-			padding-top (10/vm)
-			margin-bottom (20/vm)
+			padding-top m(10)
+			margin-bottom m(20)
 		@media (orientation: landscape)
-			padding-top (10/vm)
-			margin-bottom (12/vm)
+			padding-top m(10)
+			margin-bottom m(12)
 	&__switch-buttons
 		@media (min-width: md)
 			display none
@@ -21,37 +21,33 @@
 			display block
 			text-align right
 			@media (orientation: portrait)
-				margin-bottom (14/vm)
+				margin-bottom m(14)
 			@media (orientation: landscape)
-				margin-bottom (12/vm)
+				margin-bottom m(12)
 		&__button
 			display inline-block
-			
-			@media (max-width: md)
-				
-				//stroke-width 2px
 			&_1
 				fill none
 				stroke color1
 				@media (max-width: md)
 					@media (orientation: portrait)
-						width (18/vm)
-						height (14/vm)
-						margin-right (10/vm)
+						width m(18)
+						height m(14)
+						margin-right m(10)
 					@media (orientation: landscape)
-						width (12/vm)
-						height (9/vm)
-						margin-right (10/vm)
+						width m(12)
+						height m(9)
+						margin-right m(10)
 			&_2
 				fill none
 				stroke color3
 				@media (max-width: md)
 					@media (orientation: portrait)
-						width (24/vm)
-						height (14/vm)
+						width m(24)
+						height m(14)
 					@media (orientation: landscape)
-						width (18/vm)
-						height (9/vm)
+						width m(18)
+						height m(9)
 
 	&&_one-column
 		& .gallery-container__switch-buttons
@@ -66,84 +62,75 @@
 			@media (max-width: md)
 				@media (orientation: portrait)
 					width 100%
-					margin-bottom (20/vm)
+					margin-bottom m(20)
 				@media (orientation: landscape)
 					width 100%
-					margin-bottom (14/vm)
+					margin-bottom m(14)
 			& .gallery__block__img-block
 				@media (orientation: portrait)
-					height (240/vm)
+					height m(240)
 				@media (orientation: landscape)
-					height (150/vm)
-		
+					height m(150)
+
 		& .gallery__block__details
 			@media (max-width: md)
 				display block
 				@media (orientation: portrait)
-					padding-top (8/vm)
-					padding-left (10/vm)
+					padding-top m(8)
+					padding-left m(10)
 				@media (orientation: landscape)
-					padding-top (8/vm)
-					padding-left (15/vm)
-				
+					padding-top m(8)
+					padding-left m(15)
+
 			&__link
 				@media (max-width: md)
 					font-family fontL
 					color color4
 					@media (orientation: portrait)
-						font-size (18/vm)
+						font-size m(18)
 					@media (orientation: landscape)
-						font-size (12/vm)
+						font-size m(12)
 
 	&__title
 		text-align center
 		margin 0
 		padding 0
-		
+
 		font-family fontR
 		text-transform uppercase
 		@media (min-width: xl)
-			font-size (32/r)
-			margin-bottom (65/p)
+			font-size rem(32)
+			margin-bottom px(65)
 		@media (min-width: md) and (max-width: xl)
-			font-size (32/vd)
-			margin-bottom (65/vd)
+			font-size d(32)
+			margin-bottom d(65)
 		@media (max-width: md)
 			@media (orientation: portrait)
-				font-size (12/vm)
-				margin-bottom (15/vm)
+				font-size m(12)
+				margin-bottom m(15)
 			@media (orientation: landscape)
-				font-size (10/vm)
-				margin-bottom (12/vm)
+				font-size m(10)
+				margin-bottom m(12)
 
 .gallery
 	@media (min-width: xl)
 		display block
-		//justify-content space-between
-		//flex-flow row wrap
-		//-webkit-flex-flow row wrap
 	@media (min-width: md) and (max-width: xl)
 		display block
-		// justify-content space-between
-		// flex-flow row wrap
-		// -webkit-flex-flow row wrap
-	@media (max-width: md)	
+	@media (max-width: md)
 		display block
-		// justify-content space-between
-		// flex-flow row wrap
-		// -webkit-flex-flow row wrap
-	
+
 	&__block
 		float left
 		@media (min-width: xl)
 			width 22.9%
-			margin-right 2.8% 
+			margin-right 2.8%
 			margin-bottom 2%
 			&:nth-child(4n)
 				margin-right 0
 		@media (min-width: md) and (max-width: xl)
 			width 22.9%
-			margin-right 2.8% 
+			margin-right 2.8%
 			margin-bottom 2%
 			&:nth-child(4n)
 				margin-right 0
@@ -153,11 +140,8 @@
 			margin-bottom 2%
 			&:nth-child(3n)
 				margin-right 0
-
 		&__details
 				display none
-			
-		
 
 		&__img-block
 			position relative
@@ -165,43 +149,41 @@
 			background-size cover
 			background-position center
 			@media (min-width: xl)
-				height (270/p)
+				height px(270)
 			@media (min-width: md) and (max-width: xl)
-				height (270/vd)
+				height d(270)
 			@media (max-width: md)
 				@media (orientation: portrait)
-					height (60/vm)
+					height m(60)
 				@media (orientation: landscape)
-					height (70/vm)
+					height m(70)
 			&__image
 				display none
 				width 100%
 				height auto
 				margin auto
-			
-			
-				
+
 			&_1
 				background-image url("/img/gallery1.jpg")
-				
+
 			&_2
 				background-image url("/img/gallery2.jpg")
-			
+
 			&_3
 				background-image url("/img/gallery3.jpg")
-			
+
 			&_4
 				background-image url("/img/gallery4.jpg")
-				
+
 			&_5
 				background-image url("/img/gallery5.jpg")
-			
+
 			&_6
 				background-image url("/img/gallery6.jpg")
-				
+
 			&_7
 				background-image url("/img/gallery7.jpg")
-				
+
 			&__mask
 				display none
 				position absolute
@@ -210,21 +192,19 @@
 				left 0
 				bottom 0
 				right 0
-				font-size (20/vd)
+				font-size d(20)
 				@media (min-width: xl)
-					padding (60/p) (55/p)
+					padding px(60) px(55)
 				@media (min-width: md) and (max-width: xl)
-					padding (60/vd) (55/vd)
+					padding d(60) d(55)
 				@media (orientation: portrait) and (max-width: mob)
-					padding (4/vm) (5/vm)
+					padding m(4) m(5)
 				@media (orientation: landscape) and (max-width: mob)
-					padding (7/vm) (10/vm)
-				
+					padding m(7) m(10)
+
 				&_active-mobile
 					@media (max-width: mob)
 						display block
-				
-				
 
 				&__links-block
 					margin auto auto
@@ -234,9 +214,9 @@
 						text-align center
 					@media (orientation: landscape) and (max-width: mob)
 						text-align center
-					
 
-			
+
+
 			&:hover &__mask
 				@media (min-width: md)
 					display block

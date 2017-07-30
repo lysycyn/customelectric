@@ -6,22 +6,22 @@
 	z-index 2
 	@media (min-width: xl)
 		background url("/img/preview_bg.jpg") 0 40% no-repeat
-		height (900/p)
-		margin-bottom (90/p)
+		height px(900)
+		margin-bottom px(90)
 		background-size cover
 	@media (min-width: md) and (max-width: xl)
 		background url("/img/preview_bg.jpg") 0 40% no-repeat
-		height (900/vd)
-		margin-bottom (90/vd)
+		height d(900)
+		margin-bottom d(90)
 		background-size cover
 	@media (max-width: md)
 		background url("/img/preview_bg.jpg") 50% 40% no-repeat
 		@media (orientation: portrait)
-			height (350/vm)
-			margin-bottom (20/vm)
+			height m(350)
+			margin-bottom m(20)
 		@media (orientation: landscape)
-			height (160/vm)
-			margin-bottom (10/vm)
+			height m(160)
+			margin-bottom m(10)
 		background-size cover
 
 
@@ -29,13 +29,13 @@
 		position relative
 		z-index 1
 		@media (min-width: xl)
-			padding-top (111/p)
+			padding-top px(111)
 		@media (min-width: md) and (max-width: xl)
-			padding-top (111/vd)
+			padding-top d(111)
 		@media (orientation: portrait) and (max-width: md)
-			padding-top (35/vm)
+			padding-top m(35)
 		@media (orientation: landscape) and (max-width: md)
-			padding-top (11/vm)
+			padding-top m(11)
 
 
 	&:after
@@ -55,17 +55,17 @@
 	&__title
 		text-transform uppercase
 		@media (min-width: xl)
-			font-size (34/p)
-			margin-bottom (90/p)
+			font-size px(34)
+			margin-bottom px(90)
 		@media (min-width: md) and (max-width: xl)
-			font-size (34/vd)
-			margin-bottom (90/vd)
+			font-size d(34)
+			margin-bottom d(90)
 		@media (orientation: portrait) and (max-width: md)
-			font-size (16/vm)
-			margin-bottom (32/vm)
+			font-size m(16)
+			margin-bottom m(32)
 		@media (orientation: landscape) and (max-width: md)
-			font-size (12/vm)
-			margin-bottom (12/vm)
+			font-size m(12)
+			margin-bottom m(12)
 		font-family fontR
 		color white
 
@@ -74,21 +74,21 @@
 		display block
 		height 2px
 		@media (min-width: xl)
-			width (178/p)
+			width px(178)
 
-			margin-bottom (90/p)
+			margin-bottom px(90)
 		@media (min-width: md) and (max-width: xl)
-			width (178/vd)
+			width d(178)
 
-			margin-bottom (90/vd)
+			margin-bottom d(90)
 		@media (orientation: portrait) and (max-width: md)
-			width (89/vm)
+			width m(89)
 
-			margin-bottom (30/vm)
+			margin-bottom m(30)
 		@media (orientation: landscape) and (max-width: md)
-			width (55/vm)
+			width m(55)
 
-			margin-bottom (8/vm)
+			margin-bottom m(8)
 		background color1
 		border 0
 		outline 0
@@ -97,27 +97,27 @@
 
 	&__text
 		@media (min-width: xl)
-			width (740/p)
-			line-height (30/r)
-			font-size (25/r)
-			margin-bottom (115/p)
+			width px(740)
+			line-height rem(30)
+			font-size rem(25)
+			margin-bottom px(115)
 			font-family fontSB
 		@media (min-width: md) and (max-width: xl)
-			width (640/vd)
-			line-height (30/vd)
-			font-size (25/vd)
-			margin-bottom (115/vd)
+			width d(640)
+			line-height d(30)
+			font-size d(25)
+			margin-bottom d(115)
 			font-family fontSB
 		@media (orientation: portrait) and (max-width: md)
 			width 100%
-			line-height (14/vm)
-			font-size (12/vm)
-			margin-bottom (42/vm)
+			line-height m(14)
+			font-size m(12)
+			margin-bottom m(42)
 			font-family fontL
 		@media (orientation: landscape) and (max-width: md)
 			width 100%
-			line-height (11/vm)
-			font-size (9/vm)
-			margin-bottom (15/vm)
+			line-height m(11)
+			font-size m(9)
+			margin-bottom m(15)
 			font-family fontL
 		color white

@@ -6,38 +6,31 @@
 	@media (min-width: xl)
 		width 20px
 		height 20px
-		top (-40/p)
-		right (-40/p)
+		top px(-40)
+		right px(-40)
 	@media (min-width: md) and (max-width: xl)
-		width (30/vd)
-		height (30/vd)
-		top (-40/vd)
-		right (-40/vd)
-	@media (max-width: md) 
-		
-		@media (orientation: portrait)
-			width (15/vm)
-			height (15/vm)
-			top (-20/vm)
-			right (-6/vm)
-		@media (orientation: landscape)
-			width (8/vm)
-			height (8/vm)
-			top (-11/vm)
-			right (-11/vm)
+		width d(30)
+		height d(30)
+		top d(-40)
+		right d(-40)
+	@media (max-width: md)
 
-// .lightbox
-// 	@media (max-width: md)
-// 		@media (orientation: portrait)
-// 			top (80/vm) !important
-// 		@media (orientation: landscape)
-// 			top (35/vm) !important
+		@media (orientation: portrait)
+			width m(15)
+			height m(15)
+			top m(-20)
+			right m(-6)
+		@media (orientation: landscape)
+			width m(8)
+			height m(8)
+			top m(-11)
+			right m(-11)
 
 .lightbox .lb-image
 	@media (min-width: xl)
 		border 1px solid color1
 	@media (min-width: md) and (max-width: xl)
-		border (1/vd) solid color1
+		border 1px solid color1
 	@media (max-width: md)
 		border 1px solid color1
 
@@ -51,22 +44,22 @@
 	@media (max-width: md)
 		width 100%
 		left 0
-	
+
 .lb-nav a
 	@media (max-width: md)
-		opacity 1 !important	
-	
+		opacity 1 !important
+
 .lb-nav a.lb-next
 	position absolute
 	@media (min-width: xl)
 		right -25px
 	@media (min-width: md) and (max-width: xl)
-		right (-25/vd)
+		right d(-25)
 	@media (max-width: md)
 		@media (orientation: portrait)
-			right (-10/vm)
+			right m(-10)
 		@media (orientation: landscape)
-			right (-8/vm)
+			right m(-8)
 
 .lb-nav a.lb-next:after
 	position absolute
@@ -78,20 +71,20 @@
 	@media (min-width: xl)
 		top 46%
 		width 16px
-		height 32px  
+		height 32px
 	@media (min-width: md) and (max-width: xl)
 		top 46%
-		width (16/vd)
-		height (32/vd)  
+		width d(16)
+		height d(32)
 	@media (max-width: md)
 		@media (orientation: portrait)
 			top 46%
-			width (8/vm)
-			height (16/vm)
+			width m(8)
+			height m(16)
 		@media (orientation: landscape)
 			top 46%
-			width (5/vm)
-			height (10/vm)  
+			width m(5)
+			height m(10)
 
 
 .lb-nav a.lb-prev
@@ -99,12 +92,12 @@
 	@media (min-width: xl)
 		left 25px
 	@media (min-width: md) and (max-width: xl)
-		left (-25/vd)
+		left d(-25)
 	@media (max-width: md)
 		@media (orientation: portrait)
-			left (-10/vm)
+			left m(-10)
 		@media (orientation: landscape)
-			left (-8/vm)
+			left m(-8)
 
 .lb-nav a.lb-prev:after
 	position absolute
@@ -119,36 +112,36 @@
 		height 32px
 	@media (min-width: md) and (max-width: xl)
 		top 46%
-		width (16/vd)
-		height (32/vd)
+		width d(16)
+		height d(32)
 	@media (max-width: md)
 		@media (orientation: portrait)
 			top 46%
-			width (8/vm)
-			height (16/vm)
+			width m(8)
+			height m(16)
 		@media (orientation: landscape)
 			top 46%
-			width (5/vm)
-			height (10/vm)
+			width m(5)
+			height m(10)
 
 .lb-cancel
 	@media (min-width: xl)
 		width 48px
 		height 64px
 	@media (min-width: md) and (max-width: xl)
-		width (64/vd)
-		height (64/vd)
+		width d(64)
+		height d(64)
 	@media (max-width: md)
 		@media (orientation: portrait)
-			width (20/vm)
-			height (20/vm)
+			width m(20)
+			height m(20)
 		@media (orientation: landscape)
-			width (20/vm)
-			height (20/vm)
+			width m(20)
+			height m(20)
 
 .lb-data .lb-details
 	@media (max-width: md)
 		@media (orientation: portrait)
-			padding-top (20/vm)
+			padding-top m(20)
 		@media (orientation: landscape)
-			padding-top (10/vm)
+			padding-top m(10)

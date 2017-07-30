@@ -2,18 +2,18 @@
 
 .main-footer
 	@media (min-width: xl)
-		padding-top (54/p)
-		padding-bottom (51/p)
+		padding-top px(54)
+		padding-bottom px(51)
 	@media (min-width: md) and (max-width: xl)
-		padding-top (54/vd)
-		padding-bottom (51/vd)
+		padding-top d(54)
+		padding-bottom d(51)
 	@media (orientation: portrait) and (max-width: md)
-		padding-top (19/vm)
-		padding-bottom (18/vm)
+		padding-top m(19)
+		padding-bottom m(18)
 	@media (orientation: landscape) and (max-width: md)
-		padding-top (8/vm)
-		padding-bottom (7/vm)
-	
+		padding-top m(8)
+		padding-bottom m(7)
+
 
 	.container
 		display flex
@@ -21,43 +21,43 @@
 		justify-content space-between
 		box-sizing border-box
 		@media (min-width: xl)
-			padding 0 (180/p)
+			padding 0 px(180)
 		@media (min-width: md) and (max-width: xl)
-			padding 0 (180/vd)
-	
+			padding 0 d(180)
+
 
 	&__block
 		width 33.3%
 
 		&_logo
 			text-align center
-					
+
 			& img
 				@media (min-width: xl)
-					width (180/p)
+					width px(180)
 				@media (min-width: md) and (max-width: xl)
-					width (180/vd)
+					width d(180)
 				@media (orientation: portrait) and (max-width: md)
-					width (60/vm)
-					height (54/vm)
+					width m(60)
+					height m(54)
 				@media (orientation: landscape) and (max-width: md)
-					width (35/vm)
-					
-		
+					width m(35)
+
+
 		&__phone
 			display block
 			text-align right
-			
+
 			font-family fontL
 			@media (min-width: xl)
-				margin-bottom (26/p)
+				margin-bottom px(26)
 			@media (min-width: md) and (max-width: xl)
-				margin-bottom (26/vd)
+				margin-bottom d(26)
 			@media (orientation: portrait) and (max-width: md)
-				margin-bottom (12/vm)
-				font-size (12/vm)
+				margin-bottom m(12)
+				font-size m(12)
 			@media (orientation: landscape) and (max-width: md)
-				margin-bottom (12/vm)
-				font-size (9/vm)
+				margin-bottom m(12)
+				font-size m(9)
 			&:last-child
 				margin-bottom 0

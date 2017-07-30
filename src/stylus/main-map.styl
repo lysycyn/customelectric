@@ -1,113 +1,113 @@
 @require "var.styl"
 
 .main-map
-	
+
 	@media (min-width: md)
 		position relative
-		
+
 	& .container
 		@media (min-width: xl)
 			position relative
 		@media (max-width: xl)
 			padding 0 !important
-			
+
 	&__contacts-block
 		display flex
 		@media (min-width: xl)
-			height (974/p)
+			height px(974)
 		@media (min-width: md) and (max-width: xl)
-			height (974/vd)
+			height d(974)
 		@media (orientation: portrait) and (max-width: md)
-			height (290/vm)
+			height m(290)
 		@media (orientation: landscape) and (max-width: md)
-			height (170/vm)
+			height m(170)
 		&__left
 			@media (min-width: xl)
-				width (550/p)
-				padding 0 (52/p)
-				padding-top (87/p)
+				width px(550)
+				padding 0 px(52)
+				padding-top px(87)
 			@media (min-width: md) and (max-width: xl)
-				width (550/vd)
-				padding 0 (52/vd)
-				padding-top (87/vd)
+				width d(550)
+				padding 0 d(52)
+				padding-top d(87)
 			@media (orientation: portrait) and (max-width: md)
-				width (150/vm)
-				padding 0 (20/vm)
-				padding-top (29/vm)
+				width m(150)
+				padding 0 m(20)
+				padding-top m(29)
 			@media (orientation: landscape) and (max-width: md)
-				width (120/vm)
-				padding 0 (15/vm)
-				padding-top (13/vm)
+				width m(120)
+				padding 0 m(15)
+				padding-top m(13)
 			background black
-			
+
 			box-sizing border-box
-			
+
 			&__title
 				display block
 				text-align center
 				text-transform uppercase
 				color white
 				@media (min-width: xl)
-					margin-bottom (72/p)
-					font-size (30/r)
+					margin-bottom px(72)
+					font-size rem(30)
 				@media (min-width: md) and (max-width: xl)
-					margin-bottom (72/vd)
-					font-size (36/vd)
+					margin-bottom d(72)
+					font-size d(36)
 				@media (orientation: portrait) and (max-width: md)
-					margin-bottom (30/vm)
-					font-size (13/vm)
+					margin-bottom m(30)
+					font-size m(13)
 				@media (orientation: landscape) and (max-width: md)
-					margin-bottom (11/vm)
-					font-size (9/vm)
+					margin-bottom m(11)
+					font-size m(9)
 				font-family fontR
-			
+
 			&__category
 				display block
 				color color1
 				font-family fontR
 				@media (min-width: xl)
-					font-size (18/r)
-					margin-bottom (30/p)
+					font-size rem(18)
+					margin-bottom px(30)
 				@media (min-width: md) and (max-width: xl)
-					font-size (20/vd)
-					margin-bottom (30/vd)
+					font-size d(20)
+					margin-bottom d(30)
 				@media (orientation: portrait) and (max-width: md)
-					font-size (8/vm)
-					margin-bottom (15/vm)
+					font-size m(8)
+					margin-bottom m(15)
 				@media (orientation: landscape) and (max-width: md)
-					font-size (7/vm)
-					margin-bottom (10/vm)
+					font-size m(7)
+					margin-bottom m(10)
 				text-align left
-				
+
 
 			&__contact
 				display block
 				font-family fontL
 				@media (min-width: xl)
-					font-size (20/r)
-					margin-bottom (26/p)
+					font-size rem(20)
+					margin-bottom px(26)
 				@media (min-width: md) and (max-width: xl)
-					font-size (24/vd)
-					margin-bottom (26/vd)
+					font-size d(24)
+					margin-bottom d(26)
 				@media (orientation: portrait) and (max-width: md)
-					font-size (9/vm)
-					margin-bottom (15/vm)
+					font-size m(9)
+					margin-bottom m(15)
 				@media (orientation: landscape) and (max-width: md)
-					font-size (9/vm)
-					margin-bottom (8/vm)
+					font-size m(9)
+					margin-bottom m(8)
 				color white
-				
-		
+
+
 		&__map
 			@media (min-width: xl)
-				height (974/p)
-				width (1370/p)
+				height px(974)
+				width px(1370)
 			@media (min-width: md) and (max-width: xl)
-				height (974/vd)
-				width (1370/vd)
+				height d(974)
+				width d(1370)
 			@media (orientation: portrait) and (max-width: md)
-				height (290/vm)
-				width (170/vm)
+				height m(290)
+				width m(170)
 			@media (orientation: landscape) and (max-width: md)
-				height (170/vm)
-				width (220/vm)
+				height m(170)
+				width m(220)

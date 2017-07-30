@@ -12,7 +12,7 @@
 	transition .5s ease
 	&:hover
 		cursor pointer
-	
+
 .form-outer-container
 	visibility hidden
 	position fixed
@@ -25,11 +25,11 @@
 	opacity 0
 	transition .5s ease
 	@media (min-width: xl)
-		width (500/p)
-		border 1px solid #000 
+		width px(500)
+		border 1px solid #000
 	@media (min-width: md) and (max-width: xl)
-		width (550/vd)
-		border 1px solid #000 
+		width d(550)
+		border 1px solid #000
 	@media (orientation: portrait) and (max-width: md)
 		width 90%
 	@media (orientation: landscape) and (max-width: md)
@@ -39,24 +39,24 @@
 	box-sizing border-box
 	& .form__block
 		@media (orientation: landscape) and (max-width: md)
-			padding (7/vm) (20/vm)
+			padding m(7) m(20)
 		box-sizing border-box
 		& input[type="text"]
 			@media (orientation: landscape) and (max-width: md)
 				border-radius 0
-				font-size (10/vm) !important
-				padding (5/vm) (15/vm)
-				margin-bottom (5/vm) !important
+				font-size m(10) !important
+				padding m(5) m(15)
+				margin-bottom m(5) !important
 		& textarea
 			@media (orientation: landscape) and (max-width: md)
-				font-size (10/vm) !important
-				padding (5/vm) (15/vm) !important
+				font-size m(10) !important
+				padding m(5) m(15) !important
 
 .rental-form-show
 	visibility visible
 	opacity 1
 	transform .5s ease
-		
+
 .form-outer-btn
 	display block
 	border none
@@ -75,16 +75,16 @@
 		right -30px
 	@media (max-width: md)
 		@media (orientation: portrait)
-			top (-27/vm)
-			right (-11/vm)
-			width (22/vm)
-			height (22/vm)		
+			top m(-27)
+			right m(-11)
+			width m(22)
+			height m(22)
 		@media (orientation: landscape)
 			top 0
-			right (-15/vm)
-			width (12/vm)
-			height (12/vm)
-			
+			right m(-15)
+			width m(12)
+			height m(12)
+
 
 .popup
 	// visibility hidden
@@ -92,7 +92,7 @@
 	left 0
 	right 0
 	margin 0 auto
-	width 
+	width
 	text-align center
 	bottom 50vh
 	z-index 10000
@@ -112,18 +112,18 @@
 		width 25%
 		padding 15px 25px
 		padding-left 50px
-		font-size (25/vd)
+		font-size d(25)
 	@media (max-width: md)
 		@media(orientation: portrait)
 			width 70%
-			padding (10/vm) (15/vm)
-			padding-left (40/vm)
-			font-size (12/vm)
+			padding m(10) m(15)
+			padding-left m(40)
+			font-size m(12)
 		@media(orientation: landscape)
 			width 40%
-			padding (5/vm) (10/vm)
-			padding-left (20/vm)
-			font-size (7/vm)
+			padding m(5) m(10)
+			padding-left m(20)
+			font-size m(7)
 
 	&-success
 		background-image url("/img/done.png")
@@ -135,12 +135,12 @@
 			background-position 2% 45%
 		@media (max-width: md)
 			@media (orientation: portrait)
-				background-size (20/vm)
+				background-size m(20)
 				background-position 2% 40%
 			@media (orientation: landscape)
-				background-size (15/vm)
+				background-size m(15)
 				background-position 2% 40%
-	
+
 	&-cancel
 		background-image url("/img/cancel.png")
 		@media (min-width: xl)
@@ -151,22 +151,21 @@
 			background-position 5% 50%
 		@media (max-width: md)
 			@media (orientation: portrait)
-				background-size (20/vm)
+				background-size m(20)
 				background-position 5% 45%
 			@media (orientation: landscape)
-				background-size (15/vm)
+				background-size m(15)
 				background-position 3% 45%
 
 .show
 	visibility visible !important
 
 .popup-success1
-	// visibility hidden
 	position fixed
 	left 0
 	right 0
 	margin 0 auto
-	width 
+	width
 	text-align center
 	bottom 50vh
 	z-index 10000
@@ -176,7 +175,7 @@
 	border-radius 5px
 	font-family fontSB
 	box-shadow 1px 2px 19px 0px rgba(50, 50, 50, 1)
-	
+
 	@media (min-width: xl)
 		width 200px
 		padding 30px 25px
@@ -186,54 +185,54 @@
 		width 200px
 		padding 15px 25px
 		padding-left 50px
-		font-size (25/vd)
+		font-size d(25)
 	@media (max-width: md)
 		width 70%
 		@media(orientation: portrait)
-			padding (5/vm) (7/vm)
+			padding m(5) m(7)
 		@media(orientation: landscape)
-			padding (5/vm) (7/vm)
+			padding m(5) m(7)
 
 .form
 	&_main-map
 		@media (min-width: xl)
 			position absolute
-			width (500/p)
+			width px(500)
 			right 140px
 			top 45px
-			border 1px solid black 
-			
+			border 1px solid black
+
 		@media (min-width: md) and (max-width: xl)
 			position absolute
-			width (550/vd)
-			right (110/vd)
-			top (124/vd)
-			border (1/vd) solid black 
-			
+			width d(550)
+			right d(110)
+			top d(124)
+			border 1px solid black
+
 		@media (orientation: portrait) and (max-width: md)
-			border-top (1/vm) solid rgba(0, 0, 0, 0.2)
+			border-top 1px solid rgba(0, 0, 0, 0.2)
 			width 100%
-			margin-bottom (25/vm)
+			margin-bottom m(25)
 		@media (orientation: landscape) and (max-width: md)
-			border-top (1/vm) solid rgba(0, 0, 0, 0.2)
+			border-top 1px solid rgba(0, 0, 0, 0.2)
 			width 100%
-			margin-bottom (15/vm)
+			margin-bottom m(15)
 		display block
-		box-sizing border-box	
+		box-sizing border-box
 		z-index 1
-	
+
 	&__block
 		background white
 		@media (min-width: xl)
-			padding (30/p) (45/p)
+			padding px(30) px(45)
 		@media (min-width: md) and (max-width: xl)
-			padding (40/vd) (55/vd)
+			padding d(40) d(55)
 		@media (orientation: portrait) and (max-width: md)
-			padding (16/vm) (33/vm)
+			padding m(16) m(33)
 		@media (orientation: landscape) and (max-width: md)
-			padding (10/vm) (25/vm)
+			padding m(10) m(25)
 		box-sizing border-box
-		
+
 		& input[type="text"]
 			width 100%
 			display block
@@ -242,25 +241,25 @@
 			background color2
 			font-family fontL
 			@media (min-width: xl)
-				font-size (20/r)
-				padding (23/p) (27/p)
-				margin-bottom (24/p)
+				font-size rem(20)
+				padding px(23) px(27)
+				margin-bottom px(24)
 			@media (min-width: md) and (max-width: xl)
-				font-size (20/vd)
-				padding (23/vd) (27/vd)
-				margin-bottom (24/vd)
+				font-size d(20)
+				padding d(23) d(27)
+				margin-bottom d(24)
 			@media (orientation: portrait) and (max-width: md)
 				border-radius 0
-				font-size (10/vm)
-				padding (10/vm) (14/vm)
-				margin-bottom (10/vm)
+				font-size m(10)
+				padding m(10) m(14)
+				margin-bottom m(10)
 			@media (orientation: landscape) and (max-width: md)
 				border-radius 0
-				font-size (9/vm)
-				padding (10/vm) (25/vm)
-				margin-bottom (10/vm)
+				font-size m(9)
+				padding m(10) m(25)
+				margin-bottom m(10)
 			box-sizing border-box
-		
+
 		& textarea
 			width 100%
 			display block
@@ -269,28 +268,28 @@
 			background color2
 			font-family fontL
 			@media (min-width: xl)
-				font-size (20/r)
-				padding (23/p) (27/p)
+				font-size rem(20)
+				padding px(23) px(27)
 				margin-bottom 0
 			@media (min-width: md) and (max-width: xl)
-				font-size (20/vd)
-				padding (23/vd) (27/vd)
-				margin-bottom (24/vd)
+				font-size d(20)
+				padding d(23) d(27)
+				margin-bottom d(24)
 			@media (orientation: portrait) and (max-width: md)
 				border-radius 0
-				font-size (11/vm)
-				padding (10/vm) (14/vm)
+				font-size m(11)
+				padding m(10) m(14)
 			@media (orientation: landscape) and (max-width: md)
 				border-radius 0
-				font-size (9/vm)
-				padding (10/vm) (25/vm)
+				font-size m(9)
+				padding m(10) m(25)
 			box-sizing border-box
 			resize none
-	
+
 	&__submit
 		@media (max-width: md)
 			position relative
-			
+
 			&:after
 				display block
 				position absolute
@@ -299,16 +298,16 @@
 				background url("/img/phone.png") no-repeat
 				background-size cover
 				@media (orientation: portrait)
-					width (24/vm)
-					height (24/vm)
-					left (215/vm)
-					top (8/vm)
+					width m(24)
+					height m(24)
+					left m(215)
+					top m(8)
 				@media (orientation: landscape)
-					width (20/vm)
-					height (20/vm)
-					left (215/vm)
-					top (8/vm)
-		
+					width m(20)
+					height m(20)
+					left m(215)
+					top m(8)
+
 		&__button
 			width 100%
 			display block
@@ -320,19 +319,19 @@
 			outline none
 			font-family fontR
 			@media (min-width: xl)
-				font-size (24/r)
-				padding (30/p)
+				font-size px(24)
+				padding px(30)
 			@media (min-width: md) and (max-width: xl)
-				font-size (29/vd)
-				padding (37/vd)
+				font-size d(29)
+				padding d(37)
 			@media (orientation: portrait) and (max-width: md)
 				border-radius 0
-				font-size (12/vm)
-				padding (14/vm) 0
-			@media (orientation: landscape) and (max-width: md) 
+				font-size m(12)
+				padding m(14) 0
+			@media (orientation: landscape) and (max-width: md)
 				border-radius 0
-				font-size (11/vm)
-				padding (10/vm) 0
+				font-size m(11)
+				padding m(10) 0
 			cursor pointer
 	&__error
 		border 2px solid red !important
