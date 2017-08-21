@@ -35,13 +35,13 @@
 	&__title-block
 		position absolute
 		@media (min-width: xl)
-			top (-16/p)
+			top px(-16)
 		@media (min-width: md) and (max-width: xl)
-			top (-16/vd)
+			top d(-16)
 		@media (orientation: portrait) and (max-width: md)
-			top (-8/vm)
+			top m(-10)
 		@media (orientation: landscape) and (max-width: md)
-			top (-6/vm)
+			top m(-5)
 		left 0
 		right 0
 		margin 0 auto
@@ -138,9 +138,9 @@
 						padding (45/vd) (35/vd)
 						font-size (20/vd)
 					@media (orientation: portrait) and (max-width: md)
-						padding (40/vm) (25/vm)
+						padding (18/vm) (22/vm)
 					@media (orientation: landscape) and (max-width: md)
-						padding (30/vm) (20/vm)
+						padding (14/vm) (17/vm)
 
 					&_active-mobile
 						@media (max-width: md)
@@ -151,18 +151,17 @@
 						text-align center
 						font-family fontSB
 						@media (min-width: xl)
-							font-size (20/r)
-							margin-bottom (37/p)
+							font-size rem(20)
+							margin-bottom px(37)
 						@media (max-width: xl)
-							font-size (20/vd)
-							margin-bottom (37/vd)
-
+							font-size d(20)
+							margin-bottom d(37)
 						@media (orientation: portrait) and (max-width: md)
-							font-size (22/vm)
-							margin-bottom (25/vm)
+							font-size m(20)
+							margin-bottom (18/vm)
 						@media (orientation: landscape) and (max-width: md)
-							font-size (15/vm)
-							margin-bottom (15/vm)
+							font-size m(12)
+							margin-bottom (14/vm)
 						text-transform uppercase
 						color color1
 
@@ -179,13 +178,13 @@
 							line-height (24/vd)
 							margin-bottom (35/vd)
 						@media (orientation: portrait) and (max-width: md)
-							font-size (14/vm)
-							line-height (17/vm)
-							margin-bottom (30/vm)
+							font-size m(12)
+							line-height m(15)
+							margin-bottom m(18)
 						@media (orientation: landscape) and (max-width: md)
-							font-size (10/vm)
-							line-height (13/vm)
-							margin-bottom (17/vm)
+							font-size m(9)
+							line-height m(12)
+							margin-bottom m(12)
 
 
 					&__link-block
@@ -233,15 +232,15 @@
 				padding-top (10/vm)
 				font-size (15/vm)
 			&:after
-				content "₽"
+				content "руб."
 				display inline-block
 				padding-left 5px
 				@media (min-width: xl)
-					font-size (35/p)
+					font-size px(35)
 				@media (max-width: xl)
-					font-size (35/vd)
+					font-size d(35)
 				@media (max-width: md)
 					@media (orientation: portrait)
-						font-size (20/vm)
+						font-size m(20)
 					@media (orientation: landscape)
-						font-size (15/vm)
+						font-size m(15)

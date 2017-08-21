@@ -58,6 +58,7 @@
         распределения по всему небу.
       </p>
       <a href="#video" class="btn btn_main js-more-button">Узнать больше</a>
+      <!-- <iframe style="position: absolute; top: 0;" width="100%" height="315" src="https://www.youtube.com/embed/bQEa0RwGBOw?ecver=1" frameborder="0" autoplay="1" loop="1" playlist="bQEa0RwGBOw" ></iframe> -->
     </div>
   </section>
   <section class="main-velo">
@@ -207,6 +208,27 @@
             <input id="form_name" type="text" placeholder="Введите имя *">
             <input id="form_phone" class="phone-mask" type="text" placeholder="Введите телефон *">
             <textarea name="" id="form_message" cols="30" rows="10" placeholder="Введите сообщение"></textarea>
+            <p>Выберите удобные способы связи с Вами:</p>
+            <div class="form__contacts">
+              <div>
+                <input id="phone" class="checkbox checkbox_phone" type="checkbox" name="isPhone" checked/>
+                <label for="phone" class="label label_phone"></label>
+
+              </div>
+              <div>
+                <input id="whatsapp" class="checkbox checkbox_whatsapp" name="isWhatsapp" type="checkbox"/>
+                <label for="whatsapp" class="label label_whatsapp"></label>
+
+              </div>
+              <div>
+                <input id="telegram" class="checkbox checkbox_telegram" name="isTelegram" type="checkbox"/>
+                <label for="telegram" class="label label_telegram"></label>
+
+              </div>
+
+
+
+            </div>
           </div>
           <div class="form__submit">
             <input type="submit" class="form__submit__button" value="Заказать звонок">
@@ -216,21 +238,24 @@
         <div class="main-map__contacts-block"><!--grid-->
             <div class="main-map__contacts-block__left">
               <span class="main-map__contacts-block__left__title">
-                Контакты
-              </span>
-              <span class="main-map__contacts-block__left__category">
-                Телефон
-              </span>
-              <a href="tel:+79851876634" class="main-map__contacts-block__left__contact" title="телефон">+7 (985) 187 66 34</a>
-              <a href="tel:+79851876634" class="main-map__contacts-block__left__contact" title="телефон">+7 (985) 187 66 34</a>
+              Контакты
+            </span>
+            <span class="main-map__contacts-block__left__category">
+              Телефон
+            </span>
+            <a href="tel:+79183025660" class="main-map__contacts-block__left__contact main-map__contacts-block__left__contact_sign main-map__contacts-block__left__contact_phone" title="телефон">+7 (918) 302 56 60</a>
+            <span class="main-map__contacts-block__left__category">
+  		  	WhatsApp
+            </span>
+            <a href="https://api.whatsapp.com/send?phone=79183025660" class="main-map__contacts-block__left__contact main-map__contacts-block__left__contact_sign main-map__contacts-block__left__contact_whatsapp" title="телефон">+7 (918) 302 56 60</a>
+            <span class="main-map__contacts-block__left__category">
+              Telegram
+            </span>
+            <a href="tel:+79183025660" class="main-map__contacts-block__left__contact main-map__contacts-block__left__contact_sign main-map__contacts-block__left__contact_telegram" title="телефон">+7 (918) 302 56 60</a>
               <span class="main-map__contacts-block__left__category">
                 E-mail
               </span>
-              <span class="main-map__contacts-block__left__contact">custom-electric@gmail.com</span>
-              <span class="main-map__contacts-block__left__category">
-                Skype
-              </span>
-              <span class="main-map__contacts-block__left__contact">custom-electric</span>
+              <span class="main-map__contacts-block__left__contact">custom-electric@mail.ru</span>
             </div>
             <div class="main-map__contacts-block__map" id="map">
             </div>
@@ -240,16 +265,13 @@
   <footer class="main-footer">
     <div class="container">
       <div class="main-footer__block main-footer__block_social">
-        <a class="social-item social-item_in social-item_footer" href="https://www.instagram.com/kuzmen_custom.electric/">/kuzmen_custom.electric</a>
         <a class="social-item social-item_in social-item_footer" href="https://www.instagram.com/custom.electric/">/custom.electric</a>
       </div>
-      <div class="main-footer__block main-footer__block_logo">
-        <img src="/img/logo.png" alt="Custom-electric.ru">
-      </div>
-      <div class="main-footer__block">
 
-        <a href="tel:+79851876634" class="main-footer__block__phone" title="телефон">+7 (985) 187 66 34</a>
-        <a href="tel:+79851876634" class="main-footer__block__phone" title="телефон">+7 (985) 187 66 34</a>
+      <div class="main-footer__block">
+        <a href="tel:+79183025660" class="main-footer__block__field main-footer__block__field_phone" title="Позвонить по телефону">+7 (918) 302 56 60</a>
+        <a href="tel:+79183025660" class="main-footer__block__field main-footer__block__field_whatsapp" title="Отправить сообщение в WhatsApp">+7 (918) 302 56 60</a>
+        <a href="tel:+79183025660" class="main-footer__block__field main-footer__block__field_telegram" title="Отправить сообщение в Telegram">+7 (918) 302 56 60</a>
       </div>
     </div>
   </footer>

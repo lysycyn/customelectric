@@ -51,6 +51,7 @@
 			@media (orientation: landscape) and (max-width: md)
 				font-size m(10) !important
 				padding m(5) m(15) !important
+				margin-bottom m(5) !important
 
 .rental-form-show
 	visibility visible
@@ -194,6 +195,10 @@
 			padding m(5) m(7)
 
 .form
+	&__contacts
+		display flex
+		justify-content space-around
+
 	&_main-map
 		@media (min-width: xl)
 			position absolute
@@ -259,7 +264,23 @@
 				padding m(10) m(25)
 				margin-bottom m(10)
 			box-sizing border-box
-
+		& p
+			font-family fontR
+			text-align center
+			color #838387
+			@media(min-width: xl)
+				font-size px(20)
+				margin-bottom px(30)
+			@media(max-width: xl)
+				font-size d(20)
+				margin-bottom d(30)
+			@media(max-width: md)
+				@media(orientation: portrait)
+					font-size m(13)
+					margin-bottom m(15)
+				@media(orientation: landscape)
+					font-size m(12)
+					margin-bottom m(12)
 		& textarea
 			width 100%
 			display block
@@ -270,7 +291,7 @@
 			@media (min-width: xl)
 				font-size rem(20)
 				padding px(23) px(27)
-				margin-bottom 0
+				margin-bottom px(30)
 			@media (min-width: md) and (max-width: xl)
 				font-size d(20)
 				padding d(23) d(27)
@@ -279,10 +300,12 @@
 				border-radius 0
 				font-size m(11)
 				padding m(10) m(14)
+				margin-bottom m(15)
 			@media (orientation: landscape) and (max-width: md)
 				border-radius 0
 				font-size m(9)
 				padding m(10) m(25)
+				margin-bottom m(10)
 			box-sizing border-box
 			resize none
 
@@ -338,3 +361,40 @@
 		background-color #ffc0c0 !important
 		animation shake 0.6s !important
 		-webkt-animation shake 0.6s !important
+
+.checkbox
+	display none
+
+.label
+	display block
+	@media(min-width: xl)
+		width px(60)
+		height px(60)
+	@media(max-width: xl)
+		width d(70)
+		height d(70)
+	@media(max-width: md)
+		@media(orientation: portrait)
+			width m(50)
+			height m(50)
+		@media(orientation: landscape)
+			width m(30)
+			height m(30)
+
+	background-size cover
+	&:hover
+		cursor pointer
+	&_phone
+		background-image url('/img/phone_icon_disabled.png')
+	&_whatsapp
+		background-image url('/img/whatsapp_disabled.png')
+	&_telegram
+		background-image url('/img/telegram_disabled.png')
+
+
+.checkbox_phone:checked+.label_phone
+	background-image url('/img/phone_icon.png')
+.checkbox_whatsapp:checked+.label_whatsapp
+	background-image url('/img/whatsapp.png')
+.checkbox_telegram:checked+.label_telegram
+	background-image url('/img/telegram.png')

@@ -18,26 +18,33 @@
 		@media (min-width: md) and (max-width: xl)
 			height d(974)
 		@media (orientation: portrait) and (max-width: md)
-			height m(290)
+			height m(320)
 		@media (orientation: landscape) and (max-width: md)
-			height m(170)
+			height m(185)
 		&__left
 			@media (min-width: xl)
 				width px(550)
 				padding 0 px(52)
+				padding-right 0
 				padding-top px(87)
 			@media (min-width: md) and (max-width: xl)
-				width d(550)
+				width d(500)
 				padding 0 d(52)
+				padding-right 0
 				padding-top d(87)
+
 			@media (orientation: portrait) and (max-width: md)
 				width m(150)
 				padding 0 m(20)
+				padding-right 0
 				padding-top m(29)
+				padding-bottom m(29)
 			@media (orientation: landscape) and (max-width: md)
 				width m(120)
 				padding 0 m(15)
+				padding-right 0
 				padding-top m(13)
+				padding-bottom m(13)
 			background black
 
 			box-sizing border-box
@@ -81,6 +88,7 @@
 
 
 			&__contact
+				position relative
 				display block
 				font-family fontL
 				@media (min-width: xl)
@@ -93,9 +101,45 @@
 					font-size m(9)
 					margin-bottom m(15)
 				@media (orientation: landscape) and (max-width: md)
-					font-size m(9)
-					margin-bottom m(8)
+					font-size m(8)
+					margin-bottom m(7)
 				color white
+
+				&_sign
+					@media(min-width xl)
+						padding-left px(40)
+					@media(max-width: xl)
+						padding-left d(40)
+					@media(max-width: md)
+						@media(orientation: portrait)
+							padding-left m(18)
+						@media(orientation: landscape)
+							padding-left m(12)
+					&:after
+						position absolute
+						content ''
+						background-size cover
+						top 0
+						left 0
+						@media(min-width: xl)
+							width rem(20)
+							height rem(20)
+						@media(max-width: xl)
+							width d(30)
+							height d(30)
+						@media(max-width: md)
+							@media(orientation: portrait)
+								width m(12)
+								height m(12)
+							@media(orientation: landscape)
+								width m(10)
+								height m(10)
+				&_telegram:after
+					background-image url('/img/telegram.png')
+				&_whatsapp:after
+					background-image url('/img/whatsapp.png')
+				&_phone:after
+					background-image url('/img/phone.png')
 
 
 		&__map
@@ -104,10 +148,10 @@
 				width px(1370)
 			@media (min-width: md) and (max-width: xl)
 				height d(974)
-				width d(1370)
+				width d(1420)
 			@media (orientation: portrait) and (max-width: md)
-				height m(290)
-				width m(170)
+				height m(320)
+				width m(175)
 			@media (orientation: landscape) and (max-width: md)
-				height m(170)
-				width m(220)
+				height m(185)
+				width m(225)

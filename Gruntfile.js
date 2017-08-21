@@ -18,7 +18,8 @@ module.exports = function(grunt) {
     jshint: {
       all: [
         'src/js/lightbox.js',
-        'src/js/script.js'
+        'src/js/script.js',
+        'src/js/swiper.js'
       ],
       options: {
         jshintrc: true
@@ -39,10 +40,18 @@ module.exports = function(grunt) {
         files: {
           'dist/js/script.min.js': ['dist/js/script.js'],
           'dist/js/sprite.min.js': ['dist/js/sprite.js'],
+          'dist/js/swiper.min.js': ['dist/js/swiper.js'],
         }
       }
     },
-    
+
+    group_css_media_queries: {
+      options: {},
+      files: {
+        'dist/css/style.min.css': ['dist/css/style.min.css'],
+      },
+    },
+
     sass: {
         dist: {
             files: {
@@ -50,7 +59,7 @@ module.exports = function(grunt) {
             }
         }
     },
-    
+
     stylus: {
       compile: {
         options: {
@@ -190,20 +199,20 @@ module.exports = function(grunt) {
       },
       */
     },
-    
-    
+
+
     cssmin: {
       target: {
         files: [{
           expand: true,
           cwd: 'dist/css',
-          src: ['*.css', '!*.min.css'],
+          src: ['**.css', '!**.min.css'],
           dest: 'dist/css',
           ext: '.min.css'
         }]
       }
     },
-    
+
     browserSync: {
       dev: {
         bsFiles: {
@@ -229,7 +238,7 @@ module.exports = function(grunt) {
 
   });
 
-  
+
   grunt.registerTask('default', [
     'clean',
     'stylus',
@@ -247,8 +256,8 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('js', [
-    //'jshint', 
-    //'jscs', 
+    //'jshint',
+    //'jscs',
     'copy:js', 'uglify'
   ]);
 
@@ -260,7 +269,8 @@ module.exports = function(grunt) {
    grunt.registerTask('css', [
     'stylus',
     'copy:css',
-    'cssmin'
+    'cssmin',
+    'group_css_media_queries'
   ]);
 
    grunt.registerTask('html', [

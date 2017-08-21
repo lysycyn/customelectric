@@ -71,7 +71,10 @@ seevhmdl = 200
   width 60%
 .swiper-button-prev
   width 40%
-
+.index-swiper>.swiper-button-next
+  width 10%
+.index-swiper>.swiper-button-prev
+  width 10%
 
 .swiper-button-next:after, .swiper-button-prev:after
   display block
@@ -106,9 +109,15 @@ seevhmdl = 200
     right 33%
   @media(max-width: md)
     @media(orientation: portrait)
-      right 0
+      right 2%
     @media(orientation: landscape)
       right 3%
+
+.index-swiper>.swiper-button-next:after
+  @media(min-width: md)
+    right 0
+  @media(max-width: md)
+    right 35%
 
 .swiper-button-prev:after
   background-image url('/img/prev@2x.png')
@@ -123,6 +132,13 @@ seevhmdl = 200
       left 0
     @media(orientation: landscape)
       left 3%
+
+.index-swiper>.swiper-button-prev:after
+  @media(min-width: md)
+    left 0
+  @media(max-width: md)
+    left 35%
+
 
 .swiper-button-next
   right 0

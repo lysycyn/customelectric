@@ -27,7 +27,7 @@
 
 
 	&__block
-		width 33.3%
+
 
 		&_logo
 			text-align center
@@ -44,20 +44,54 @@
 					width m(35)
 
 
-		&__phone
+		&__field
 			display block
 			text-align right
-
+			position relative
 			font-family fontL
 			@media (min-width: xl)
+				font-size px(27)
 				margin-bottom px(26)
+				padding-right px(40)
 			@media (min-width: md) and (max-width: xl)
 				margin-bottom d(26)
+				padding-right d(40)
+				font-size d(25)
 			@media (orientation: portrait) and (max-width: md)
 				margin-bottom m(12)
-				font-size m(12)
+				padding-right m(20)
+				font-size m(10)
 			@media (orientation: landscape) and (max-width: md)
 				margin-bottom m(12)
-				font-size m(9)
+				padding-right m(15)
+				font-size m(8)
 			&:last-child
 				margin-bottom 0
+
+			&:after
+				position absolute
+				top 0
+				right 0
+				content ''
+				display block
+				background-size cover
+				@media(min-width: xl)
+					width px(30)
+					height px(30)
+				@media(max-width: xl)
+					width d(30)
+					height d(30)
+				@media(max-width: md)
+					@media(orientation: portrait)
+						width m(12)
+						height m(12)
+					@media(orientation: landscape)
+						width m(10)
+						height m(10)
+
+			&_phone:after
+				background-image url('/img/phone.png')
+			&_whatsapp:after
+				background-image url('/img/whatsapp.png')
+			&_telegram:after
+				background-image url('/img/telegram.png')

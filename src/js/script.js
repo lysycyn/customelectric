@@ -107,6 +107,19 @@ var md = 768;
     $('body,html').animate({scrollTop: top}, 1500);
   });
 
+  $('.js-close-phone-menu').click(function(e){
+    if ($('.main-nav_active')) {
+      var $nav = $('#nav');
+      if ($nav.hasClass('main-nav_active')) {
+        $nav.removeClass('main-nav_in');
+        setTimeout(function() {
+          $nav.removeClass('main-nav_active');
+        }, 500);
+      }
+    }
+    e.preventDefault();
+  });
+
   $('.js-more-button').click(function(e) {
     if ($('.main-nav_active')) {
       var $nav = $('#nav');
@@ -299,28 +312,12 @@ var md = 768;
 })();
 
 $(function() {
-    // Get the form.
-  var form = $('#ticket-form');
-  console.log(123);
-  console.log(form);
-  
-  var form_name = $('#form_name');
-  var form_phone = $('#form_phone');
-  var form_message = $('#form_message');
-  
   $('input').on("click", function(e){
     if($(e.target).hasClass("form__error")){
-      $(e.target).removeClass("form__error"); 
-    }    
+      $(e.target).removeClass("form__error");
+    }
   });
 
-  if($(window).innerWidth() > md){
-    $('.js-message-rental').attr("rows", "10");
-  }
-  else{
-    $('.js-message-rental').attr("rows", "2");
-  }
-  
   function showAlert(status, text){
     var div = document.createElement('div');
     div.classList.add('popup', 'popup-'+status);
@@ -333,6 +330,7 @@ $(function() {
     }, 3000);
   }
 
+
   $('.js-outer-form').click(function(e) {
     if ($('.main-nav_active')) {
       var $nav = $('#nav');
@@ -344,28 +342,48 @@ $(function() {
       }
     }
     e.preventDefault();
-    var container = document.getElementById('rental-form-outer');
-    if(container){
-      container.classList.add("rental-form-show");
-      var form = document.getElementById('rental-form-outer-container');
-      if(form){
-        form.classList.add("rental-form-show");
+    var target = $(this).data("target");
+    if(target == "ticket"){
+      var container = document.getElementById('rental-form-outer');
+      if(container){
+        container.classList.add("rental-form-show");
+        var form = document.getElementById('rental-form-outer-container');
+        if(form){
+          form.classList.add("rental-form-show");
+        }
+      }
+      return;
+    }
+    if(target == "buy"){
+      var container = document.getElementById('rental-form-outer');
+      if(container){
+        container.classList.add("rental-form-show");
+        var form = document.getElementById('form-buy-container');
+        if(form){
+          form.classList.add("rental-form-show");
+        }
       }
     }
   });
 
   function closeRentalForm(){
     var outer = document.getElementById('rental-form-outer');
-    var form = document.getElementById('rental-form-outer-container');
-    outer.classList.toggle('rental-form-show');
-    form.classList.toggle('rental-form-show');
+    if(outer){
+      outer.classList.toggle('rental-form-show');
+    }
+    if($("#rental-form-outer-container").hasClass('rental-form-show')){
+      $("#rental-form-outer-container").removeClass('rental-form-show');
+    }
+    if($('#form-buy-container').hasClass('rental-form-show')){
+      $('#form-buy-container').removeClass('rental-form-show');
+    }
   }
 
   $('#rental-form-outer').click(function(e){
     closeRentalForm();
   });
 
-  $('#rental-form-close').click(function(e){
+  $('.js-form-close').click(function(e){
     closeRentalForm();
   });
 
@@ -378,30 +396,82 @@ $(function() {
     if(form_phone.val() == ''){
       error = true;
       form_phone.addClass('form__error');
-    }  
+    }
     if(error){
       return;
     }
     var formData = $('#ticket-form').serialize();
     $.ajax({
         type: 'POST',
-        url: $(form).attr('action'),
+        url: $(form_ticket).attr('action'),
         data: formData
     }).done(function(response) {
-      form_name.val('');
-      form_phone.val('');
-      form_message.val('');
-      closeRentalForm();
-      showAlert("success", "Мы скоро свяжемся с Вами!");
-    }).fail(function(data) {
-      showAlert("cancel", "Ошибка! Попробуйте отправить заявку сегодня или свяжитесь с нами по телефону");
-      closeRentalForm();
-  });
-    
+        form_name.val('');
+        form_phone.val('');
+        form_message.val('');
+        $('.checkbox').removeAttr('checked');
+        closeRentalForm();
+        showAlert("success", "Мы скоро свяжемся с Вами!");
+      }).fail(function(data) {
+        showAlert("cancel", "Ошибка! Попробуйте отправить заявку сегодня или свяжитесь с нами по телефону");
+        closeRentalForm();
+    });
   }
-    $(form).submit(function(event) {
+
+  function formHandlerBuy(){
+    var error = false;
+    if(form_name_buy.val() == ''){
+      error = true;
+      form_name_buy.addClass('form__error');
+    }
+    if(form_phone_buy.val() == ''){
+      error = true;
+      form_phone_buy.addClass('form__error');
+    }
+    if(error){
+      return;
+    }
+    var formData = $('#buy-form').serialize();
+    $.ajax({
+        type: 'POST',
+        url: $(form_buy).attr('action'),
+        data: formData
+    }).done(function(response) {
+        form_name_buy.val('');
+        form_phone_buy.val('');
+        $('.checkbox').removeAttr('checked');
+        closeRentalForm();
+        showAlert("success", "Мы скоро свяжемся с Вами!");
+      }).fail(function(data) {
+        showAlert("cancel", "Ошибка! Попробуйте отправить заявку сегодня или свяжитесь с нами по телефону");
+        closeRentalForm();
+    });
+  }
+    // Get the form.
+  var form_ticket = $('#ticket-form');
+
+  var form_name = $('#form_name');
+  var form_phone = $('#form_phone');
+  var form_message = $('#form_message');
+
+  $(form_ticket).submit(function(event) {
       event.preventDefault();
-    $(".form__error").removeClass('form__error');     
-    setTimeout(formHandler, 10);
-  });  
+      $(".form__error").removeClass('form__error');
+      setTimeout(formHandler, 10);
+  });
+
+  var form_buy = $('#buy-form');
+  var form_name_buy = $('#form_name_buy');
+  var form_phone_buy = $('#form_phone_buy');
+
+  $(form_buy).submit(function(event){
+    event.preventDefault();
+    $(".form_error").removeClass('form_error')
+    setTimeout(formHandlerBuy, 10);
+  });
+
+});
+
+$(function(){
+
 });

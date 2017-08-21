@@ -4,17 +4,17 @@
 	&-container
 		@media (min-width: xl)
 			padding-top px(100)
-			margin-bottom px(70)
+			
 		@media (min-width: md) and (max-width: xl)
 			padding-top d(111)
-			margin-bottom d(70)
+
 		@media (max-width: md)
 			@media (orientation: portrait)
 				padding-top m(10)
-				margin-bottom m(20)
+
 			@media (orientation: landscape)
 				padding-top m(10)
-				margin-bottom m(12)
+
 	&-block
 		@media (min-width: md)
 			position relative
@@ -24,14 +24,14 @@
 	&-map
 		width 100%
 		@media (min-width: xl)
-			height px(900)
+			height px(900) !important
 		@media (min-width: md) and (max-width: xl)
-			height d(900)
+			height d(900) !important
 		@media (max-width: md)
 			@media (orientation: portrait)
-				height m(250)
+				height m(250) !important
 			@media (orientation: landscape)
-				height m(150)
+				height m(150) !important
 
 	&-title
 		text-align center
@@ -53,37 +53,54 @@
 				font-size m(10)
 				margin-bottom m(12)
 	&-addresses-city
-		@media (min-width: md)
-			display none
+		text-align center
+		@media (min-width: xl)
+			width 70%
+			margin 0 auto
+			font-family fontR
+			font-size px(25)
+			line-height px(30)
+			margin-bottom px(75)
+		@media (max-width: xl)
+			width 70%
+			margin 0 auto
+			font-family fontR
+			font-size d(25)
+			line-height d(30)
+			margin-bottom d(70)
 		@media (max-width: md)
-			display block
+			width 100%
 			font-family fontL
 			text-align center
 			@media (orientation: landscape)
-				font-size m(10)
+				font-size m(9)
+				line-height m(12)
 			@media (orientation: portrait)
-				font-size m(15)
+				font-size m(13)
+				line-height m(16)
 
 	&-addresses
 		@media (min-width: md)
 			position absolute
 			z-index 1
 		@media (min-width: xl)
-			top px(250)
+			top px(50)
 			left px(100)
 		@media (min-width: md) and (max-width: xl)
-			top d(250)
+			top d(50)
 			left d(100)
 		@media (max-width: md)
 			display flex
+			flex-wrap wrap
+			justify-content space-around
 	&-address
 		background white
 		font-family fontL
 		cursor pointer
 
 		@media (min-width: xl)
-			margin-bottom px(25)
-			padding px(37) px(18)
+			margin-bottom px(20)
+			padding px(25) px(18)
 			padding-right px(30)
 			border-radius 3px
 			box-shadow 1px 2px 19px 0px rgba(50, 50, 50, 1)
@@ -94,8 +111,14 @@
 			border-radius 3px
 			box-shadow 1px 2px 19px 0px rgba(50, 50, 50, 1)
 		@media (max-width md)
-			flex-basis 50%
 			position relative
+			flex-basis 49%
+			margin-bottom 1%
+			box-sizing border-box
+			-webkit-box-shadow inset 0px 0px 1px 1px rgba(0,184,212,1)
+			-moz-box-shadow inset 0px 0px 1px 1px rgba(0,184,212,1)
+			box-shadow inset 0px 0px 1px 1px rgba(0,184,212,1)
+			border-radius 3px
 			@media (orientation: landscape)
 				padding m(10) m(8)
 				padding-left m(35)
@@ -123,9 +146,10 @@
 		&:hover
 			box-shadow 0px 0px 2px 0px rgba(50, 50, 50, 1)
 		&:active
-			box-shadow inset 0px 0px 9px 0px rgba(50, 50, 50, 1)
+			box-shadow inset 0px 0px 9px 2px rgba(50, 50, 50, 1)
 
 		&__title
+			font-family fontSB
 			@media (min-width: xl)
 				font-size 20px
 				margin-bottom 15px
@@ -133,7 +157,8 @@
 				font-size d(22)
 				margin-bottom d(15)
 			@media (max-width: md)
-				display none
+
+				font-size m(10)
 		&__text
 			@media (min-width: xl)
 				font-size 18px
@@ -158,6 +183,7 @@
 				display none
 	&-balloon
 		font-family fontSB
+		overflow hidden
 		@media (min-width: xl)
 			width 400px
 		@media (min-width: md) and (max-width: xl)
@@ -178,11 +204,11 @@
 				margin-bottom d(25)
 			@media (max-width: md)
 				@media (orientation: landscape)
-					font-size m(9)
-					margin-bottom m(8)
+					font-size m(8)
+					margin-bottom m(3)
 				@media (orientation: portrait)
-					font-size m(12)
-					margin-bottom m(5)
+					font-size m(9)
+					margin-bottom m(3)
 
 		&-content
 			display flex
@@ -205,13 +231,13 @@
 				margin-bottom d(30)
 			@media (max-width: md)
 				@media (orientation: portrait)
-					font-size m(10)
-					line-height m(12)
-					margin-bottom m(8)
+					font-size m(8)
+					line-height m(10)
+					margin-bottom m(4)
 				@media (orientation: landscape)
 					font-size m(6)
 					line-height m(7)
-					margin-bottom m(10)
+					margin-bottom m(4)
 
 		&-phone
 			position relative
@@ -221,17 +247,17 @@
 				margin-bottom px(30)
 			@media (min-width: md) and (max-width: xl)
 				font-size d(22)
-				margin-bottom d(30)
+				margin-bottom d(15)
 				padding-left d(30)
 			@media (max-width: md)
 				@media (orientation: portrait)
-					font-size m(14)
-					margin-bottom m(10)
-					padding-top m(7)
+					font-size m(9)
+					margin-bottom m(2)
+					padding-top m(4)
 					padding-left m(20)
 				@media (orientation: landscape)
-					font-size m(8)
-					margin-bottom m(10)
+					font-size m(6)
+					margin-bottom m(2)
 					padding-left m(10)
 			&:before
 				position absolute
@@ -275,10 +301,10 @@
 			@media (max-width: md)
 				@media (orientation: portrait)
 					padding-top m(7)
-					font-size m(14)
+					font-size m(9)
 					padding-left m(20)
 				@media (orientation: landscape)
-					font-size m(8)
+					font-size m(6)
 					padding-left m(10)
 			&:before
 				position absolute
@@ -311,6 +337,6 @@
 						left 0
 
 		&-img
-			flex-basis 30%
+			flex-basis 27%
 			& img
 				width 100%

@@ -45,26 +45,39 @@
   </nav>
   <div class="header-margin-block"></div>
   <section class="rental-container">
-    
-      <h1 class="rental-title">Прокат велосипедов</h1>
-      <h2 class="rental-addresses-city">г. Сочи, Курортный район Имеретинский</h2>
+      <div class="container">
+        <h1 class="rental-title">Прокат велосипедов</h1>
+        <p class="rental-addresses-city">Наши магазины и точки прокатов,
+          где вы всегда можете провести тест-драйв любого электроскутера, находятся по адресу:<br/><br/>г. Сочи, Курортный район Имеретинский</p>
+      </div>
+
       <div class="rental-block">
         <div class="rental-addresses">
           <div class="rental-address" onClick="toggleMap(myPlacemark1); return false;">
-            <p class="rental-address__title">г. Сочи, Курортный район Имеретинский</p>
+            <p class="rental-address__title"><b>МАГАЗИН и ПРОКАТ</b></p>
             <p class="rental-address__text">ул. Парусная, д.11, корп.6.6</p>
             <p class="rental-address__phone">Тел. <a href="tel:+79186772201" title="телефон">+7 (918) 677-22-01</a></p>
           </div>
           <div class="rental-address" onClick="toggleMap(myPlacemark); return false;">
-            <p class="rental-address__title">г. Сочи, Курортный район Имеретинский</p>
-            <p class="rental-address__text">ул. Парусная, д.39, корп.2.4</p>
+            <p class="rental-address__title"><b>МАГАЗИН и ПРОКАТ</b></p>
+            <p class="rental-address__text">ул. Парусная, д.11, корп.6.6</p>
             <p class="rental-address__phone">Тел. <a href="tel:+79186772201" title="телефон">+7 (918) 677-22-01</a></p>
-          </div>  
+          </div>
+          <div class="rental-address" onClick="toggleMap(myPlacemark1); return false;">
+            <p class="rental-address__title"><b>МАГАЗИН и ПРОКАТ</b></p>
+            <p class="rental-address__text">ул. Парусная, д.11, корп.6.6</p>
+            <p class="rental-address__phone">Тел. <a href="tel:+79186772201" title="телефон">+7 (918) 677-22-01</a></p>
+          </div>
+          <div class="rental-address" onClick="toggleMap(myPlacemark); return false;">
+            <p class="rental-address__title"><b>МАГАЗИН и ПРОКАТ</b></p>
+            <p class="rental-address__text">ул. Парусная, д.11, корп.6.6</p>
+            <p class="rental-address__phone">Тел. <a href="tel:+79186772201" title="телефон">+7 (918) 677-22-01</a></p>
+          </div>
         </div>
         <div id="map1" class="rental-map">
         </div>
-      </div>    
-    
+      </div>
+
   </section>
   <footer class="main-footer">
     <div class="container">
@@ -131,14 +144,14 @@
         hintContent: '<p>Парусная 11</p>',
         balloonContent: '<div class="rental-balloon"><p class="rental-balloon-title">Прокат на Парусной 11</p><div class="rental-balloon-content"><div class="rental-balloon-text"><p class="rental-balloon-address">г. Сочи, Курортный район Имеретинский,ул. Парусная, д.11, корп.6.6</p><p class="rental-balloon-phone"><a href="tel:+79186772201" title="телефон">+7 (918) 677-22-01</a></p><p class="rental-balloon-work">10.00-22.00</p></div><div class="rental-balloon-img"><img src="img/rental2.jpg" alt=""></div></div></div>',
       });
-      
+
       myMap.geoObjects.add(myPlacemark);
       myMap.geoObjects.add(myPlacemark1);
     }
 
     function toggleMap(myPlace) {
       var cords = myPlace.geometry._coordinates;
-      
+
       myMap.setCenter(cords, 13, {checkZoomRange: true});
       myPlace.balloon.open();
     }

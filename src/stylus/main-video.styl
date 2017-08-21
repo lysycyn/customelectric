@@ -9,7 +9,7 @@
 		margin-bottom (22/vm)
 	@media (orientation: landscape) and (max-width: md)
 		margin-bottom (20/vm)
-	
+
 	& .container
 		@media (min-width: xl)
 			padding 0 (180/vd)
@@ -19,19 +19,31 @@
 			padding 0
 
 	&__frame
-		width 100%
+		margin 0 auto
+		display block
 		@media (min-width: xl)
-			height (857/p)		
-			margin-bottom (33/p)
+			width 70%
+			height px(600)
+			margin-bottom px(33)
 		@media (min-width: md) and (max-width: xl)
-			height (857/vd)		
-			margin-bottom (33/vd)
+			width 70%
+			height d(600)
+			margin-bottom d(33)
 		@media (orientation: portrait) and (max-width: md)
-			height (177/vm)		
-			margin-bottom (17/vm)
+			width 100%
+			height m(177)
+			margin-bottom m(17)
 		@media (orientation: landscape) and (max-width: md)
-			height (140/vm)		
-			margin-bottom (10/vm)
+			width 100%
+			height m(140)
+			margin-bottom m(10)
+		&.index
+			@media(min-width:md)
+				width 80%
+			@media(max-width:md)
+				width 80%
+				margin-left auto
+				margin-right auto
 
 	&__social
 		font-size 0
@@ -41,7 +53,7 @@
 		@media (orientation: landscape) and (max-width: md)
 			padding 0 (17/vm)
 			height (20/vm)
-				
+
 		&__phone
 			display inline-block
 			float right
@@ -71,5 +83,3 @@
 					right 0
 					background url("/img/phone.png") no-repeat
 					background-size cover
-			
-			

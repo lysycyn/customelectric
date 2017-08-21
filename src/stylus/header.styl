@@ -76,6 +76,8 @@
 			display block
 			text-align right
 			width 33.3%
+			position relative
+			z-index 1000
 			& img
 				@media (orientation: portrait) and (max-width: md)
 					width m(44)
@@ -198,6 +200,8 @@
 		&__item
 			text-decoration none
 			display block
+			&:last-child
+				margin-right 0
 			@media (min-width: xl)
 				float left
 				margin-right px(33)

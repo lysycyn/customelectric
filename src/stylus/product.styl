@@ -37,6 +37,8 @@
         margin-bottom m(12)
 .product-block
   display flex
+  @media (min-width: md)
+    align-items center
   @media (max-width: md)
     flex-direction column
   &__text
@@ -63,7 +65,6 @@
       font-size px(25)
       line-height px(35)
     @media (max-width: xl)
-      padding-top d(50)
       margin-bottom d(70)
       font-size d(27)
       line-height d(38)
@@ -72,6 +73,63 @@
       font-size 1rem
       line-height 1.4rem
       margin-bottom 2rem
+  &__app
+    &.lead
+      @media(min-width: md)
+        padding-left 30px
+    font-family fontR
+    & b
+      font-family fontSB
+    @media (min-width: xl)
+      font-size px(25)
+      line-height px(35)
+    @media (max-width: xl)
+      margin-bottom d(30)
+      font-size d(27)
+      line-height d(38)
+    @media (max-width: md)
+      text-align justify
+      font-size 1rem
+      line-height 1.4rem
+      margin-bottom 2rem
+    &-table
+      padding 0
+      margin 0
+      list-style none
+      font-family fontR
+      @media (min-width: xl)
+        font-size px(25)
+      @media (max-width: xl)
+        font-size d(27)
+      @media (max-width: md)
+        font-size 1rem
+      & b
+        font-family fontSB
+      & li
+        position relative
+        &:before
+          content: ''
+          color color1
+          display block
+          height 2px
+          background color1
+          position absolute
+          left 0
+          @media(min-width: md)
+            width 15px
+            top 10px
+          @media(max-width: md)
+            width 1rem
+            top .5rem
+        @media(min-width: xl)
+          padding-left px(20)
+          margin-bottom px(20)
+        @media(max-width: xl)
+          padding-left d(30)
+          margin-bottom d(15)
+        @media(max-width: md)
+          padding-left 1.5rem
+          margin-bottom 1rem
 .product-table
   border-collapse collapse
   & td
@@ -92,7 +150,7 @@
       @media (orientation: portrait)
         padding-left m(5)
         padding-right m(5)
-  &__short
+  &__name
     text-transform uppercase
     font-family fontSB
     @media (min-width: xl)
@@ -116,6 +174,10 @@
     font-family fontR
 .product-title
   border-top 1px solid color2
+
+.product-elements
+   @media(max-width: md)
+    display: none
 
 .title-wrapper
   position relative
@@ -167,3 +229,93 @@
         border-bottom none
 .product-image
   width 100%
+
+.product-form-container
+  padding-top d(50)
+
+.product-form
+  @media (min-width: md)
+    width 40%
+    margin 0 auto
+  @media (max-width: md)
+    width 80%
+    margin 0 auto
+  &.used
+    @media (min-width: md)
+      width 70%
+    @media (max-width: md)
+      padding-top 1.5rem
+  &-grid
+    display flex
+    justify-content space-around
+    flex-direction column
+    @media (max-width: md)
+      flex-direction column
+  &-price
+    text-transform uppercase
+    font-family fontSB
+    display inline-block
+    text-align center
+    width 100%
+    @media (min-width: xl)
+      font-size px(30)
+    @media (max-width: xl)
+      font-size d(30)
+      margin-bottom d(30)
+    @media (max-width: md)
+      @media (orientation: portrait)
+        font-size m(16)
+        margin-bottom m(15)
+      @media (orientation: landscape)
+        font-size m(13)
+        margin-bottom m(10)
+    & span
+      display inline-block
+      padding-left 20px
+      color color1
+      @media (min-width: xl)
+        font-size px(45)
+      @media (max-width: xl)
+        font-size d(60)
+      @media (max-width: md)
+        @media (orientation: portrait)
+          font-size m(24)
+        @media (orientation: landscape)
+          font-size m(17)
+      &:after
+        content "руб."
+        color color1
+        display inline-block
+        padding-left 5px
+        @media (min-width: xl)
+          font-size px(30)
+        @media (max-width: xl)
+          font-size d(35)
+        @media (max-width: md)
+          @media (orientation: portrait)
+            font-size m(17)
+          @media (orientation: landscape)
+            font-size m(12)
+  &-descr
+    font-family fontR
+    text-align justify
+    @media (min-width: xl)
+      font-size px(25)
+      line-height px(33)
+      margin-bottom px(40)
+      //width 35%
+    @media (max-width: xl)
+      font-size d(25)
+      line-height d(33)
+      margin-bottom d(40)
+      //width 35%
+    @media (max-width: md)
+      width 100%
+      @media (orientation: landscape)
+        font-size m(13)
+        line-height m(18)
+        margin-bottom m(25)
+      @media (orientation: portrait)
+        font-size m(10)
+        line-height m(13)
+        margin-bottom m(18)
